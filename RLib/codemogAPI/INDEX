@@ -1,0 +1,16 @@
+county_coc              API Wrapper to call Colorado County Components
+                        of Change Data
+county_est              API Wrapper to call Colorado county population
+                        estimates
+county_job_forecast     API Wrapper to call Colorado county job
+                        forecasts
+county_jobs             API Wrapper to call Colorado county job
+                        estimates
+county_profile          API Wrapper to call Colorado County Demographic
+                        Profile Variables
+county_sya              API Wrapper to call Colorado County Single Year
+                        of Age Data
+muni_est                API Wrapper to call Colorado municipal
+                        population estimates
+muni_hist               API Wrapper to call Colorado historical
+                        municipal population estimates

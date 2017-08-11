@@ -1,0 +1,28 @@
+Package: codemogAPI
+Type: Package
+Title: API Wrapper for Colorado Demography Office APIs
+Version: 0.1.1
+Authors@R: person("Rob", "Kemp", email = "robert.kemp@state.co.us",
+                  role = c("aut", "cre"))
+Description: This package provides access to the API for Colorado Demography
+    Office and Census data APIs
+License: MIT + file LICENSE
+Imports: jsonlite, tidyr
+Depends: dplyr
+LazyData: TRUE
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1
+Author: Rob Kemp [aut, cre]
+Maintainer: Rob Kemp <robert.kemp@state.co.us>
+Built: R 3.4.0; ; 2017-06-29 17:01:41 UTC; windows
+RemoteType: github
+RemoteHost: https://api.github.com
+RemoteRepo: codemogAPI
+RemoteUsername: coloradodemography
+RemoteRef: master
+RemoteSha: ac28bf35345cff94ebc427c1e1ba812c19f0ffa0
+GithubRepo: codemogAPI
+GithubUsername: coloradodemography
+GithubRef: master
+GithubSHA1: ac28bf35345cff94ebc427c1e1ba812c19f0ffa0

@@ -1,0 +1,28 @@
+age_cat                 Categorize a continuous age variable into
+                        common categories.
+ann_gr                  Calculates annualized growth rates.
+codemog-package         Colorado State Demography Office Population
+                        Data
+codemog_api             Links R to the URL based REST API for the CO
+                        Demography Office Databases
+codemog_pal             Colorado State Demography Office Color Palette
+                        for ggplot2
+county_base             County Base Industry Analysis Data
+county_est              County Estimates
+county_forecast         County by Age and Sex Estimates and Forecasts
+county_hist             County Historical Population Estimates
+county_jobs             County Jobs Data
+county_ts_chart         Creates a 'ggplot2' chart of the population for
+                        a CO county
+ed_cat                  Categorize a continuous education variable into
+                        common categories.
+emp_cat                 Recategorize the ACS Employment status variable
+                        (ESR)
+muni_est                Municipal Estimates
+muni_hist               Municipal Historical Population Estimates
+muni_ts_chart           Creates a 'ggplot2' chart of the population for
+                        a CO municipality
+muni_win_est            Municipalities within County Estimates
+muni_win_hist           Municipal parts within counties Historical
+                        Population Estimates
+theme_codemog           Colorado State Demography Office ggplot2 Theme
