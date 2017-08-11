@@ -1,0 +1,3 @@
+RSQLServer              RSQLServer
+SQLServer               SQLServerDriver class and methods
+have_test_server        Checks availability of TEST server

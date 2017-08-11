@@ -8,6 +8,17 @@ external.packages:
     gridExtra
     scales
     ggthemes
+    devtools
+    rmarkdown
+    grid
+    ggpubr
+    tigris
+    leaflet
+    shiny
+    htmlwidgets
+    readxl
+    car
+    shinydashboard
 local.repos: 
 load.external.packages.on.startup: TRUE
 ignored.packages: 
