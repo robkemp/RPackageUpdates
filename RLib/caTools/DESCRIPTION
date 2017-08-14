@@ -18,5 +18,5 @@ Packaged: 2014-09-09 21:05:06 UTC; ripley
 NeedsCompilation: yes
 Repository: CRAN
 Date/Publication: 2014-09-10 16:22:53
-Built: R 3.4.1; x86_64-w64-mingw32; 2017-08-11 21:53:22 UTC; windows
+Built: R 3.3.3; x86_64-w64-mingw32; 2017-08-10 16:35:52 UTC; windows
 Archs: i386, x64
