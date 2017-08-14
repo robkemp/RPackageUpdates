@@ -38,6 +38,14 @@ install.packages(c("tidyverse",
                    "lme4",
                    "multicomp",
                    "xlsx",
-                   "XLConnect"
+                   "XLConnect",
+                   "highr", 
+                   "caTools", 
+                   "bitops"
                    ),
                  lib="RLib")
+
+
+install.packages(c()
+,
+lib="RLib")
