@@ -35,3 +35,4 @@ new_pool	multi
 nslookup	nslookup
 parse_date	parse_date
 parse_headers	parse_headers
+parse_headers_list	parse_headers
