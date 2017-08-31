@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: ArcGIS product and license information</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for arc.check_product {arcgisbinding}"><tr><td>arc.check_product {arcgisbinding}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>ArcGIS product and license information</h2>
+
+<h3>Description</h3>
+
+<p>Initialize connection to ArcGIS. Any script running directly from R (i.e.
+without being called from a Geoprocessing script) should first call
+<code>arc.check_product</code> to create a connection with ArcGIS. Provides
+installation details on the version of ArcGIS installed that
+<code>arcgisbinding</code> is communicating with.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+arc.check_product()
+</pre>
+
+
+<h3>Details</h3>
+
+<p>Returned details include:
+</p>
+
+<ul>
+<li><p> Product: ArcGIS Desktop (i.e. ArcMap), or ArcGIS Pro. The name of the
+product connected.
+</p>
+</li>
+<li><p> License level: Basic, Standard, or Advanced are the three licensing
+levels available. Each provides progressively more functionality
+within the software. See the &quot;Desktop Functionality Matrix&quot; link for
+details.
+</p>
+</li>
+<li><p> Build number: The build number of the release being used.
+Useful in debugging and when creating error reports.
+</p>
+</li>
+<li><p> DLL: The dynamic linked library (DLL) in use allowing
+ArcGIS to communicate with R.
+</p>
+</li></ul>
+
+
+
+<h3>References</h3>
+
+<p><a href="http://www.esri.com/~/media/Files/Pdfs/library/brochures/pdfs/arcgis1021-desktop-functionality-matrix.pdf">ArcGIS Desktop Functionality Matrix</a>
+</p>
+
+
+<h3>Note</h3>
+
+<p>Additional license levels are available on ArcGIS Desktop: Server,
+EngineGeoDB, and Engine. These license levels are currently
+unsupported by this package.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+info &lt;- arc.check_product()
+info$license # ArcGIS license level
+info$version # ArcGIS build number
+info$app # product name
+info$dll # binding DLL in use
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>arcgisbinding</em> version 1.0.0.128 <a href="00Index.html">Index</a>]</div>
+</body></html>

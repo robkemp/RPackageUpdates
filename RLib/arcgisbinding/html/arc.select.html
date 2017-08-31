@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Load dataset to data.frame</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for arc.select {arcgisbinding}"><tr><td>arc.select {arcgisbinding}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Load dataset to data.frame</h2>
+
+<h3>Description</h3>
+
+<p>Load dataset to a standard data frame.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+arc.select(object, fields = "*", where_clause = "", selected = TRUE,
+  sr = NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+<p><a href="arc.dataset-class.html">arc.dataset-class</a> object</p>
+</td></tr>
+<tr valign="top"><td><code>fields</code></td>
+<td>
+<p>string, or list of strings, containing fields to include (default: all)</p>
+</td></tr>
+<tr valign="top"><td><code>where_clause</code></td>
+<td>
+<p>SQL where clause</p>
+</td></tr>
+<tr valign="top"><td><code>selected</code></td>
+<td>
+<p>use only selected records (if any) when dataset is a layer or
+standalone table</p>
+</td></tr>
+<tr valign="top"><td><code>sr</code></td>
+<td>
+<p>transform geometry to Spatial Reference</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p><code>arc.select</code> returns a <code>data.frame</code> object (type of
+<code>arc.data</code>).
+</p>
+
+
+<h3>Note</h3>
+
+<p>If dataset includes the <code>arc.feature</code> attribute, the &quot;shape&quot; of class
+<code><a href="arc.shape-class.html">arc.shape-class</a></code> will be attached to the resulting
+<code>data.frame</code> object.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="arc.open.html">arc.open</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+## read all fields
+ozone.file &lt;- system.file("extdata", "ca_ozone_pts.shp",
+                          package="arcgisbinding")
+d &lt;- arc.open(ozone.file)
+df &lt;- arc.select(d, names(d@fields))
+head(df, n=3)
+
+## read 'name', 'fid' and geometry
+df &lt;- arc.select(d, c('fid', 'ozone'), where_clause="fid &lt; 5")
+nrow(df)
+
+## transform points to "+proj=eqc"
+df &lt;- arc.select(d,"fid", where_clause="fid&lt;5", sr="+proj=eqc")
+arc.shape(df)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>arcgisbinding</em> version 1.0.0.128 <a href="00Index.html">Index</a>]</div>
+</body></html>

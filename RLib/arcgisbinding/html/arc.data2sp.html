@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Convert an arc.dataframe object to an sp SpatialDataFrame...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for arc.data2sp {arcgisbinding}"><tr><td>arc.data2sp {arcgisbinding}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Convert an arc.dataframe object to an sp SpatialDataFrame object</h2>
+
+<h3>Description</h3>
+
+<p>Convert an ArcGIS <code>data.frame</code> to the equivalent <code>sp</code> data frame
+type. The output types that can be generated: <code>SpatialPointsDataFrame</code>,
+<code>SpatialLinesDataFrame</code>, or <code>SpatialPolygonsDataFrame</code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+arc.data2sp(x)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p><code>data.frame</code> result of <code><a href="arc.select.html">arc.select</a></code></p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+require(sp)
+d &lt;- arc.open(system.file("extdata", "ca_ozone_pts.shp",
+                          package="arcgisbinding"))
+df &lt;- arc.select(d, 'ozone')
+sp.df &lt;- arc.data2sp(df)
+## Not run: spplot(sp.df)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>arcgisbinding</em> version 1.0.0.128 <a href="00Index.html">Index</a>]</div>
+</body></html>

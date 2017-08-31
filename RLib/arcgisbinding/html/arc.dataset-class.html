@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Class &quot;arc.dataset&quot;</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for arc.dataset-class {arcgisbinding}"><tr><td>arc.dataset-class {arcgisbinding}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Class &quot;arc.dataset&quot;</h2>
+
+<h3>Description</h3>
+
+<p><code>arc.dataset</code> S4 class
+</p>
+
+
+<h3>Details</h3>
+
+<p>The <code>dataset_type</code> slot possible values are described in the
+referenced &quot;dataset properties &ndash; data type&quot; documentation. For feature datasets,
+<code>extent</code> contains four <code>double</code> values: <code>(xmin, ymin, xmax, ymax)</code>.
+The <code>fields</code> slot includes the details of the ArcGIS data types of the
+relevant fields, which include data types not directly representable in <code>R</code>.
+</p>
+
+
+<h3>Slots</h3>
+
+
+<dl>
+<dt><code>path</code></dt><dd><p>file path or layer name</p>
+</dd>
+<dt><code>dataset_type</code></dt><dd><p>dataset type</p>
+</dd>
+<dt><code>extent</code></dt><dd><p>spatial extent of the dataset</p>
+</dd>
+<dt><code>fields</code></dt><dd><p>list of field names</p>
+</dd>
+<dt><code>shapeinfo</code></dt><dd><p>geometry information (see <code><a href="arc.shapeinfo.html">arc.shapeinfo</a></code>)</p>
+</dd>
+</dl>
+
+
+<h3>References</h3>
+
+
+<ol>
+<li> <p><a href="http://desktop.arcgis.com/en/desktop/latest/analyze/arcpy-functions/dataset-properties.htm#GUID-35446E5D-31AF-4B41-B795-783409C641A8">ArcGIS Help: Dataset properties &ndash; dataset type</a>
+</p>
+</li></ol>
+
+
+
+<h3>Examples</h3>
+
+<pre>
+
+ozone.file &lt;- system.file("extdata", "ca_ozone_pts.shp",
+                          package="arcgisbinding")
+d &lt;- arc.open(ozone.file)
+names(d@fields) # get all field names
+d@shapeinfo     # print shape info
+d               # print dataset info
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>arcgisbinding</em> version 1.0.0.128 <a href="00Index.html">Index</a>]</div>
+</body></html>

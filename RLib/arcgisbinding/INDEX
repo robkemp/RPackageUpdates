@@ -1,0 +1,23 @@
+arc.check_product       ArcGIS product and license information
+arc.data2sp             Convert an arc.dataframe object to an sp
+                        SpatialDataFrame object
+arc.dataset-class       Class "arc.dataset"
+arc.env                 Get geoprocessing environment settings
+arc.fromP4ToWkt         Convert PROJ.4 Coordinate Reference System
+                        string to Well-known Text.
+arc.fromWktToP4         Convert a Well-known Text Coordinate Reference
+                        System into a PROJ.4 string.
+arc.open                Open dataset, table, or layer
+arc.progress_label      Set progressor label for Geoprocessing dialog
+                        box
+arc.progress_pos        Set progressor position for Geoprocessing
+                        dialog box
+arc.select              Load dataset to data.frame
+arc.shape               Get arc.shape object
+arc.shape-class         Class "arc.shape"
+arc.shape2sp            Convert Esri shape to sp spatial geometry
+arc.shapeinfo           Shape Information
+arc.sp2data             Convert a sp SpatialDataFrame object to an
+                        arc.dataframe object
+arc.write               Write dataset, table or layer
+arcgisbinding           Bindings for ArcGIS

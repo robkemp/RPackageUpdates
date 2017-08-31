@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Convert a sp SpatialDataFrame object to an arc.dataframe...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for arc.sp2data {arcgisbinding}"><tr><td>arc.sp2data {arcgisbinding}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Convert a sp SpatialDataFrame object to an arc.dataframe object</h2>
+
+<h3>Description</h3>
+
+<p>Convert <code>sp</code> <code>SpatialPointsDataFrame</code>, <code>SpatialPolygonsDataFrame</code>,
+and <code>SpatialLinesDataFrame</code> objects to an ArcGIS-compatible <code>data.frame</code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+arc.sp2data(sp.df)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>sp.df</code></td>
+<td>
+<p><code>SpatialPointsDataFrame</code>, <code>SpatialPolygonsDataFrame</code>,
+or <code>SpatialLinesDataFrame</code></p>
+</td></tr>
+</table>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="arc.data2sp.html">arc.data2sp</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+require(sp)
+s1 &lt;- Polygon(cbind(c(2,4,4,1,2),c(2,3,5,4,2)))
+s2 &lt;- Polygon(cbind(c(5,4,2,5),c(2,3,2,2)))
+s3 &lt;- Polygon(cbind(c(4,4,5,10,4),c(5,3,2,5,5)))
+s4 &lt;- Polygon(cbind(c(5,6,6,5,5),c(4,4,3,3,4)), hole = TRUE)
+ss1 &lt;- Polygons(list(s1), "s1")
+ss2 &lt;- Polygons(list(s2), "s2")
+ss3 &lt;- Polygons(list(s3, s4), "s3/4")
+spp &lt;- SpatialPolygons(list(ss1,ss2,ss3), 1:3)
+sp.df &lt;- SpatialPolygonsDataFrame(spp, data=data.frame(df=1:3),
+                               match.ID = FALSE)
+arc.df = arc.sp2data(sp.df)
+arc.write(tempfile("sp_poly", fileext=".shp"), arc.df)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>arcgisbinding</em> version 1.0.0.128 <a href="00Index.html">Index</a>]</div>
+</body></html>

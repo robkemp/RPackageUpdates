@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Write dataset, table or layer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for arc.write {arcgisbinding}"><tr><td>arc.write {arcgisbinding}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Write dataset, table or layer</h2>
+
+<h3>Description</h3>
+
+<p>Export a <code>data.frame</code> object to an ArcGIS dataset. If the data frame
+includes a spatial attribute, this function writes a feature dataset. If no
+spatial attribute is found, a table is instead written.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+arc.write(path, data, coords = NULL, shape_info = NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>path</code></td>
+<td>
+<p>full output path</p>
+</td></tr>
+<tr valign="top"><td><code>data</code></td>
+<td>
+<p>input data frame. Accepts <code>data.frame</code>, spatial <code>data.frame</code>,
+<code>SpatialPointsDataFrame</code>, <code>SpatialLinesDataFrame</code>, and
+<code>SpatialPolygonsDataFrame</code> objects.</p>
+</td></tr>
+<tr valign="top"><td><code>coords</code></td>
+<td>
+<p>list containing geometry type and spatial reference (optional)</p>
+</td></tr>
+<tr valign="top"><td><code>shape_info</code></td>
+<td>
+<p>(optional)</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Supports a variety of output formats. Below are pairs of example paths and the resulting data types:
+</p>
+
+<ul>
+<li> <p><code>C:/place.gdb/fc</code>: File Geodatabase Feature Class
+</p>
+</li>
+<li> <p><code>C:/place.gdb/fdataset/fc</code>: File Geodatabase Feature Dataset
+</p>
+</li>
+<li> <p><code>in_memory\logreg</code>: In-memory workspace (must be run in ArcGIS Session)
+</p>
+</li>
+<li> <p><code>C:/place.shp</code>: Esri Shapefile
+</p>
+</li>
+<li> <p><code>C:/place.dbf</code>: Table
+</p>
+</li></ul>
+
+
+
+<h3>References</h3>
+
+
+<ul>
+<li> <p><a href="http://support.esri.com/es/knowledgebase/techarticles/detail/40057">What is the difference between a shapefile and a layer file?</a>
+</p>
+</li>
+<li> <p><a href="https://desktop.arcgis.com/en/desktop/latest/map/working-with-layers/what-is-a-layer-.htm">ArcGIS Help: What is a layer?</a>
+</p>
+</li></ul>
+
+
+
+<h3>See Also</h3>
+
+<p><code><a href="arc.dataset-class.html">arc.dataset-class</a></code>, <code><a href="arc.open.html">arc.open</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+## write as a shapefile
+fc &lt;- arc.open(system.file("extdata", "ca_ozone_pts.shp",
+                           package="arcgisbinding"))
+d &lt;- arc.select(fc, 'ozone')
+d[1,] &lt;- 0.6
+arc.write(tempfile("ca_new", fileext=".shp"), d)
+## write as table
+arc.write(tempfile("tlb", fileext=".dbf"),
+          list('f1'=c(23,45), 'f2'=c('hello', 'bob')))
+
+## from scratch as feature class
+arc.write(tempfile("fc_pts", fileext=".shp"), list('data'=rnorm(100)),
+          list(x=runif(100,min=0,max=10),y=runif(100,min=0,max=10)),
+          list(type='Point'))
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>arcgisbinding</em> version 1.0.0.128 <a href="00Index.html">Index</a>]</div>
+</body></html>

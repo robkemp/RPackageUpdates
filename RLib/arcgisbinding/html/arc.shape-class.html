@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Class &quot;arc.shape&quot;</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for arc.shape-class {arcgisbinding}"><tr><td>arc.shape-class {arcgisbinding}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Class &quot;arc.shape&quot;</h2>
+
+<h3>Description</h3>
+
+<p><code>arc.shape</code> is geometry collection
+</p>
+
+
+<h3>Note</h3>
+
+<p><code>arc.shape</code> is attached to an ArcGIS <code>data.frame</code> as the
+attribute &quot;shape&quot;. Each element corresponds to one record in
+the input data frame. Points are presented as an array of lists, with
+each list containing (<code>x</code>, <code>y</code>, <code>Z</code>, <code>M</code>), where
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+d &lt;- arc.open(system.file("extdata", "ca_ozone_pts.shp",
+                          package="arcgisbinding"))
+arc.df &lt;- arc.select(d, "FID")
+
+shape &lt;- arc.shape(arc.df)
+# create data.frame with X and Y columns
+df &lt;- data.frame(arc.df, X=shape$x, Y=shape$y)
+# print out row #42
+df[42,]
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>arcgisbinding</em> version 1.0.0.128 <a href="00Index.html">Index</a>]</div>
+</body></html>

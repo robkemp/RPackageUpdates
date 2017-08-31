@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Set progressor label for Geoprocessing dialog box</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for arc.progress_label {arcgisbinding}"><tr><td>arc.progress_label {arcgisbinding}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Set progressor label for Geoprocessing dialog box</h2>
+
+<h3>Description</h3>
+
+<p>Geoprocessing tools have a progressor, which includes both a progress
+label and a progress bar. The default progressor continuously moves back
+and forth to indicate the script is running. Using
+<code><a href="arc.progress_label.html">arc.progress_label</a></code> and <code><a href="arc.progress_pos.html">arc.progress_pos</a></code>
+allows fine control over the script progress. Updating the progressor
+isn't necessary, but is useful in situations where solely outputting messages
+to the dialog is insufficient to communicate script progress.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+arc.progress_label(label)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>label</code></td>
+<td>
+<p>Progress Label</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Using <code><a href="arc.progress_label.html">arc.progress_label</a></code> allows control over the label that is
+displayed at the top of the running script. For example, it might be used
+to display the current step of the analysis taking place.
+</p>
+
+
+<h3>References</h3>
+
+<p><a href="https://pro.arcgis.com/en/pro-app/arcpy/geoprocessing_and_python/understanding-the-progress-dialog-in-script-tools.htm">Understanding the progressor in script tools</a>
+</p>
+
+
+<h3>Note</h3>
+
+
+<ul>
+<li><p> Currently only functions in ArcGIS Pro, and has no effect in
+ArcGIS Desktop.
+</p>
+</li>
+<li><p> This function is only available from within an ArcGIS session, and
+has no effect when run from the command line or in background geoprocessing.
+</p>
+</li></ul>
+
+
+
+<h3>See Also</h3>
+
+<p><code><a href="arc.progress_pos.html">arc.progress_pos</a></code>,
+&quot;Progress Messages&quot; example Geoprocessing script
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+arc.progress_label("Calculating bootstrap samples...")
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>arcgisbinding</em> version 1.0.0.128 <a href="00Index.html">Index</a>]</div>
+</body></html>

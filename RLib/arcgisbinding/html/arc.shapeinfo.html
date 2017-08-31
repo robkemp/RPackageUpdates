@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Shape Information</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for arc.shapeinfo {arcgisbinding}"><tr><td>arc.shapeinfo {arcgisbinding}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Shape Information</h2>
+
+<h3>Description</h3>
+
+<p><code>arc.shapeinfo</code> provides details on what type of geometry is stored
+within the dataset, and the spatial reference of the geometry. The
+well-known text, <code>WKT</code>, allows interoperable transfer of the spatial
+reference system (CRS) between environments. The <code>WKID</code> is a numeric
+value that ArcGIS uses to precisely specify a projection.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+arc.shapeinfo(object)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+<p><a href="arc.dataset-class.html">arc.dataset-class</a> object</p>
+</td></tr>
+</table>
+
+
+<h3>Slots</h3>
+
+
+<dl>
+<dt><code>type</code></dt><dd><p>geometry type: &quot;Point&quot;, &quot;Polyline&quot;, or &quot;Polygon&quot;</p>
+</dd>
+<dt><code>hasZ</code></dt><dd><p>TRUE if geometry includes Z-values</p>
+</dd>
+<dt><code>hasM</code></dt><dd><p>TRUE if geometry includes M-values</p>
+</dd>
+<dt><code>WKT</code></dt><dd><p>well-known text representation of the shape's spatial reference</p>
+</dd>
+<dt><code>WKID</code></dt><dd><p>well-known ID of the shape's spatial reference</p>
+</dd>
+</dl>
+
+
+<h3>References</h3>
+
+
+<ol>
+<li> <p><a href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Using_spatial_references/02r3000000qq000000/">ArcGIS REST API: Using spatial references</a>
+</p>
+</li>
+<li> <p><a href="http://spatialreference.org/">Spatial reference lookup</a>
+</p>
+</li></ol>
+
+
+
+<h3>See Also</h3>
+
+<p><code><a href="arc.dataset-class.html">arc.dataset-class</a></code> <code><a href="arc.shape-class.html">arc.shape-class</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+d &lt;- arc.open(system.file("extdata", "ca_ozone_pts.shp",
+                          package="arcgisbinding"))
+# from arc.dataset
+info &lt;- arc.shapeinfo(d)
+info$WKT   # print dataset spatial reference
+
+# from arc.shape
+df &lt;- arc.select(d, 'ozone')
+arc.shapeinfo(arc.shape(df))
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>arcgisbinding</em> version 1.0.0.128 <a href="00Index.html">Index</a>]</div>
+</body></html>

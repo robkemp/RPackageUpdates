@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Convert Esri shape to sp spatial geometry</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for arc.shape2sp {arcgisbinding}"><tr><td>arc.shape2sp {arcgisbinding}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Convert Esri shape to sp spatial geometry</h2>
+
+<h3>Description</h3>
+
+<p>Convert <code><a href="arc.shape-class.html">arc.shape-class</a></code> to <code>sp</code> spatial geometry:
+<code>SpatialPoints</code>, <code>SpatialLines</code>, or <code>SpatialPolygons</code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+arc.shape2sp(shape, wkt = arc.shapeinfo(shape)$WKT)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>shape</code></td>
+<td>
+<p><code><a href="arc.shape-class.html">arc.shape-class</a></code></p>
+</td></tr>
+<tr valign="top"><td><code>wkt</code></td>
+<td>
+<p>WKT spatial reference</p>
+</td></tr>
+</table>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="arc.shape.html">arc.shape</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+require(sp)
+d &lt;- arc.open(system.file("extdata", "ca_ozone_pts.shp",
+                          package="arcgisbinding"))
+df &lt;- arc.select(d, 'ozone')
+sp.df &lt;- arc.shape2sp(arc.shape(df))
+## Not run: plot(sp.df)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>arcgisbinding</em> version 1.0.0.128 <a href="00Index.html">Index</a>]</div>
+</body></html>
