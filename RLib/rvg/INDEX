@@ -1,0 +1,16 @@
+body_add_vg             add a plot output as vector graphics into a
+                        Word object
+dml_docx                DrawingML graphic device for Microsoft Word
+dml_pptx                DrawingML graphic device for Microsoft
+                        PowerPoint
+dml_xlsx                DrawingML graphic device for Microsoft Excel
+dsvg                    SVG Graphics Driver
+dsvg_view               Run plotting code and view svg in RStudio
+                        Viewer or web broswer.
+ph_with_vg              add a plot output as vector graphics into a
+                        PowerPoint object
+rvg_tracer_off          trace off id colection
+rvg_tracer_on           trace on id colection
+set_attr                set attributes to graphical elements
+xl_add_vg               add a plot output as vector graphics into an
+                        Excel object

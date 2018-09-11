@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: freq_tab</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for freq_tab {socviz}"><tr><td>freq_tab {socviz}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>freq_tab</h2>
+
+<h3>Description</h3>
+
+<p>Generate a tidy n-way frequency table
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+freq_tab(df, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>df</code></td>
+<td>
+<p>tibble or data frame (implicit within pipline)</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>grouping, as with group_by()</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>tidyverse, pipeline, and dplyr-friendly frequency tables
+</p>
+
+
+<h3>Value</h3>
+
+<p>A tibble with the grouping variables, the N ('n') per group, and
+the proportion ('prop') of each group, calculated with respect to the
+outermost grouping variable.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Kieran Healy
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+mtcars %&gt;% freq_tab(vs, gear, carb)
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>socviz</em> version 0.5.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

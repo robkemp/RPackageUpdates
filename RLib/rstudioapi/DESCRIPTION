@@ -2,23 +2,28 @@ Package: rstudioapi
 Title: Safely Access the RStudio API
 Description: Access the RStudio API (if available) and provide informative error
     messages when it's not.
-Version: 0.6
+Version: 0.7
 Authors@R: c(
-    person("Hadley", "Wickham", role = c("aut"), email = "hadley@rstudio.com"),
     person("JJ", "Allaire", role = c("aut", "cre"), email = "jj@rstudio.com"),
-    person("Kevin", "Ushey", role = c("ctb"), email = "kevin@rstudio.com"),
+    person("Hadley", "Wickham", role = c("aut"), email = "hadley@rstudio.com"),
+    person("Kevin", "Ushey", role = c("aut"), email = "kevin@rstudio.com"),
+    person("Gary", "Ritchie", role = c("aut"), email = "gary@rstudio.com"),
     person(family = "RStudio", role = "cph")
     )
 Maintainer: JJ Allaire <jj@rstudio.com>
 License: MIT + file LICENSE
-RoxygenNote: 5.0.1
-Suggests: testthat
+URL: https://github.com/rstudio/rstudioapi
+BugReports: https://github.com/rstudio/rstudioapi/issues
+RoxygenNote: 6.0.1
+Suggests: testthat, knitr, rmarkdown
+VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2016-06-27 03:13:50 UTC; jjallaire
-Author: Hadley Wickham [aut],
-  JJ Allaire [aut, cre],
-  Kevin Ushey [ctb],
+Packaged: 2017-09-07 17:48:48 UTC; kevin
+Author: JJ Allaire [aut, cre],
+  Hadley Wickham [aut],
+  Kevin Ushey [aut],
+  Gary Ritchie [aut],
   RStudio [cph]
 Repository: CRAN
-Date/Publication: 2016-06-27 07:00:05
-Built: R 3.4.0; ; 2017-06-25 12:45:10 UTC; windows
+Date/Publication: 2017-09-07 21:41:46 UTC
+Built: R 3.4.1; ; 2017-12-05 23:46:01 UTC; windows

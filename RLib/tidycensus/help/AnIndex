@@ -1,0 +1,13 @@
+tidycensus-package	tidycensus
+census_api_key	census_api_key
+county_laea	county_laea
+fips_codes	fips_codes
+get_acs	get_acs
+get_decennial	get_decennial
+load_variables	load_variables
+moe_product	moe_product
+moe_prop	moe_prop
+moe_ratio	moe_ratio
+moe_sum	moe_sum
+state_laea	state_laea
+tidycensus	tidycensus

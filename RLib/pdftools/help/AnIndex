@@ -1,0 +1,11 @@
+pdftools	pdftools
+pdf_attachments	pdftools
+pdf_convert	pdf_render_page
+pdf_data	pdftools
+pdf_fonts	pdftools
+pdf_info	pdftools
+pdf_render_page	pdf_render_page
+pdf_text	pdftools
+pdf_toc	pdftools
+poppler_config	pdf_render_page
+render	pdf_render_page

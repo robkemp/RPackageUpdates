@@ -2,33 +2,30 @@
                         exceeding the last day of the new month
 %within%                Tests whether a date or interval falls within
                         an interval
-DateUpdate              Changes the components of a date object
-Deprecated-lubridate    Deprecated function in 'lubridate' package
+DateTimeUpdate          Changes the components of a date object
 Duration-class          Duration class
 Interval-class          Interval class
-Period-class            Period class
-Timespan-class          Timespan class
 am                      Does date time occur in the am or pm?
-as.duration             Change an object to a duration.
-as.interval             Change an object to an 'interval'.
-as.period               Change an object to a period.
+as.duration             Change an object to a duration
+as.interval             Change an object to an 'interval'
+as.period               Change an object to a period
 as_date                 Convert an object to a date or date-time
-date                    Get/set Date component of a date-time.
-date_decimal            Converts a decimal to a date.
-day                     Get/set days component of a date-time.
+date                    Get/set date component of a date-time
+date_decimal            Converts a decimal to a date
+day                     Get/set days component of a date-time
 days_in_month           Get the number of days in the month of a
-                        date-time.
-decimal_date            Converts a date to a decimal of its year.
-dst                     Get Daylight Savings Time indicator of a
-                        date-time.
+                        date-time
+decimal_date            Converts a date to a decimal of its year
+dst                     Get *d*aylight *s*avings *t*ime indicator of a
+                        date-time
 duration                Create a duration object.
 fit_to_timeline         Fit a POSIXlt date-time to the timeline
 force_tz                Replace time zone to create new date-time
-guess_formats           Guess formats from the supplied date-time
-                        character vector.
-hour                    Get/set hours component of a date-time.
+guess_formats           Guess possible date-times formats from a
+                        character vector
+hour                    Get/set hours component of a date-time
 interval                Utilities for creation and manipulation of
-                        'Interval' objects.
+                        'Interval' objects
 is.Date                 Is x a Date object?
 is.POSIXt               Is x a POSIXct or POSIXlt object?
 is.difftime             Is x a difftime object?
@@ -36,42 +33,39 @@ is.instant              Is x a date-time object?
 is.timespan             Is x a length of time?
 lakers                  Lakers 2008-2009 basketball data set
 leap_year               Is a year a leap year?
-lubridate-package       Dates and times made easy with lubridate
+local_time              Get local time from a date-time vector.
 make_datetime           Efficient creation of date-times from numeric
                         representations
 make_difftime           Create a difftime object.
-minute                  Get/set minutes component of a date-time.
-month                   Get/set months component of a date-time.
-ms                      Create a period with the specified hours,
-                        minutes, and seconds
+minute                  Get/set minutes component of a date-time
+month                   Get/set months component of a date-time
+ms                      Parse periods with *h*our, *m*inute, and
+                        *s*econd components
 now                     The current time
 origin                  1970-01-01 UTC
-parse_date_time         Parse character and numeric date-time vectors
-                        with user friendly order formats.
-period                  Create a period object.
+parse_date_time         User friendly date-time parsing functions
+period                  Create or parse period objects
 period_to_seconds       Contrive a period to/from a given number of
-                        seconds.
+                        seconds
 pretty_dates            Computes attractive axis breaks for date-time
                         data
 quarter                 Get the fiscal quarter and semester of a
-                        date-time.
-quick_durations         Quickly create duration objects.
-quick_periods           Quickly create period objects.
+                        date-time
 rollback                Roll back date to last day of previous month
 round_date              Round, floor and ceiling methods for date-time
-                        objects.
-second                  Get/set seconds component of a date-time.
+                        objects
+second                  Get/set seconds component of a date-time
 stamp                   Format dates and times based on human-friendly
-                        templates.
-time_length             Compute the exact length of a time span.
-timespan                Description of time span classes in lubridate.
+                        templates
+time_length             Compute the exact length of a time span
+timespan                Description of time span classes in lubridate
 today                   The current date
-tz                      Get/set time zone component of a date-time.
-week                    Get/set weeks component of a date-time.
+tz                      Get/set time zone component of a date-time
+week                    Get/set weeks component of a date-time
 with_tz                 Get date-time in a different time zone
-year                    Get/set years component of a date-time.
-ymd                     Parse dates according to the order in that
-                        year, month, and day elements appear in the
-                        input vector.
-ymd_hms                 Parse dates that have hours, minutes, or
-                        seconds elements.
+year                    Get/set years component of a date-time
+ymd                     Parse dates with *y*ear, *m*onth, and *d*ay
+                        components
+ymd_hms                 Parse date-times with *y*ear, *m*onth, and
+                        *d*ay, *h*our, *m*inute, and *s*econd
+                        components.

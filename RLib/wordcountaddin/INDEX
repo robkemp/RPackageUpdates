@@ -1,0 +1,9 @@
+readability             Get readability stats for selected text
+                        (excluding code chunks)
+readability_chr         Get readability stats for selected text
+                        (excluding code chunks)
+text_stats              Get text stats for selected text (excluding
+                        code chunks and inline code)
+text_stats_chr          Get text stats for selected text (excluding
+                        code chunks and inline code)
+wordcountaddin          wordcountaddin

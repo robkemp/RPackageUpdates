@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Serialize to Protocol Buffers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for serialize_pb {protolite}"><tr><td>serialize_pb {protolite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Serialize to Protocol Buffers</h2>
+
+<h3>Description</h3>
+
+<p>Serializes R objects to a general purpose protobuf message. It uses the same
+<a href="https://github.com/jeroen/protolite/blob/master/src/rexp.proto">rexp.proto</a>
+descriptor and mapping between R objects and protobuf messages as RHIPE and the
+<a href="../../RProtoBuf/html/serialize_pb.html">RProtoBuf</a> package.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+serialize_pb(object, connection = NULL, skip_native = FALSE)
+
+unserialize_pb(msg)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+<p>an R object to serialize</p>
+</td></tr>
+<tr valign="top"><td><code>connection</code></td>
+<td>
+<p>a connection, file, or <code>NULL</code> for a raw vector</p>
+</td></tr>
+<tr valign="top"><td><code>skip_native</code></td>
+<td>
+<p>do not serialize 'native' (non-data) R objects. Setting to <code>TRUE</code>
+will only serialize <em>data</em> types (numeric, boolean, string, raw, list). The default
+behavior is to fall back on base R <code><a href="../../base/html/serialize.html">serialize</a></code> for non-data objects.</p>
+</td></tr>
+<tr valign="top"><td><code>msg</code></td>
+<td>
+<p>raw vector with the serialized <code>rexp.proto</code> message</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The <code>serialize_pb</code> and <code>unserialize_pb</code> reimplement the identically
+named functions from the <code>RProtoBuf</code> package in pure <code>C++</code>. This makes
+the function faster and simpler, but the output should be identical.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# Serialize and unserialize an object
+buf &lt;- serialize_pb(iris)
+out &lt;- unserialize_pb(buf)
+stopifnot(identical(iris, out))
+
+## Not run:  #Fully compatible with RProtoBuf
+buf &lt;- RProtoBuf::serialize_pb(iris, NULL)
+out &lt;- protolite::unserialize_pb(buf)
+stopifnot(identical(iris, out))
+
+# Other way around
+buf &lt;- protolite::serialize_pb(mtcars, NULL)
+out &lt;- RProtoBuf::unserialize_pb(buf)
+stopifnot(identical(mtcars, out))
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>protolite</em> version 1.8 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,26 @@
+Package: demographyMicrosim
+Title: Microsynthesis and microsimulation worked examples for
+        demography
+Version: 1.0.1
+Authors@R: person("Andrew", "Smith", email = "a.p.smith@leeds.ac.uk", role = c("aut", "cre"))
+Description: Microsynthesis and microsimulation worked examples accompanying the article 
+  "Microsimulation for Demography" to be published in the journal "Australian Population Studies". 
+Depends: R (>= 3.3.3), data.table, sf, plotrix, leaflet
+Imports: humanleague (== 1.0.1),
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Author: Andrew Smith [aut, cre]
+Maintainer: Andrew Smith <a.p.smith@leeds.ac.uk>
+Built: R 3.4.1; ; 2018-04-16 21:23:54 UTC; windows
+RemoteType: github
+RemoteHost: https://api.github.com
+RemoteRepo: demographyMicrosim
+RemoteUsername: virgesmith
+RemoteRef: master
+RemoteSha: 6dba326f619636621006ad11d08c3ac77a45954a
+GithubRepo: demographyMicrosim
+GithubUsername: virgesmith
+GithubRef: master
+GithubSHA1: 6dba326f619636621006ad11d08c3ac77a45954a

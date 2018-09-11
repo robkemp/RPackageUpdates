@@ -1,3 +1,61 @@
+git2r 0.21.0
+------------
+
+* Added methods 'odb_blobs' and 'odb_objects' with missing repository
+  signature. Internally, they use 'getwd' and 'discover_repository' to
+  open a repository.
+
+BUG FIXES
+
+* The bundled libgit2 source code has been reverted to libgit2 v0.26.0
+  (15e1193) from 14 June 2017 (same as in git2r v0.19.0) to fix memory
+  alignment errors.
+
+git2r 0.20.0
+------------
+
+IMPROVEMENTS
+
+* Updated the bundled libgit2 source code to commit (fa8cf14) from 16
+  December 2017.
+
+* Improvements to the build configuration script.
+
+BUG FIXES
+
+* Fixed the internal callback for remote host authentication from
+  hanging indefinitely when querying an ssh-agent for
+  credentials. Now, the callback signals an error instead of trying
+  again if the authentication failed the first time.
+
+git2r 0.19.0
+------------
+
+IMPROVEMENTS
+
+* Updated the bundled libgit2 source code to commit (15e1193)
+  (v0.26.0) from 14 June 2017.
+
+* Added 'checkout' argument to 'clone()'. Allows to control whether
+  checkout of HEAD is performed after the clone is complete. Setting
+  'checkout=FALSE' has similar effect as the git command line option
+  '--no-checkout'. Andrzej K. Oles in #282.
+
+BUG FIXES
+
+* Fixed memory protection errors in the git2r C source code reported
+  by the 'rchk' tool.
+
+* Added missing calls to 'R_forceSymbols' and 'R_useDynamicSymbols' in
+  the C init function.
+
+* Enable argument 'all' to commit multiple modified (or deleted)
+  files. John Blischak in #283
+
+* Changed the configure script to determine the architecture of the
+  machine earlier in order to fix an unsupported architecture error
+  encountered on CentOS (#268, #288).
+
 git2r 0.18.0
 ------------
 

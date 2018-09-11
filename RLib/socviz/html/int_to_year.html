@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: int_to_year</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for int_to_year {socviz}"><tr><td>int_to_year {socviz}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>int_to_year</h2>
+
+<h3>Description</h3>
+
+<p>Convert an integer to a date.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+int_to_year(x, month = "01", day = "01")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>An integer or vector integers.</p>
+</td></tr>
+<tr valign="top"><td><code>month</code></td>
+<td>
+<p>The month to be added to the year. Months 1 to 9
+should be given as 01, 02, etc.</p>
+</td></tr>
+<tr valign="top"><td><code>day</code></td>
+<td>
+<p>The day to be added to the year. Days should be given
+as 01 or 02, etc, and not 1 or 2, etc.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A vector of dates where the input integer forms the year
+component. The day and month components added will by default
+be today's day and month. For input, only years 0:9999 are
+accepted.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Kieran Healy
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+int_to_year(1960)
+class(int_to_year(1960))
+int_to_year(1960:1965)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>socviz</em> version 0.5.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

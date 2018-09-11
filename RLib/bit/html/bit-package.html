@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: A class for vectors of 1-bit booleans</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for bit-package {bit}"><tr><td>bit-package {bit}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+A class for vectors of 1-bit booleans
+</h2>
+
+<h3>Description</h3>
+
+<p>Package 'bit' provides bitmapped vectors of booleans (no NAs),
+coercion from and to logicals, integers and integer subscripts;
+fast boolean operators and fast summary statistics. <br />
+</p>
+<p>With bit vectors you can store true binary booleans {FALSE,TRUE} at the expense
+of 1 bit only, on a 32 bit architecture this means factor 32 less RAM and
+factor 32 more speed on boolean operations. With this speed gain it even
+pays-off to convert to bit in order to avoid a single boolean operation on
+logicals or a single set operation on (longer) integer subscripts, the pay-off
+is dramatic when such components are used more than once. <br />
+</p>
+<p>Reading from and writing to bit is approximately as fast as accessing standard
+logicals - mostly due to R's time for memory allocation. The package allows to
+work with pre-allocated memory for return values by calling .Call() directly:
+when evaluating the speed of C-access with pre-allocated vector memory, coping
+from bit to logical requires only 70% of the time for copying from logical to
+logical; and copying from logical to bit comes at a performance penalty of 150%. <br />
+</p>
+<p>Since bit objects cannot be used as subsripts in R, a second class 'bitwhich'
+allows to store selections as efficiently as possible with standard R types.
+This is usefull either to represent parts of bit objects or to represent
+very asymetric selections.  <br />
+</p>
+<p>Class 'ri' (range index) allows to select ranges of positions for  chunked processing:
+all three classes 'bit', 'bitwhich' and 'ri' can be used for subsetting 'ff' objects (ff-2.1.0 and higher).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+ bit(length)
+ ## S3 method for class 'bit'
+print(x, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>length</code></td>
+<td>
+<p> length of vector in bits </p>
+</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p> a bit vector </p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p> further arguments to print </p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+   Package: </td><td style="text-align: left;"> bit</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+   Type: </td><td style="text-align: left;"> Package</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+   Version: </td><td style="text-align: left;"> 1.1.0</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+   Date: </td><td style="text-align: left;"> 2012-06-05</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+   License: </td><td style="text-align: left;"> GPL-2</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+   LazyLoad: </td><td style="text-align: left;"> yes</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+   Encoding: </td><td style="text-align: left;"> latin1</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+<p>Index:
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: right;">
+   <b>bit function</b>           </td><td style="text-align: right;"> <b>bitwhich function</b>          </td><td style="text-align: right;"> <b>ri function</b>                </td><td style="text-align: right;"> <b>see also</b>          </td><td style="text-align: left;"> <b>description</b> </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code>.BITS</code>                  </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/environment.html">globalenv</a></code>   </td><td style="text-align: left;"> variable holding number of bits on this system </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="bit_init.html">bit_init</a></code>        </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/base-defunct.html">.First.lib</a></code>  </td><td style="text-align: left;"> initially allocate bit-masks (done in .First.lib) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="bit_init.html">bit_done</a></code>        </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/ns-hooks.html">.Last.lib</a></code>   </td><td style="text-align: left;"> finally de-allocate bit-masks (done in .Last.lib) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="bit-package.html">bit</a></code>             </td><td style="text-align: right;"> <code><a href="bitwhich.html">bitwhich</a></code>            </td><td style="text-align: right;"> <code><a href="ri.html">ri</a></code>                  </td><td style="text-align: right;"> <code><a href="../../base/html/logical.html">logical</a></code>     </td><td style="text-align: left;"> create bit object </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="bit-package.html">print.bit</a></code>       </td><td style="text-align: right;"> <code><a href="bitwhich.html">print.bitwhich</a></code>      </td><td style="text-align: right;"> <code><a href="ri.html">print.ri</a></code>            </td><td style="text-align: right;"> <code><a href="../../base/html/print.html">print</a></code>       </td><td style="text-align: left;"> print bit vector </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="length.bit.html">length.bit</a></code>      </td><td style="text-align: right;"> <code><a href="length.bit.html">length.bitwhich</a></code>     </td><td style="text-align: right;"> <code><a href="length.bit.html">length.ri</a></code>           </td><td style="text-align: right;"> <code><a href="../../base/html/length.html">length</a></code>      </td><td style="text-align: left;"> get length of bit vector </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="length.bit.html">length&lt;-.bit</a></code>    </td><td style="text-align: right;"> <code><a href="length.bit.html">length&lt;-.bitwhich</a></code>   </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/length.html">length&lt;-</a></code>    </td><td style="text-align: left;"> change length of bit vector </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="c.bit.html">c.bit</a></code>           </td><td style="text-align: right;"> <code><a href="c.bit.html">c.bitwhich</a></code>          </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/c.html">c</a></code>           </td><td style="text-align: left;"> concatenate bit vectors </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="is.bit.html">is.bit</a></code>          </td><td style="text-align: right;"> <code><a href="is.bit.html">is.bitwhich</a></code>         </td><td style="text-align: right;"> <code><a href="is.bit.html">is.ri</a></code>               </td><td style="text-align: right;"> <code><a href="../../base/html/logical.html">is.logical</a></code>  </td><td style="text-align: left;"> test for bit class </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.bit.html">as.bit</a></code>          </td><td style="text-align: right;"> <code><a href="as.bitwhich.html">as.bitwhich</a></code>         </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/logical.html">as.logical</a></code>  </td><td style="text-align: left;"> generically coerce to bit or bitwhich </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.bit.html">as.bit.logical</a></code>  </td><td style="text-align: right;"> <code><a href="as.bitwhich.html">as.bitwhich.logical</a></code> </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/logical.html">logical</a></code>     </td><td style="text-align: left;"> coerce logical to bit vector (FALSE =&gt; FALSE, c(NA, TRUE) =&gt; TRUE) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.bit.html">as.bit.integer</a></code>  </td><td style="text-align: right;"> <code><a href="as.bitwhich.html">as.bitwhich.integer</a></code> </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/integer.html">integer</a></code>     </td><td style="text-align: left;"> coerce integer to bit vector (0 =&gt; FALSE, ELSE =&gt; TRUE) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.bit.html">as.bit.double</a></code>   </td><td style="text-align: right;"> <code><a href="as.bitwhich.html">as.bitwhich.double</a></code>  </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/double.html">double</a></code>      </td><td style="text-align: left;"> coerce double to bit vector (0 =&gt; FALSE, ELSE =&gt; TRUE) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.logical.bit.html">as.double.bit</a></code>   </td><td style="text-align: right;"> <code><a href="as.logical.bit.html">as.double.bitwhich</a></code>  </td><td style="text-align: right;"> <code><a href="as.logical.bit.html">as.double.ri</a></code>        </td><td style="text-align: right;"> <code><a href="../../base/html/double.html">as.double</a></code>   </td><td style="text-align: left;"> coerce bit vector to double (0/1) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.logical.bit.html">as.integer.bit</a></code>  </td><td style="text-align: right;"> <code><a href="as.logical.bit.html">as.integer.bitwhich</a></code> </td><td style="text-align: right;"> <code><a href="as.logical.bit.html">as.integer.ri</a></code>       </td><td style="text-align: right;"> <code><a href="../../base/html/integer.html">as.integer</a></code>  </td><td style="text-align: left;"> coerce bit vector to integer (0L/1L) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.logical.bit.html">as.logical.bit</a></code>  </td><td style="text-align: right;"> <code><a href="as.logical.bit.html">as.logical.bitwhich</a></code> </td><td style="text-align: right;"> <code><a href="as.logical.bit.html">as.logical.ri</a></code>       </td><td style="text-align: right;"> <code><a href="../../base/html/logical.html">as.logical</a></code>  </td><td style="text-align: left;"> coerce bit vector to logical (FALSE/TRUE) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.which.html">as.which.bit</a></code>    </td><td style="text-align: right;"> <code><a href="as.which.html">as.which.bitwhich</a></code>   </td><td style="text-align: right;"> <code><a href="as.which.html">as.which.ri</a></code>         </td><td style="text-align: right;"> <code><a href="as.which.html">as.which</a></code>    </td><td style="text-align: left;"> coerce bit vector to positive integer subscripts</td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.bit.html">as.bit.which</a></code>    </td><td style="text-align: right;"> <code><a href="as.bitwhich.html">as.bitwhich.which</a></code>   </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="bitwhich.html">bitwhich</a></code>    </td><td style="text-align: left;"> coerce integer subscripts to bit vector </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.bit.html">as.bit.bitwhich</a></code> </td><td style="text-align: right;"> <code><a href="as.bitwhich.html">as.bitwhich.bitwhich</a></code></td><td style="text-align: right;">                                   </td><td style="text-align: right;">                           </td><td style="text-align: left;"> coerce from bitwhich  </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.bit.html">as.bit.bit</a></code>      </td><td style="text-align: right;"> <code><a href="as.bitwhich.html">as.bitwhich.bit</a></code>     </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/UseMethod.html">UseMethod</a></code>   </td><td style="text-align: left;"> coerce from bit </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="as.bit.html">as.bit.ri</a></code>       </td><td style="text-align: right;"> <code><a href="as.bitwhich.html">as.bitwhich.ri</a></code>      </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                           </td><td style="text-align: left;"> coerce from range index </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="../../ff/html/as.bit.ff.html">as.bit.ff</a></code>   </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../ff/html/ff.html">ff</a></code>      </td><td style="text-align: left;"> coerce ff boolean to bit vector </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="../../ff/html/as.ff.bit.html">as.ff.bit</a></code>   </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../ff/html/as.ff.html">as.ff</a></code>   </td><td style="text-align: left;"> coerce bit vector to ff boolean </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="../../ff/html/as.hi.bit.html">as.hi.bit</a></code>   </td><td style="text-align: right;"> <code><a href="../../ff/html/as.hi.bitwhich.html">as.hi.bitwhich</a></code>  </td><td style="text-align: right;"> <code><a href="../../ff/html/as.hi.ri.html">as.hi.ri</a></code>        </td><td style="text-align: right;"> <code><a href="../../ff/html/as.hi.html">as.hi</a></code>   </td><td style="text-align: left;"> coerce to hybrid index (requires package ff) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="../../ff/html/as.bit.hi.html">as.bit.hi</a></code>   </td><td style="text-align: right;"> <code><a href="../../ff/html/as.bitwhich.hi.html">as.bitwhich.hi</a></code>  </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                           </td><td style="text-align: left;"> coerce from hybrid index (requires package ff) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="Extract.html">[[.bit</a></code>          </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/Extract.html">[[</a></code>          </td><td style="text-align: left;"> get single bit (index checked) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="Extract.html">[[&lt;-.bit</a></code>        </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/Extract.html">[[&lt;-</a></code>        </td><td style="text-align: left;"> set single bit (index checked) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="Extract.html">[.bit</a></code>           </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/Extract.html">[</a></code>           </td><td style="text-align: left;"> get vector of bits (unchecked) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="Extract.html">[&lt;-.bit</a></code>         </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/Extract.html">[&lt;-</a></code>         </td><td style="text-align: left;"> set vector of bits (unchecked) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="LogicBit.html">!.bit</a></code>           </td><td style="text-align: right;"> <code><a href="LogicBit.html">!.bitwhich</a></code>          </td><td style="text-align: right;"> (works as second arg in           </td><td style="text-align: right;"> <code><a href="../../base/html/Logic.html">!</a></code>           </td><td style="text-align: left;"> boolean NOT on bit </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="LogicBit.html">&amp;.bit</a></code>           </td><td style="text-align: right;"> <code><a href="LogicBit.html">&amp;.bitwhich</a></code>          </td><td style="text-align: right;">  bit and bitwhich ops)            </td><td style="text-align: right;"> <code><a href="../../base/html/Logic.html">&amp;</a></code>           </td><td style="text-align: left;"> boolean AND on bit </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="LogicBit.html">|.bit</a></code>           </td><td style="text-align: right;"> <code><a href="LogicBit.html">|.bitwhich</a></code>          </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/Logic.html">|</a></code>           </td><td style="text-align: left;"> boolean OR on bit </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="LogicBit.html">xor.bit</a></code>         </td><td style="text-align: right;"> <code><a href="LogicBit.html">xor.bitwhich</a></code>        </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="LogicBit.html">xor</a></code>         </td><td style="text-align: left;"> boolean XOR on bit </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="LogicBit.html">!=.bit</a></code>          </td><td style="text-align: right;"> <code><a href="LogicBit.html">!=.bitwhich</a></code>         </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/Comparison.html">!=</a></code>          </td><td style="text-align: left;"> boolean unequality (same as XOR) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="LogicBit.html">==.bit</a></code>          </td><td style="text-align: right;"> <code><a href="LogicBit.html">==.bitwhich</a></code>         </td><td style="text-align: right;">                                   </td><td style="text-align: right;"> <code><a href="../../base/html/Comparison.html">==</a></code>          </td><td style="text-align: left;"> boolean equality </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="Summary.html">all.bit</a></code>         </td><td style="text-align: right;"> <code><a href="Summary.html">all.bitwhich</a></code>        </td><td style="text-align: right;"> <code><a href="Summary.html">all.ri</a></code>              </td><td style="text-align: right;"> <code><a href="../../base/html/all.html">all</a></code>         </td><td style="text-align: left;"> aggregate AND </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="Summary.html">any.bit</a></code>         </td><td style="text-align: right;"> <code><a href="Summary.html">any.bitwhich</a></code>        </td><td style="text-align: right;"> <code><a href="Summary.html">any.ri</a></code>              </td><td style="text-align: right;"> <code><a href="../../base/html/any.html">any</a></code>         </td><td style="text-align: left;"> aggregate OR </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="Summary.html">min.bit</a></code>         </td><td style="text-align: right;"> <code><a href="Summary.html">min.bitwhich</a></code>        </td><td style="text-align: right;"> <code><a href="Summary.html">min.ri</a></code>              </td><td style="text-align: right;"> <code><a href="../../base/html/Extremes.html">min</a></code>         </td><td style="text-align: left;"> aggregate MIN (first TRUE position) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="Summary.html">max.bit</a></code>         </td><td style="text-align: right;"> <code><a href="Summary.html">max.bitwhich</a></code>        </td><td style="text-align: right;"> <code><a href="Summary.html">max.ri</a></code>              </td><td style="text-align: right;"> <code><a href="../../base/html/Extremes.html">max</a></code>         </td><td style="text-align: left;"> aggregate MAX (last TRUE position) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="Summary.html">range.bit</a></code>       </td><td style="text-align: right;"> <code><a href="Summary.html">range.bitwhich</a></code>      </td><td style="text-align: right;"> <code><a href="Summary.html">range.ri</a></code>            </td><td style="text-align: right;"> <code><a href="../../base/html/range.html">range</a></code>       </td><td style="text-align: left;"> aggregate [MIN,MAX] </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="Summary.html">sum.bit</a></code>         </td><td style="text-align: right;"> <code><a href="Summary.html">sum.bitwhich</a></code>        </td><td style="text-align: right;"> <code><a href="Summary.html">sum.ri</a></code>              </td><td style="text-align: right;"> <code><a href="../../base/html/sum.html">sum</a></code>         </td><td style="text-align: left;"> aggregate SUM (count of TRUE) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="Summary.html">summary.bit</a></code>     </td><td style="text-align: right;"> <code><a href="Summary.html">summary.bitwhich</a></code>    </td><td style="text-align: right;"> <code><a href="Summary.html">summary.ri</a></code>          </td><td style="text-align: right;"> <code><a href="../../base/html/tabulate.html">tabulate</a></code>    </td><td style="text-align: left;"> aggregate c(nFALSE, nTRUE, minRange, maxRange) </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+   <code><a href="regtest.bit.html">regtest.bit</a></code>     </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                                   </td><td style="text-align: right;">                           </td><td style="text-align: left;"> regressiontests for the package </td>
+</tr>
+<tr>
+ <td style="text-align: right;">
+ </td>
+</tr>
+
+</table>
+
+
+
+<h3>Value</h3>
+
+<p><code>bit</code> returns a vector of integer sufficiently long to store 'length' bits
+(but not longer) with an attribute 'n' and class 'bit'
+</p>
+
+
+<h3>Note</h3>
+
+<p>Currently operations on bit objects have some overhead from R-calls. Do expect speed gains for vectors
+of length ~ 10000 or longer. <br />
+Since this package was created for high performance purposes, only positive integer subscripts are allowed:
+All R-functions behave as expected - i.e. they do not change their arguments and create new return values.
+If you want to save the time for return value memory allocation, you must use <code><a href="../../base/html/CallExternal.html">.Call</a></code> directly
+(see the dontrun example in <code><a href="Summary.html">sum.bit</a></code>).
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Jens Oehlschlägel &lt;Jens.Oehlschlaegel@truecluster.com&gt;
+</p>
+<p>Maintainer: Jens Oehlschlägel &lt;Jens.Oehlschlaegel@truecluster.com&gt;
+</p>
+
+
+<h3>See Also</h3>
+
+ <p><code><a href="../../base/html/logical.html">logical</a></code> in base R and <code><a href="../../ff/html/vmode.html">vmode</a></code> in package 'ff' </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  x &lt;- bit(12)                                 # create bit vector
+  x                                            # autoprint bit vector
+  length(x) &lt;- 16                              # change length
+  length(x)                                    # get length
+  x[[2]]                                       # extract single element
+  x[[2]] &lt;- TRUE                               # replace single element
+  x[1:2]                                       # extract parts of bit vector
+  x[1:2] &lt;- TRUE                               # replace parts of bit vector
+  as.which(x)                                  # coerce bit to subscripts
+  x &lt;- as.bit.which(3:4, 4)                    # coerce subscripts to bit
+  as.logical(x)                                # coerce bit to logical
+  y &lt;- as.bit(c(FALSE, TRUE, FALSE, TRUE))     # coerce logical to bit
+  is.bit(y)                                    # test for bit
+  !x                                           # boolean NOT
+  x &amp; y                                        # boolean AND
+  x | y                                        # boolean OR
+  xor(x, y)                                    # boolean Exclusive OR
+  x != y                                       # boolean unequality (same as xor)
+  x == y                                       # boolean equality
+  all(x)                                       # aggregate AND
+  any(x)                                       # aggregate OR
+  min(x)                                       # aggregate MIN (integer version of ALL)
+  max(x)                                       # aggregate MAX (integer version of ANY)
+  range(x)                                     # aggregate [MIN,MAX]
+  sum(x)                                       # aggregate SUM (count of TRUE)
+  summary(x)                                   # aggregate count of FALSE and TRUE
+
+  ## Not run: 
+    message("\nEven for a single boolean operation transforming logical to bit pays off")
+    n &lt;- 10000000
+    x &lt;- sample(c(FALSE, TRUE), n, TRUE)
+    y &lt;- sample(c(FALSE, TRUE), n, TRUE)
+    system.time(x|y)
+    system.time({
+       x &lt;- as.bit(x)
+       y &lt;- as.bit(y)
+    })
+    system.time( z &lt;- x | y )
+    system.time( as.logical(z) )
+    message("Even more so if multiple operations are needed :-)")
+
+    message("\nEven for a single set operation transforming subscripts to bit pays off\n")
+    n &lt;- 10000000
+    x &lt;- sample(n, n/2)
+    y &lt;- sample(n, n/2)
+    system.time( union(x,y) )
+    system.time({
+     x &lt;- as.bit.which(x, n)
+     y &lt;- as.bit.which(y, n)
+    })
+    system.time( as.which.bit( x | y ) )
+    message("Even more so if multiple operations are needed :-)")
+
+    message("\nSome timings WITH memory allocation")
+    n &lt;- 2000000
+    l &lt;- sample(c(FALSE, TRUE), n, TRUE)
+    # copy logical to logical
+    system.time(for(i in 1:100){  # 0.0112
+       l2 &lt;- l
+       l2[1] &lt;- TRUE   # force new memory allocation (copy on modify)
+       rm(l2)
+    })/100
+    # copy logical to bit
+    system.time(for(i in 1:100){  # 0.0123
+       b &lt;- as.bit(l)
+       rm(b)
+    })/100
+    # copy bit to logical
+    b &lt;- as.bit(l)
+    system.time(for(i in 1:100){  # 0.009
+       l2 &lt;- as.logical(b)
+       rm(l2)
+    })/100
+    # copy bit to bit
+    b &lt;- as.bit(l)
+    system.time(for(i in 1:100){  # 0.009
+       b2 &lt;- b
+       b2[1] &lt;- TRUE   # force new memory allocation (copy on modify)
+       rm(b2)
+    })/100
+
+
+    l2 &lt;- l
+    # replace logical by TRUE
+    system.time(for(i in 1:100){
+       l[] &lt;- TRUE
+    })/100
+    # replace bit by TRUE (NOTE that we recycle the assignment  
+		 # value on R side == memory allocation and assignment first)
+    system.time(for(i in 1:100){
+       b[] &lt;- TRUE
+    })/100
+    # THUS the following is faster
+    system.time(for(i in 1:100){
+       b &lt;- !bit(n)
+    })/100
+
+    # replace logical by logical
+    system.time(for(i in 1:100){
+       l[] &lt;- l2
+    })/100
+    # replace bit by logical
+    system.time(for(i in 1:100){
+       b[] &lt;- l2
+    })/100
+    # extract logical
+    system.time(for(i in 1:100){
+       l2[]
+    })/100
+    # extract bit
+    system.time(for(i in 1:100){
+       b[]
+    })/100
+
+    message("\nSome timings WITHOUT memory allocation (Serge, that's for you)")
+    n &lt;- 2000000L
+    l &lt;- sample(c(FALSE, TRUE), n, TRUE)
+    b &lt;- as.bit(l)
+    # read from logical, write to logical
+    l2 &lt;- logical(n)
+    system.time(for(i in 1:100).Call("R_filter_getset", l, l2, PACKAGE="bit")) / 100
+    # read from bit, write to logical
+    l2 &lt;- logical(n)
+    system.time(for(i in 1:100).Call("R_bit_get", b, l2, c(1L, n), PACKAGE="bit")) / 100
+    # read from logical, write to bit
+    system.time(for(i in 1:100).Call("R_bit_set", b, l2, c(1L, n), PACKAGE="bit")) / 100
+
+  
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>bit</em> version 1.1-14 <a href="00Index.html">Index</a>]</div>
+</body></html>

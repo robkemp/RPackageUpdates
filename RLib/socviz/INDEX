@@ -1,0 +1,47 @@
+%nin%                   %nin%
+asasec                  American Sociological Association Section
+                        Membership
+bad_date                Dates in character form
+bommer                  Monthly Births in the US, and England & Wales
+center_df               center_df
+color_comp              Plot a table of color hex values as a table of
+                        colors
+color_pal               Draw a palette of colors
+county_data             Census Data on US Counties
+county_map              US County map file
+edu                     Years of school completed by people 25 years
+                        and over in the US.
+election                US Presidential Election 2016, State-level
+                        results
+elections_historic      US Presidential Election vote shares
+fredts                  Monetary Base and S&P 500 series
+freq_tab                freq_tab
+gss_lon                 General Social Survey data, 1972-2016
+gss_sib                 General Social Survey data, 1972-2016
+gss_sm                  General Social Survey data, 2016
+int_to_year             int_to_year
+is_html_output          is_html_output
+is_latex_output         is_latex_output
+lawschools              US Law School Enrollments 1963-2015
+lay_out                 lay_out
+margin_codenote         margin_codenote
+margin_textnote         margin_textnote
+marginnote_html         marginnote_html
+maunaloa                Mauna Loa Atmospheric CO2 Concentration
+multiplot               multiplot
+oecd_le                 Life Expectancy in the OECD, 1960-2015.
+oecd_sum                Life Expectancy in the OECD, 1960-2015
+opiates                 Opiate-Related Deaths in the United States,
+                        1999-2014
+organdata               Organ donation in the OECD
+out_format              out_format
+pandoc_to               pandoc_to
+prefix_replace          prefix_replace
+prefix_strip            prefix_strip
+preg                    An untidy table of data
+preg2                   A wider table of untidy data
+round_df                round_df
+studebt                 Student debt data
+titanic                 A table of survival rates from the Titanic
+tw_tab                  tw_tab
+yahoo                   Yahoo Revenue and Employees

@@ -1,0 +1,39 @@
+Package: wordcountaddin
+Type: Package
+Title: Word counts and readability statistics in R markdown documents
+Version: 0.2.0
+Authors@R: c(person("Ben", "Marwick", 
+                  email = "benmarwick@gmail.com",
+                  role = c("aut", "cre")),
+            person("JooYoung", "Seo", 
+                  email = "sjysky@gmail.com", 
+                  role = "ctb"),
+            person("Henrik", "Bengtsson", 
+                  email = "henrik.bengtsson@gmail.com", 
+                  role = "ctb"))
+Maintainer: Ben Marwick <benmarwick@gmail.com>
+Description: This packages is an addin for RStudio that will count the words
+    and characters in a plain text document. It is designed for use with R markdown
+    documents and will exclude YAML header content, code chunks and inline code from
+    the counts. It also computes readability statistics so you can get an idea of
+    how easy or difficult your text is to read.
+License: MIT + file LICENSE
+LazyData: TRUE
+Imports: knitr, purrr, stringi, koRpus, shiny (>= 0.13), miniUI (>=
+        0.1.1), rstudioapi (>= 0.5)
+RoxygenNote: 6.0.1
+Suggests: testthat, covr
+Author: Ben Marwick [aut, cre],
+  JooYoung Seo [ctb],
+  Henrik Bengtsson [ctb]
+Built: R 3.4.1; ; 2017-12-05 23:46:59 UTC; windows
+RemoteType: github
+RemoteHost: https://api.github.com
+RemoteRepo: wordcountaddin
+RemoteUsername: benmarwick
+RemoteRef: master
+RemoteSha: cbe935973723220d7545f0c3b3f6be6d8d234146
+GithubRepo: wordcountaddin
+GithubUsername: benmarwick
+GithubRef: master
+GithubSHA1: cbe935973723220d7545f0c3b3f6be6d8d234146

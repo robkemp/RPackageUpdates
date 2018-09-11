@@ -5,6 +5,7 @@ clean_site	render_site
 compile_notebook	compile_notebook
 default_output_format	default_output_format
 default_site	render_site
+default_site_generator	render_site
 draft	draft
 find_external_resources	find_external_resources
 from_rmarkdown	rmarkdown_format
@@ -37,15 +38,19 @@ knitr_options_html	knitr_options_html
 knitr_options_pdf	knitr_options_pdf
 knit_params_ask	knit_params_ask
 latex_dependency	latex_dependency
+latex_document	pdf_document
+latex_fragment	pdf_document
 md_document	md_document
 metadata	metadata
 navbar_html	navbar_html
 navbar_links_html	navbar_html
 odt_document	odt_document
 output_format	output_format
+output_metadata	output_metadata
 paged_table	paged_table
 pandoc_args	pandoc_args
 pandoc_available	pandoc_available
+pandoc_citeproc_convert	pandoc_citeproc_convert
 pandoc_convert	pandoc_convert
 pandoc_highlight_args	pandoc_args
 pandoc_include_args	pandoc_args
@@ -59,6 +64,7 @@ pandoc_variable_arg	pandoc_args
 pandoc_version	pandoc_available
 parse_html_notebook	parse_html_notebook
 pdf_document	pdf_document
+powerpoint_presentation	powerpoint_presentation
 relative_to	relative_to
 render	render
 render_delayed	render_delayed
@@ -75,6 +81,7 @@ shiny_prerendered_clean	shiny_prerendered_clean
 shiny_prerendered_server_start_code	shiny_prerendered_server_start_code
 site_config	render_site
 site_generator	render_site
+site_resources	site_resources
 slidy_presentation	slidy_presentation
 tufte_handout	tufte_handout
 word_document	word_document

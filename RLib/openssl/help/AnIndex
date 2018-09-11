@@ -64,4 +64,5 @@ write_der	write_pem
 write_p12	pkcs12
 write_p7b	pkcs12
 write_pem	write_pem
+write_pkcs1	write_pem
 write_ssh	write_pem

@@ -164,8 +164,10 @@ note_remove	note_remove-methods
 note_remove,git_note-method	note_remove-methods
 odb_blobs	odb_blobs-methods
 odb_blobs,git_repository-method	odb_blobs-methods
+odb_blobs,missing-method	odb_blobs-methods
 odb_objects	odb_objects-methods
 odb_objects,git_repository-method	odb_objects-methods
+odb_objects,missing-method	odb_objects-methods
 parents	parents-methods
 parents,git_commit-method	parents-methods
 plot	plot-methods

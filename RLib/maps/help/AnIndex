@@ -9,6 +9,7 @@ closed.polygon	polygon
 county	county
 county.fips	county.fips
 countyMapEnv	county
+Deprecated	maps-deprecated
 france	france
 franceMapEnv	france
 gp.smooth	internal2
@@ -48,6 +49,7 @@ map.wrap.poly	internal2
 mapgetg	internal
 mapgetl	internal
 mapname	internal
+maps-deprecated	maps-deprecated
 mapthin	internal
 maptype	internal
 match.map	match.map

@@ -1,8 +1,10 @@
 code_coverage           Calculate coverage of code directly
 codecov                 Run covr on a package and upload the result to
                         codecov.io
+coverage_to_list        Convert a coverage dataset to a list
 coveralls               Run covr on a package and upload the result to
                         coveralls
+covr-package            covr: Test coverage for packages
 exclusions              Exclusions
 file_coverage           Calculate test coverage for sets of files
 function_coverage       Calculate test coverage for a specific

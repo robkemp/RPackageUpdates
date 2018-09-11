@@ -1,0 +1,20 @@
+belt                    Data on driver injury and seat belt use
+bipf                    Bayesian Iterative Proportional Fitting (BIPF)
+crimes                  U.S. National Crime Survey
+da.cat                  Data Augmentation algorithm for incomplete
+                        categorical data
+dabipf                  Data augmentation-Bayesian IPF algorithm for
+                        incomplete categorical data
+ecm.cat                 ECM algorithm for incomplete categorical data
+em.cat                  EM algorithm for incomplete categorical data
+imp.cat                 Impute missing categorical data
+ipf                     Iterative Proportional Fitting
+logpost.cat             Log-posterior density for incomplete
+                        categorical data
+mda.cat                 Monotone Data Augmentation algorithm for
+                        incomplete categorical data
+mi.inference            Multiple imputation inference
+older                   Older people dataset
+prelim.cat              Preliminary manipulations on incomplete
+                        categorical data
+rngseed                 Initialize random number generator seed

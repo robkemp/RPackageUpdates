@@ -2,9 +2,9 @@ Package: openssl
 Type: Package
 Title: Toolkit for Encryption, Signatures and Certificates Based on
         OpenSSL
-Version: 0.9.6
-Authors@R: c(
-    person("Jeroen", "Ooms", , "jeroen.ooms@stat.ucla.edu", role = c("cre", "aut")),
+Version: 1.0.1
+Authors@R: c(person("Jeroen", "Ooms", role = c("aut", "cre"), email = "jeroen@berkeley.edu",
+    comment = c(ORCID = "0000-0002-4035-0289")),
     person("Oliver", "Keyes", role = "ctb"))
 Description: Bindings to OpenSSL libssl and libcrypto, plus custom SSH pubkey parsers.
     Supports RSA, DSA and EC curves P-256, P-384 and P-521. Cryptographic signatures
@@ -16,18 +16,18 @@ Description: Bindings to OpenSSL libssl and libcrypto, plus custom SSH pubkey pa
     random number generator, and 'bignum' math methods for manually performing
     crypto calculations on large multibyte integers.
 License: MIT + file LICENSE
-URL: https://github.com/jeroenooms/openssl#readme
-BugReports: https://github.com/jeroenooms/openssl/issues
+URL: https://github.com/jeroen/openssl#readme
+BugReports: https://github.com/jeroen/openssl/issues
 SystemRequirements: OpenSSL >= 1.0.1
 VignetteBuilder: knitr
 Suggests: testthat, digest, knitr, rmarkdown, jsonlite, jose
-RoxygenNote: 5.0.1.9000
+RoxygenNote: 6.0.1.9000
 NeedsCompilation: yes
-Packaged: 2016-12-30 21:26:04 UTC; jeroen
-Author: Jeroen Ooms [cre, aut],
+Packaged: 2018-03-03 10:51:56 UTC; jeroen
+Author: Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),
   Oliver Keyes [ctb]
-Maintainer: Jeroen Ooms <jeroen.ooms@stat.ucla.edu>
+Maintainer: Jeroen Ooms <jeroen@berkeley.edu>
 Repository: CRAN
-Date/Publication: 2016-12-31 01:41:12
-Built: R 3.4.1; x86_64-w64-mingw32; 2017-08-23 21:25:23 UTC; windows
+Date/Publication: 2018-03-03 14:03:23 UTC
+Built: R 3.5.0; x86_64-w64-mingw32; 2018-05-29 16:30:36 UTC; windows
 Archs: i386, x64

@@ -5,7 +5,10 @@ OdbcDriver              Odbc Driver Methods
 OdbcResult              Odbc Result Methods
 dbConnect,OdbcDriver-method
                         Connect to a ODBC compatible database
-dbUnQuoteIdentifier     Un-Quote identifiers
+dbListFields,OdbcConnection,character-method
+                        List field names of a remote table
+dbListTables,OdbcConnection-method
+                        List remote tables
 odbc                    Odbc driver
 odbc-tables             Convenience functions for reading/writing DBMS
                         tables

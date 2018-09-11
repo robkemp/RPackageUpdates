@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Geobuf</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for geobuf {protolite}"><tr><td>geobuf {protolite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Geobuf</h2>
+
+<h3>Description</h3>
+
+<p>The <a href="https://github.com/mapbox/geobuf">geobuf</a> format is an optimized
+binary format for storing <code>geojson</code> data with protocol buffers. These
+functions are compatible with the <code>geobuf2json</code> and <code>json2geobuf</code>
+utilities from the geobuf <a href="https://www.npmjs.com/package/geobuf">npm package</a>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+read_geobuf(x, as_data_frame = TRUE)
+
+geobuf2json(x, pretty = FALSE)
+
+json2geobuf(json, decimals = 6)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>file path or raw vector with the serialized <code>geobuf.proto</code> message</p>
+</td></tr>
+<tr valign="top"><td><code>as_data_frame</code></td>
+<td>
+<p>simplify geojson data into data frames</p>
+</td></tr>
+<tr valign="top"><td><code>pretty</code></td>
+<td>
+<p>indent json, see <a href="../../jsonlite/html/toJSON.html">jsonlite::toJSON</a></p>
+</td></tr>
+<tr valign="top"><td><code>json</code></td>
+<td>
+<p>a text string with geojson data</p>
+</td></tr>
+<tr valign="top"><td><code>decimals</code></td>
+<td>
+<p>how many decimals (digits behind the dot) to store for numbers</p>
+</td></tr>
+</table>
+
+<hr /><div style="text-align: center;">[Package <em>protolite</em> version 1.8 <a href="00Index.html">Index</a>]</div>
+</body></html>

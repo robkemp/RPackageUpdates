@@ -1,0 +1,33 @@
+dplyr_select_style      Select-style helpers from dplyr
+ipums_conditions        Get IPUMS citation and conditions
+ipums_example           Get path to ipums example datasets
+ipums_file_info         Get IPUMS file information
+ipums_list_files        List files available for analysis in an IPUMS
+                        extract
+ipums_shape_left_join   Join data to geographic boundaries
+ipums_var_info          Get IPUMS variable information
+ipums_view              View a static webpage with variable information
+                        from a IPUMS extract
+ipums_website           Launch a browser window to the ipums website
+join_failures           Report on observations dropped by a join
+lbl                     Make a label placeholder object
+lbl_add                 Add labels for unlabelled values
+lbl_clean               Clean unused labels
+lbl_collapse            Collapse labelled values to labels that already
+                        exist
+lbl_na_if               Set labelled values to missing
+lbl_relabel             Relabel labelled values
+read_ipums_codebook     Read metadata from a text codebook in a NHGIS
+                        or Terra area-level extract
+read_ipums_ddi          Read metadata about an IPUMS extract from a DDI
+                        (.xml) file
+read_ipums_micro        Read data from an IPUMS extract
+read_ipums_sf           Read boundary files from an IPUMS extract
+read_nhgis              Read data from an NHGIS extract
+read_terra_area         Read data from an IPUMS Terra area extract
+read_terra_micro        Read data from an IPUMS Terra microdata extract
+read_terra_raster       Read data from an IPUMS Terra raster extract
+set_ipums_var_attributes
+                        Add IPUMS variable attributes to a data.frame
+zap_ipums_attributes    Remove all IPUMS attributes from a variable (or
+                        all variables in a data.frame)

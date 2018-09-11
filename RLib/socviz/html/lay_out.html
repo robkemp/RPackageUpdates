@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: lay_out</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for lay_out {socviz}"><tr><td>lay_out {socviz}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>lay_out</h2>
+
+<h3>Description</h3>
+
+<p>Arrange ggplot2 plots in an arbitrary grid
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+lay_out(...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>A series lists of of ggplot objects</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The function takes arguments of the form 'list(plot, row(s),
+column(s))' where 'plot' is a ggplot2 plot object, and the
+rows and columns identify an area of the grid that you want
+that plot object to occupy. See
+http://stackoverflow.com/questions/18427455/multiple-ggplots-of-different-sizes
+</p>
+
+
+<h3>Value</h3>
+
+<p>A grid of ggplot2 plots
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Extracted from the [wq] package
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+p1 &lt;- qplot(x=wt,y=mpg,geom="point",main="Scatterplot of wt vs.
+    mpg", data=mtcars)
+p2 &lt;- qplot(x=wt,y=disp,geom="point",main="Scatterplot of wt vs
+    disp", data=mtcars)
+p3 &lt;- qplot(wt,data=mtcars)
+lay_out(list(p1, 1:2, 1:4),
+      list(p2, 3:4, 1:2),
+      list(p3, 3:4, 3:4))
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>socviz</em> version 0.5.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

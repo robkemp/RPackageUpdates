@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: A class for vectors representing asymetric selections</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for bitwhich {bit}"><tr><td>bitwhich {bit}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2> A class for vectors representing asymetric selections </h2>
+
+<h3>Description</h3>
+
+<p>A bitwhich object like the result of <code><a href="../../base/html/which.html">which</a></code> and <code><a href="as.which.html">as.which</a></code> does represent integer subscript positions,
+but bitwhich objects represent some subscripts rather with negative integers, if this needs less space.
+The extreme cases of selecting all/none subscripts are represented by TRUE/FALSE.
+This needs less RAM compared to <code><a href="../../base/html/logical.html">logical</a></code> (and often less than <code><a href="as.which.html">as.which</a></code>).
+Logical operations are fast if the selection is asymetric (only few or almost all selected).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+bitwhich(maxindex, poslength = NULL, x = NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>maxindex</code></td>
+<td>
+<p> the length of the vector (sum of all TRUEs and FALSEs) </p>
+</td></tr>
+<tr valign="top"><td><code>poslength</code></td>
+<td>
+<p> Only use if x is not NULL: the sum of all TRUEs </p>
+</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p> Default NULL or FALSE or unique negative integers or unique positive integers or TRUE</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>class 'bitwhich' represents a boolean selection in one of the following ways
+</p>
+
+<ul>
+<li><p> FALSE to select nothing
+</p>
+</li>
+<li><p> TRUE to select everything
+</p>
+</li>
+<li><p> unique positive integers to select those
+</p>
+</li>
+<li><p> unique negative integers to exclude those
+</p>
+</li></ul>
+
+
+
+<h3>Value</h3>
+
+<p>An object of class 'bitwhich' carrying two attributes
+</p>
+<table summary="R valueblock">
+<tr valign="top"><td><code>maxindex</code></td>
+<td>
+<p> see above </p>
+</td></tr>
+<tr valign="top"><td><code>poslength</code></td>
+<td>
+<p> see above </p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+<p> Jens Oehlschlägel </p>
+
+
+<h3>See Also</h3>
+
+ <p><code><a href="as.bitwhich.html">as.bitwhich</a></code>, <code><a href="as.which.html">as.which</a></code>, <code><a href="bit-package.html">bit</a></code> </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+ bitwhich(12, x=c(1,3), poslength=2)
+ bitwhich(12, x=-c(1,3), poslength=10)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>bit</em> version 1.1-14 <a href="00Index.html">Index</a>]</div>
+</body></html>

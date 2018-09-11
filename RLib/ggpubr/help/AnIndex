@@ -1,6 +1,7 @@
 add_summary	add_summary
 annotate_figure	annotate_figure
 as_ggplot	as_ggplot
+axis_scale	axis_scale
 background_image	background_image
 bgcolor	bgcolor
 border	border
@@ -11,6 +12,7 @@ color_palette	set_palette
 compare_means	compare_means
 desc_statby	desc_statby
 diff_express	diff_express
+drawDetails.splitText	ggparagraph
 facet	facet
 fill_palette	set_palette
 font	font
@@ -20,9 +22,11 @@ get_legend	get_legend
 get_palette	get_palette
 ggadd	ggadd
 ggarrange	ggarrange
+ggballoonplot	ggballoonplot
 ggbarplot	ggbarplot
 ggboxplot	ggboxplot
 ggdensity	ggdensity
+ggdonutchart	ggdonutchart
 ggdotchart	ggdotchart
 ggdotplot	ggdotplot
 ggecdf	ggecdf
@@ -38,6 +42,7 @@ ggpie	ggpie
 ggpubr_args	ggpubr_args
 ggqqplot	ggqqplot
 ggscatter	ggscatter
+ggscatterhist	ggscatterhist
 ggstripchart	ggstripchart
 ggtext	ggtext
 ggtexttable	ggtexttable
@@ -68,10 +73,13 @@ stat_conf_ellipse	stat_conf_ellipse
 stat_cor	stat_cor
 stat_mean	stat_mean
 stat_stars	stat_stars
+table_cell_bg	ggtexttable
+table_cell_font	ggtexttable
 tbody_style	ggtexttable
 text_grob	text_grob
 theme_classic2	theme_pubr
 theme_cleveland	ggdotchart
+theme_pubclean	theme_pubr
 theme_pubr	theme_pubr
 theme_transparent	theme_transparent
 ttheme	ggtexttable

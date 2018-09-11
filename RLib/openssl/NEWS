@@ -1,3 +1,30 @@
+1.0.1
+ - Fix a unit test from  http://pki.goog/ (google changed servers)
+
+1.0
+ - Add the 'name' field to read_p12() output
+ - Add write_pkcs1() for legacy OpenSSH keys
+ - Fix unit tests using http://pki.goog/ (Google changed crt files to DER)
+
+0.9.9
+ - Workaround failing test on Mavericks due to IPv6 firewall issue
+
+0.9.8
+ - Fix build on OSX Mavericks
+
+0.9.7
+ - Configure script checks SHLIB_VERSION_NUMBER to find matching lib
+ - Added internal stopifnot() replacement to give more helpful error mesasges
+ - Add live SSL unit tests from https://pki.goog
+ - Fix for OpenBSD/FreeBSD (#41)
+ - Added as.integer.bignum() method
+ - Update maintainer email address
+ - Add symbol registration call in R_init_openssl
+ - Reject empty digests when signing (#44)
+ - Use OPENSSL_free to free OpenSSL's allocations (#44)
+ - Cleanups for ec_keygen() (#44)
+ - Windows: update OpenSSL to 1.1.0f
+
 0.9.6
  - Add read_p7b() and write_p7b() for certificate bundles
  - Rename read_pkcs12 / write_pkcs12 to read_p12 / write_p12
@@ -7,6 +34,7 @@
  - Sync bundled cacert.pem with Mozilla as of: Wed Sep 14 03:12:05 2016
  - Added blake2b and blake2s hash functions (only available in libssl 1.1)
  - Fix support for LibreSSL
+ - Windows: update libssl/libcrypto to 1.1.0c
 
 0.9.5
  - Support for new API in OpenSSL 1.1.0

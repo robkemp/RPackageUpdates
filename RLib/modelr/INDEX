@@ -11,10 +11,12 @@ heights                 Height and income data.
 model-quality           Compute model quality for a given dataset
 model_matrix            Construct a design matrix
 na.warn                 Handle missing values with a warning
+permute                 Generate 'n' permutation replicates.
 resample                A "lazy" resample.
 resample_bootstrap      Generate a boostrap replicate
 resample_partition      Generate an exclusive partitioning of a data
                         frame
+resample_permutation    Create a resampled permutation of a data frame
 seq_range               Generate a sequence over the range of a vector
 sim                     Simple simulated datasets
 typical                 Find the typical value

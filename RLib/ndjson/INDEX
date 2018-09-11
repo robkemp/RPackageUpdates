@@ -1,0 +1,6 @@
+flatten                 Flatten a character vector of individual JSON
+                        lines into a 'tbl_dt'
+ndjson                  Wicked-fast Streaming JSON ('ndjson) Reader
+stream_in               Stream in & flatten an ndjson file into a
+                        'tbl_dt'
+validate                Validate ndjson file

@@ -124,8 +124,8 @@ Note that `CIRCULASTRING`, `COMPOUNDCURVE` and `CURVEPOLYGON` are not described 
 ## Coordinate reference system
 
 Coordinates can only be placed on the Earth's surface when their coordinate
-reference system (CRS) is known; this may be an elipsoidal CRS such as WGS84, a projected, two-dimensional (Cartesian) CRS such as a UTM zone or Web Mercator, or a CRS
-in three-dimensions or [including time](http://www.faculty.jacobs-university.de/pbaumann/iu-bremen.de_pbaumann/Papers/acmgis-2012_crs-nts.pdf). Similarly, M-coordinates need an attribute reference
+reference system (CRS) is known; this may be an spheroid CRS such as WGS84, a projected, two-dimensional (Cartesian) CRS such as a UTM zone or Web Mercator, or a CRS
+in three-dimensions, or including time. Similarly, M-coordinates need an attribute reference
 system, e.g. a [measurement unit](https://CRAN.R-project.org/package=units).
 
 # How simple features in R are organized
@@ -613,16 +613,13 @@ This shows that `sf::st_read()` is substantially faster than
 files, and more than a factor of 4 for the KMZ file used in this
 benchmark, respectively.
 
-### Directly reading and writing to spatial databases
+### Connection to spatial databases
 
-Two further functions, `st_read_db` and `st_write_db` attempt to
-read and write from spatial databases, directly reading WKB or WKT
-without using GDAL. The advantage over `st_read` may be that instead
-of a complete table, the result of a (spatial) query may be fetched,
-limiting the amount of data that is read into R, and potentially
-benefiting from the spatial index of the database. Although intended
-to use the DBI interface, current use and testing of these functions
-are limited to PostGIS.
+Read and write functions, `st_read()` and `st_write()`, can handle 
+connections to spatial databases to read WKB or WKT directly
+without using GDAL.
+Although intended to use the DBI interface, current use and testing of these 
+functions are limited to PostGIS.
 
 ## Coordinate reference systems and transformations {#crs}
 
@@ -642,14 +639,15 @@ projections, and hence can cover an infinite amount of different
 projections.  This library (also used by GDAL) provides functions
 to convert or transform between different CRS.  `epsg` is the
 integer ID for a particular, known CRS that can be resolved into a
-`proj4string`. There is no (known, simple and general) way to resolve
-`proj4string` values into `epsg` IDs.
+`proj4string`. Some `proj4string` values can resolved back into
+their corresponding `epsg` ID, but this does not always work.
 
 The importance of having `epsg` values stored with data besides
 `proj4string` values is that the `epsg` refers to particular,
 well-known CRS, whose parameters may change (improve) over time;
 fixing only the `proj4string` may remove the possibility to benefit
-from such improvements, and limit the provenance of datasets.
+from such improvements, and limit some of the provenance of datasets,
+but may help reproducibility.
 
 Coordinate reference system transformations can be carried out using
 `st_transform`, e.g. converting longitudes/latitudes in NAD27 to

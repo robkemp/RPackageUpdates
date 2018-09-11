@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="Scott Chamberlain and Jeroen Ooms" />
+
+<meta name="date" content="2017-11-07" />
+
+<title>geojson operations</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+
+
+<link href="data:text/css;charset=utf-8,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23header%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%20code%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">geojson operations</h1>
+<h4 class="author"><em>Scott Chamberlain and Jeroen Ooms</em></h4>
+<h4 class="date"><em>2017-11-07</em></h4>
+
+
+
+<p>The <code>geojson</code> package has functions to do basic operations on GeoJSON classes.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;geojson&quot;</span>)</code></pre></div>
+<p>First, let’s make a GeoJSON object</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> '{</span>
+<span class="st"> &quot;type&quot;: &quot;GeometryCollection&quot;,</span>
+<span class="st"> &quot;geometries&quot;: [</span>
+<span class="st">   {</span>
+<span class="st">     &quot;type&quot;: &quot;Point&quot;,</span>
+<span class="st">     &quot;coordinates&quot;: [100.0, 0.0]</span>
+<span class="st">   },</span>
+<span class="st">   {</span>
+<span class="st">     &quot;type&quot;: &quot;LineString&quot;,</span>
+<span class="st">     &quot;coordinates&quot;: [ [101.0, 0.0], [102.0, 1.0] ]</span>
+<span class="st">   }</span>
+<span class="st">  ]</span>
+<span class="st">}'</span>
+(y &lt;-<span class="st"> </span><span class="kw">geometrycollection</span>(x))
+<span class="co">#&gt; &lt;GeometryCollection&gt; </span>
+<span class="co">#&gt;   geometries (n): 2 </span>
+<span class="co">#&gt;   geometries (geometry / length):</span>
+<span class="co">#&gt;     Point / 2</span>
+<span class="co">#&gt;     LineString / 2</span></code></pre></div>
+<div id="inspect-the-object" class="section level3">
+<h3>inspect the object</h3>
+<p>Get the string</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">1</span>]]
+<span class="co">#&gt; [1] &quot;{\n \&quot;type\&quot;: \&quot;GeometryCollection\&quot;,\n \&quot;geometries\&quot;: [\n   {\n     \&quot;type\&quot;: \&quot;Point\&quot;,\n     \&quot;coordinates\&quot;: [100.0, 0.0]\n   },\n   {\n     \&quot;type\&quot;: \&quot;LineString\&quot;,\n     \&quot;coordinates\&quot;: [ [101.0, 0.0], [102.0, 1.0] ]\n   }\n  ]\n}&quot;</span></code></pre></div>
+<p>Get the type</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">geo_type</span>(y)
+<span class="co">#&gt; [1] &quot;GeometryCollection&quot;</span></code></pre></div>
+<p>Pretty print the geojson</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">geo_pretty</span>(y)
+<span class="co">#&gt; {</span>
+<span class="co">#&gt;     &quot;type&quot;: &quot;GeometryCollection&quot;,</span>
+<span class="co">#&gt;     &quot;geometries&quot;: [</span>
+<span class="co">#&gt;         {</span>
+<span class="co">#&gt;             &quot;type&quot;: &quot;Point&quot;,</span>
+<span class="co">#&gt;             &quot;coordinates&quot;: [</span>
+<span class="co">#&gt;                 100.0,</span>
+<span class="co">#&gt;                 0.0</span>
+<span class="co">#&gt;             ]</span>
+<span class="co">#&gt;         },</span>
+<span class="co">#&gt;         {</span>
+<span class="co">#&gt;             &quot;type&quot;: &quot;LineString&quot;,</span>
+<span class="co">#&gt;             &quot;coordinates&quot;: [</span>
+<span class="co">#&gt;                 [</span>
+<span class="co">#&gt;                     101.0,</span>
+<span class="co">#&gt;                     0.0</span>
+<span class="co">#&gt;                 ],</span>
+<span class="co">#&gt;                 [</span>
+<span class="co">#&gt;                     102.0,</span>
+<span class="co">#&gt;                     1.0</span>
+<span class="co">#&gt;                 ]</span>
+<span class="co">#&gt;             ]</span>
+<span class="co">#&gt;         }</span>
+<span class="co">#&gt;     ]</span>
+<span class="co">#&gt; }</span>
+<span class="co">#&gt; </span></code></pre></div>
+<p>Write to disk</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">geo_write</span>(y, f &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">&quot;.geojson&quot;</span>))
+jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(f, <span class="ot">FALSE</span>)
+<span class="co">#&gt; $type</span>
+<span class="co">#&gt; [1] &quot;GeometryCollection&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $geometries</span>
+<span class="co">#&gt; $geometries[[1]]</span>
+<span class="co">#&gt; $geometries[[1]]$type</span>
+<span class="co">#&gt; [1] &quot;Point&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $geometries[[1]]$coordinates</span>
+<span class="co">#&gt; $geometries[[1]]$coordinates[[1]]</span>
+<span class="co">#&gt; [1] 100</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $geometries[[1]]$coordinates[[2]]</span>
+<span class="co">#&gt; [1] 0</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $geometries[[2]]</span>
+<span class="co">#&gt; $geometries[[2]]$type</span>
+<span class="co">#&gt; [1] &quot;LineString&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $geometries[[2]]$coordinates</span>
+<span class="co">#&gt; $geometries[[2]]$coordinates[[1]]</span>
+<span class="co">#&gt; $geometries[[2]]$coordinates[[1]][[1]]</span>
+<span class="co">#&gt; [1] 101</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $geometries[[2]]$coordinates[[1]][[2]]</span>
+<span class="co">#&gt; [1] 0</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $geometries[[2]]$coordinates[[2]]</span>
+<span class="co">#&gt; $geometries[[2]]$coordinates[[2]][[1]]</span>
+<span class="co">#&gt; [1] 102</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $geometries[[2]]$coordinates[[2]][[2]]</span>
+<span class="co">#&gt; [1] 1</span></code></pre></div>
+</div>
+<div id="properties" class="section level2">
+<h2>properties</h2>
+<p>Add properties</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> '{ &quot;type&quot;: &quot;LineString&quot;, &quot;coordinates&quot;: [ [100.0, 0.0], [101.0, 1.0] ]}'</span>
+res &lt;-<span class="st"> </span><span class="kw">linestring</span>(x) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">feature</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">properties_add</span>(<span class="dt">population =</span> <span class="dv">1000</span>)
+res
+<span class="co">#&gt; &lt;Feature&gt; </span>
+<span class="co">#&gt;   type:  LineString </span>
+<span class="co">#&gt;   coordinates:  [[100,0],[101,1]]</span></code></pre></div>
+<p>Get a property</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">properties_get</span>(res, <span class="dt">property =</span> <span class="st">'population'</span>)
+<span class="co">#&gt; 1000</span></code></pre></div>
+</div>
+<div id="crs" class="section level2">
+<h2>crs</h2>
+<p>Add crs</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">crs &lt;-<span class="st"> '{</span>
+<span class="st">  &quot;type&quot;: &quot;name&quot;,</span>
+<span class="st">  &quot;properties&quot;: {</span>
+<span class="st">     &quot;name&quot;: &quot;urn:ogc:def:crs:OGC:1.3:CRS84&quot;</span>
+<span class="st">  }</span>
+<span class="st">}'</span>
+z &lt;-<span class="st"> </span>x <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">feature</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">crs_add</span>(crs)
+z
+<span class="co">#&gt; {</span>
+<span class="co">#&gt;     &quot;type&quot;: &quot;Feature&quot;,</span>
+<span class="co">#&gt;     &quot;properties&quot;: {</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     },</span>
+<span class="co">#&gt;     &quot;geometry&quot;: {</span>
+<span class="co">#&gt;         &quot;type&quot;: &quot;LineString&quot;,</span>
+<span class="co">#&gt;         &quot;coordinates&quot;: [</span>
+<span class="co">#&gt;             [</span>
+<span class="co">#&gt;                 100,</span>
+<span class="co">#&gt;                 0</span>
+<span class="co">#&gt;             ],</span>
+<span class="co">#&gt;             [</span>
+<span class="co">#&gt;                 101,</span>
+<span class="co">#&gt;                 1</span>
+<span class="co">#&gt;             ]</span>
+<span class="co">#&gt;         ]</span>
+<span class="co">#&gt;     },</span>
+<span class="co">#&gt;     &quot;crs&quot;: {</span>
+<span class="co">#&gt;         &quot;type&quot;: &quot;name&quot;,</span>
+<span class="co">#&gt;         &quot;properties&quot;: {</span>
+<span class="co">#&gt;             &quot;name&quot;: &quot;urn:ogc:def:crs:OGC:1.3:CRS84&quot;</span>
+<span class="co">#&gt;         }</span>
+<span class="co">#&gt;     }</span>
+<span class="co">#&gt; }</span></code></pre></div>
+<p>Get crs</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">crs_get</span>(z)
+<span class="co">#&gt; $type</span>
+<span class="co">#&gt; [1] &quot;name&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $properties</span>
+<span class="co">#&gt; $properties$name</span>
+<span class="co">#&gt; [1] &quot;urn:ogc:def:crs:OGC:1.3:CRS84&quot;</span></code></pre></div>
+</div>
+<div id="bbox" class="section level2">
+<h2>bbox</h2>
+<p>Add bbox - by default, if you don’t pass a bbox into <code>bbox_add()</code> we attempt to calculate the bbox for you. You can also pass in your own bbox.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tt &lt;-<span class="st"> </span>x <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">feature</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">bbox_add</span>()
+tt
+<span class="co">#&gt; {</span>
+<span class="co">#&gt;     &quot;type&quot;: &quot;Feature&quot;,</span>
+<span class="co">#&gt;     &quot;properties&quot;: {</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     },</span>
+<span class="co">#&gt;     &quot;geometry&quot;: {</span>
+<span class="co">#&gt;         &quot;type&quot;: &quot;LineString&quot;,</span>
+<span class="co">#&gt;         &quot;coordinates&quot;: [</span>
+<span class="co">#&gt;             [</span>
+<span class="co">#&gt;                 100,</span>
+<span class="co">#&gt;                 0</span>
+<span class="co">#&gt;             ],</span>
+<span class="co">#&gt;             [</span>
+<span class="co">#&gt;                 101,</span>
+<span class="co">#&gt;                 1</span>
+<span class="co">#&gt;             ]</span>
+<span class="co">#&gt;         ]</span>
+<span class="co">#&gt;     },</span>
+<span class="co">#&gt;     &quot;bbox&quot;: [</span>
+<span class="co">#&gt;         100,</span>
+<span class="co">#&gt;         0,</span>
+<span class="co">#&gt;         101,</span>
+<span class="co">#&gt;         1</span>
+<span class="co">#&gt;     ]</span>
+<span class="co">#&gt; }</span></code></pre></div>
+<p>Get bbox</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bbox_get</span>(tt)
+<span class="co">#&gt; [1] 100   0 101   1</span></code></pre></div>
+</div>
+<div id="geojson-in-data.frames" class="section level2">
+<h2>geojson in data.frame’s</h2>
+<p>It’s really easy to put <code>geojson</code> class objects into data.frame’s as well.</p>
+<p>The ideal solution is to put them into <code>tbl</code>’s (see the <code>tibble</code> package)</p>
+<p>Make a <code>point</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> '{ &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [100.0, 0.0] }'</span>
+(pt &lt;-<span class="st"> </span><span class="kw">point</span>(x))
+<span class="co">#&gt; &lt;Point&gt; </span>
+<span class="co">#&gt;   coordinates:  [100,0]</span></code></pre></div>
+<p>Put the point into a <code>tbl</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;tibble&quot;</span>)
+<span class="kw">data_frame</span>(<span class="dt">a =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">b =</span> <span class="kw">list</span>(pt))
+<span class="co">#&gt; # A tibble: 5 x 2</span>
+<span class="co">#&gt;       a              b</span>
+<span class="co">#&gt;   &lt;int&gt;         &lt;list&gt;</span>
+<span class="co">#&gt; 1     1 &lt;S3: geopoint&gt;</span>
+<span class="co">#&gt; 2     2 &lt;S3: geopoint&gt;</span>
+<span class="co">#&gt; 3     3 &lt;S3: geopoint&gt;</span>
+<span class="co">#&gt; 4     4 &lt;S3: geopoint&gt;</span>
+<span class="co">#&gt; 5     5 &lt;S3: geopoint&gt;</span></code></pre></div>
+<p>Another object, here a <code>multilinestring</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> '{ &quot;type&quot;: &quot;MultiLineString&quot;,</span>
+<span class="st">  &quot;coordinates&quot;: [ [ [100.0, 0.0], [101.0, 1.0] ], [ [102.0, 2.0], [103.0, 3.0] ] ] }'</span>
+(mls &lt;-<span class="st"> </span><span class="kw">multilinestring</span>(x))
+<span class="co">#&gt; &lt;MultiLineString&gt; </span>
+<span class="co">#&gt;   no. lines:  2 </span>
+<span class="co">#&gt;   no. nodes / line:  2, 2 </span>
+<span class="co">#&gt;   coordinates:  [[[100,0],[101,1]],[[102,2],[103,3]]]</span></code></pre></div>
+<p>Put into a <code>tbl</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data_frame</span>(<span class="dt">a =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">b =</span> <span class="kw">list</span>(mls))
+<span class="co">#&gt; # A tibble: 5 x 2</span>
+<span class="co">#&gt;       a                        b</span>
+<span class="co">#&gt;   &lt;int&gt;                   &lt;list&gt;</span>
+<span class="co">#&gt; 1     1 &lt;S3: geomultilinestring&gt;</span>
+<span class="co">#&gt; 2     2 &lt;S3: geomultilinestring&gt;</span>
+<span class="co">#&gt; 3     3 &lt;S3: geomultilinestring&gt;</span>
+<span class="co">#&gt; 4     4 &lt;S3: geomultilinestring&gt;</span>
+<span class="co">#&gt; 5     5 &lt;S3: geomultilinestring&gt;</span></code></pre></div>
+<p>Put the <code>point</code> and <code>multilinestring</code> into the same <code>tbl</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(df &lt;-<span class="st"> </span><span class="kw">data_frame</span>(<span class="dt">a =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">b =</span> <span class="kw">list</span>(pt), <span class="dt">c =</span> <span class="kw">list</span>(mls)))
+<span class="co">#&gt; # A tibble: 5 x 3</span>
+<span class="co">#&gt;       a              b                        c</span>
+<span class="co">#&gt;   &lt;int&gt;         &lt;list&gt;                   &lt;list&gt;</span>
+<span class="co">#&gt; 1     1 &lt;S3: geopoint&gt; &lt;S3: geomultilinestring&gt;</span>
+<span class="co">#&gt; 2     2 &lt;S3: geopoint&gt; &lt;S3: geomultilinestring&gt;</span>
+<span class="co">#&gt; 3     3 &lt;S3: geopoint&gt; &lt;S3: geomultilinestring&gt;</span>
+<span class="co">#&gt; 4     4 &lt;S3: geopoint&gt; &lt;S3: geomultilinestring&gt;</span>
+<span class="co">#&gt; 5     5 &lt;S3: geopoint&gt; &lt;S3: geomultilinestring&gt;</span></code></pre></div>
+<p>And you can pull the geojson back out</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>b
+<span class="co">#&gt; [[1]]</span>
+<span class="co">#&gt; &lt;Point&gt; </span>
+<span class="co">#&gt;   coordinates:  [100,0] </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[2]]</span>
+<span class="co">#&gt; &lt;Point&gt; </span>
+<span class="co">#&gt;   coordinates:  [100,0] </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[3]]</span>
+<span class="co">#&gt; &lt;Point&gt; </span>
+<span class="co">#&gt;   coordinates:  [100,0] </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[4]]</span>
+<span class="co">#&gt; &lt;Point&gt; </span>
+<span class="co">#&gt;   coordinates:  [100,0] </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[5]]</span>
+<span class="co">#&gt; &lt;Point&gt; </span>
+<span class="co">#&gt;   coordinates:  [100,0]</span>
+df<span class="op">$</span>b[[<span class="dv">1</span>]]
+<span class="co">#&gt; &lt;Point&gt; </span>
+<span class="co">#&gt;   coordinates:  [100,0]</span></code></pre></div>
+</div>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

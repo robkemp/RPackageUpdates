@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Extract or replace part of an bit vector</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for Extract {bit}"><tr><td>Extract {bit}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2> Extract or replace part of an bit vector </h2>
+
+<h3>Description</h3>
+
+<p>Operators acting on bit objects to extract or replace parts.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'bit'
+x[[i]]
+## S3 replacement method for class 'bit'
+x[[i]] &lt;- value
+## S3 method for class 'bit'
+x[i]
+## S3 replacement method for class 'bit'
+x[i] &lt;- value
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p> a bit object </p>
+</td></tr>
+<tr valign="top"><td><code>i</code></td>
+<td>
+<p> positive integer subscript </p>
+</td></tr>
+<tr valign="top"><td><code>value</code></td>
+<td>
+<p> new logical or integer values </p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Since this package was created for high performance purposes, only positive integer subscripts make sense.
+Negative subscripts are converted to positive ones, beware the RAM consumption.
+Further subscript classes allowed for '[' and '[&lt;-' are range indices <code><a href="ri.html">ri</a></code> and <code><a href="bitwhich.html">bitwhich</a></code>.
+The '[' and '[&lt;-' methods don't check whether the subscripts are positive integers in the allowed range.
+</p>
+
+
+<h3>Value</h3>
+
+<p>The extractors <code>[[</code> and <code>[</code> return a logical scalar or vector.
+The replacment functions return a bit object.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p> Jens Oehlschlägel </p>
+
+
+<h3>See Also</h3>
+
+ <p><code><a href="bit-package.html">bit</a></code>, <code><a href="../../base/html/Extract.html">Extract</a></code> </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  x &lt;- as.bit(c(FALSE, NA, TRUE))
+  x[] &lt;- c(FALSE, NA, TRUE)
+  x[1:2]
+  x[-3]
+  x[ri(1,2)]
+  x[as.bitwhich(c(TRUE,TRUE,FALSE))]
+  x[[1]]
+  x[] &lt;- TRUE
+  x[1:2] &lt;- FALSE
+  x[[1]] &lt;- TRUE
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>bit</em> version 1.1-14 <a href="00Index.html">Index</a>]</div>
+</body></html>

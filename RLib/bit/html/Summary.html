@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Summaries of bit vectors</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for Summary {bit}"><tr><td>Summary {bit}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2> Summaries of bit vectors </h2>
+
+<h3>Description</h3>
+
+<p>Fast aggregation functions for bit vectors.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'bit'
+all(x, range = NULL, ...)
+## S3 method for class 'bit'
+any(x, range = NULL, ...)
+## S3 method for class 'bit'
+min(x, range = NULL, ...)
+## S3 method for class 'bit'
+max(x, range = NULL, ...)
+## S3 method for class 'bit'
+range(x, range = NULL, ...)
+## S3 method for class 'bit'
+sum(x, range = NULL, ...)
+## S3 method for class 'bit'
+summary(object, range = NULL, ...)
+## S3 method for class 'bitwhich'
+all(x, ...)
+## S3 method for class 'bitwhich'
+any(x, ...)
+## S3 method for class 'bitwhich'
+min(x, ...)
+## S3 method for class 'bitwhich'
+max(x, ...)
+## S3 method for class 'bitwhich'
+range(x, ...)
+## S3 method for class 'bitwhich'
+sum(x, ...)
+## S3 method for class 'bitwhich'
+summary(object, ...)
+## S3 method for class 'ri'
+all(x, ...)
+## S3 method for class 'ri'
+any(x, ...)
+## S3 method for class 'ri'
+min(x, ...)
+## S3 method for class 'ri'
+max(x, ...)
+## S3 method for class 'ri'
+range(x, ...)
+## S3 method for class 'ri'
+sum(x, ...)
+## S3 method for class 'ri'
+summary(object, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p> an object of class bit or bitwhich </p>
+</td></tr>
+<tr valign="top"><td><code>object</code></td>
+<td>
+<p> an object of class bit </p>
+</td></tr>
+<tr valign="top"><td><code>range</code></td>
+<td>
+<p> a <code><a href="ri.html">ri</a></code> or an integer vector of length==2 giving a range restriction for chunked processing </p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p> formally required but not used </p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Bit summaries are quite fast because we use a double loop that fixes each word in a processor register.
+Furthermore we break out of looping as soon as possible.
+</p>
+
+
+<h3>Value</h3>
+
+<p>as expected
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p> Jens Oehlschlägel </p>
+
+
+<h3>See Also</h3>
+
+ <p><code><a href="bit-package.html">bit</a></code>, <code><a href="../../base/html/all.html">all</a></code>, <code><a href="../../base/html/any.html">any</a></code>, <code><a href="../../base/html/Extremes.html">min</a></code>, <code><a href="../../base/html/Extremes.html">max</a></code>, <code><a href="../../base/html/range.html">range</a></code>, <code><a href="../../base/html/sum.html">sum</a></code>, <code><a href="../../base/html/summary.html">summary</a></code> </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  x &lt;- as.bit(c(TRUE, TRUE))
+  all(x)
+  any(x)
+  min(x)
+  max(x)
+  range(x)
+  sum(x)
+  summary(x)
+
+  x &lt;- as.bitwhich(c(TRUE, TRUE))
+  all(x)
+  any(x)
+  min(x)
+  max(x)
+  range(x)
+  sum(x)
+  summary(x)
+
+ ## Not run: 
+    n &lt;- .Machine$integer.max
+    x &lt;- !bit(n)
+    N &lt;- 1000000L  # batchsize
+    B &lt;- n %/% N   # number of batches
+    R &lt;- n %% N    # rest
+
+    message("Batched sum (52.5 sec on Centrino duo)")
+    system.time({
+      s &lt;- 0L
+      for (b in 1:B){
+        s &lt;- s + sum(x[((b-1L)*N+1L):(b*N)])
+      }
+      if (R)
+        s &lt;- s + sum(x[(n-R+1L):n])
+    })
+
+    message("Batched sum saving repeated memory allocation for the return vector
+    (44.4 sec on Centrino duo)")
+    system.time({
+      s &lt;- 0L
+      l &lt;- logical(N)
+      for (b in 1:B){
+        .Call("R_bit_extract", x, length(x), ((b-1L)*N+1L):(b*N), l, PACKAGE = "bit")
+        s &lt;- s + sum(l)
+      }
+      if (R)
+        s &lt;- s + sum(x[(n-R+1L):n])
+    })
+
+    message("C-coded sum (3.1 sec on Centrino duo)")
+    system.time(sum(x))
+ 
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>bit</em> version 1.1-14 <a href="00Index.html">Index</a>]</div>
+</body></html>

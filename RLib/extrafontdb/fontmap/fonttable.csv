@@ -1,0 +1,426 @@
+"package","afmfile","fontfile","FullName","FamilyName","FontName","Bold","Italic","Symbol","afmsymfile"
+NA,"AGENCYB.afm.gz","C:\Windows\Fonts\AGENCYB.TTF","Agency FB Bold","Agency FB","AgencyFB-Bold",TRUE,FALSE,FALSE,NA
+NA,"AGENCYR.afm.gz","C:\Windows\Fonts\AGENCYR.TTF","Agency FB","Agency FB","AgencyFB-Reg",FALSE,FALSE,FALSE,NA
+NA,"saswalr.afm.gz","C:\Windows\Fonts\saswalr.ttf","Albany AMT","Albany AMT","AlbanyAMT",FALSE,FALSE,FALSE,NA
+NA,"saswalb.afm.gz","C:\Windows\Fonts\saswalb.ttf","Albany AMT Bold","Albany AMT","AlbanyAMT-Bold",TRUE,FALSE,FALSE,NA
+NA,"saswalbi.afm.gz","C:\Windows\Fonts\saswalbi.ttf","Albany AMT Bold Italic","Albany AMT","AlbanyAMT-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"saswali.afm.gz","C:\Windows\Fonts\saswali.ttf","Albany AMT Italic","Albany AMT","AlbanyAMT-Italic",FALSE,TRUE,FALSE,NA
+NA,"ALGER.afm.gz","C:\Windows\Fonts\ALGER.TTF","Algerian","Algerian","Algerian",FALSE,FALSE,FALSE,NA
+NA,"ariblk.afm.gz","C:\Windows\Fonts\ariblk.ttf","Arial Black","Arial Black","Arial-Black",FALSE,FALSE,FALSE,NA
+NA,"arialbi.afm.gz","C:\Windows\Fonts\arialbi.ttf","Arial Bold Italic","Arial","Arial-BoldItalicMT",TRUE,TRUE,FALSE,NA
+NA,"arialbd.afm.gz","C:\Windows\Fonts\arialbd.ttf","Arial Bold","Arial","Arial-BoldMT",TRUE,FALSE,FALSE,NA
+NA,"ariali.afm.gz","C:\Windows\Fonts\ariali.ttf","Arial Italic","Arial","Arial-ItalicMT",FALSE,TRUE,FALSE,NA
+NA,"arial.afm.gz","C:\Windows\Fonts\arial.ttf","Arial","Arial","ArialMT",FALSE,FALSE,FALSE,NA
+NA,"ARIALN.afm.gz","C:\Windows\Fonts\ARIALN.TTF","Arial Narrow","Arial Narrow","ArialNarrow",FALSE,FALSE,FALSE,NA
+NA,"ARIALNB.afm.gz","C:\Windows\Fonts\ARIALNB.TTF","Arial Narrow Bold","Arial Narrow","ArialNarrow-Bold",TRUE,FALSE,FALSE,NA
+NA,"ARIALNBI.afm.gz","C:\Windows\Fonts\ARIALNBI.TTF","Arial Narrow Bold Italic","Arial Narrow","ArialNarrow-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"ARIALNI.afm.gz","C:\Windows\Fonts\ARIALNI.TTF","Arial Narrow Italic","Arial Narrow","ArialNarrow-Italic",FALSE,TRUE,FALSE,NA
+NA,"ARLRDBD.afm.gz","C:\Windows\Fonts\ARLRDBD.TTF","Arial Rounded MT Bold","Arial Rounded MT Bold","ArialRoundedMTBold",FALSE,FALSE,FALSE,NA
+NA,"sasgasr.afm.gz","C:\Windows\Fonts\sasgasr.ttf","Arial Symbol","Arial Symbol","ArialSymbol",FALSE,FALSE,TRUE,NA
+NA,"sasgasb.afm.gz","C:\Windows\Fonts\sasgasb.ttf","Arial Symbol Bold","Arial Symbol","ArialSymbol-Bold",TRUE,FALSE,TRUE,NA
+NA,"sasgasbi.afm.gz","C:\Windows\Fonts\sasgasbi.ttf","Arial Symbol Bold Italic","Arial Symbol","ArialSymbol-BoldItalic",TRUE,TRUE,TRUE,NA
+NA,"sasgasi.afm.gz","C:\Windows\Fonts\sasgasi.ttf","Arial Symbol Italic","Arial Symbol","ArialSymbol-Italic",FALSE,TRUE,TRUE,NA
+NA,"arialuni.afm.gz","C:\Windows\Fonts\arialuni.ttf","Arial Unicode MS","Arial Unicode MS","ArialUnicodeMS",FALSE,FALSE,FALSE,NA
+NA,"avncyrd.afm.gz","C:\Windows\Fonts\avncyrd.ttf","Avenir Next Cyr W04 Demi","Avenir Next Cyr W04 Demi","AvenirNextCyrW04-Demi",FALSE,FALSE,FALSE,NA
+NA,"avncyrdi.afm.gz","C:\Windows\Fonts\avncyrdi.ttf","Avenir Next Cyr W04 Demi Italic","Avenir Next Cyr W04 Demi Italic","AvenirNextCyrW04-DemiIt",FALSE,FALSE,FALSE,NA
+NA,"avncyri.afm.gz","C:\Windows\Fonts\avncyri.ttf","Avenir Next Cyr W04 Italic","Avenir Next Cyr W04 Italic","AvenirNextCyrW04-Italic",FALSE,TRUE,FALSE,NA
+NA,"avncyrl.afm.gz","C:\Windows\Fonts\avncyrl.ttf","Avenir Next Cyr W04 Light","Avenir Next Cyr W04 Light","AvenirNextCyrW04-Light",FALSE,FALSE,FALSE,NA
+NA,"avncyrli.afm.gz","C:\Windows\Fonts\avncyrli.ttf","Avenir Next Cyr W04 Light It","Avenir Next Cyr W04 Light It","AvenirNextCyrW04-LightIt",FALSE,FALSE,FALSE,NA
+NA,"avncyrr.afm.gz","C:\Windows\Fonts\avncyrr.ttf","Avenir Next Cyr W04 Regular","Avenir Next Cyr W04 Regular","AvenirNextCyrW04-Regular",FALSE,FALSE,FALSE,NA
+NA,"avnltd.afm.gz","C:\Windows\Fonts\avnltd.ttf","Avenir Next LT W04 Demi","Avenir Next LT W04 Demi","AvenirNextLTW04-Demi",FALSE,FALSE,FALSE,NA
+NA,"avnltdi.afm.gz","C:\Windows\Fonts\avnltdi.ttf","Avenir Next LT W04 Demi Italic","Avenir Next LT W04 Demi Italic","AvenirNextLTW04-DemiItalic",FALSE,TRUE,FALSE,NA
+NA,"avnlti.afm.gz","C:\Windows\Fonts\avnlti.ttf","Avenir Next LT W04 Italic","Avenir Next LT W04 Italic","AvenirNextLTW04-Italic",FALSE,TRUE,FALSE,NA
+NA,"avnltl.afm.gz","C:\Windows\Fonts\avnltl.ttf","Avenir Next LT W04 Light","Avenir Next LT W04 Light","AvenirNextLTW04-Light",FALSE,FALSE,FALSE,NA
+NA,"avnltli.afm.gz","C:\Windows\Fonts\avnltli.ttf","Avenir Next LT W04 Light Italic","Avenir Next LT W04 Light Italic","AvenirNextLTW04-LightIt",FALSE,FALSE,FALSE,NA
+NA,"avnltr.afm.gz","C:\Windows\Fonts\avnltr.ttf","Avenir Next LT W04 Regular","Avenir Next LT W04 Regular","AvenirNextLTW04-Regular",FALSE,FALSE,FALSE,NA
+NA,"BASKVILL.afm.gz","C:\Windows\Fonts\BASKVILL.TTF","Baskerville Old Face","Baskerville Old Face","BaskOldFace",FALSE,FALSE,FALSE,NA
+NA,"BAUHS93.afm.gz","C:\Windows\Fonts\BAUHS93.TTF","Bauhaus 93","Bauhaus 93","Bauhaus93",FALSE,FALSE,FALSE,NA
+NA,"BELL.afm.gz","C:\Windows\Fonts\BELL.TTF","Bell MT","Bell MT","BellMT",FALSE,FALSE,FALSE,NA
+NA,"BELLB.afm.gz","C:\Windows\Fonts\BELLB.TTF","Bell MT Bold","Bell MT","BellMTBold",TRUE,FALSE,FALSE,NA
+NA,"BELLI.afm.gz","C:\Windows\Fonts\BELLI.TTF","Bell MT Italic","Bell MT","BellMTItalic",FALSE,TRUE,FALSE,NA
+NA,"BRLNSB.afm.gz","C:\Windows\Fonts\BRLNSB.TTF","Berlin Sans FB Bold","Berlin Sans FB","BerlinSansFB-Bold",TRUE,FALSE,FALSE,NA
+NA,"BRLNSR.afm.gz","C:\Windows\Fonts\BRLNSR.TTF","Berlin Sans FB","Berlin Sans FB","BerlinSansFB-Reg",FALSE,FALSE,FALSE,NA
+NA,"BRLNSDB.afm.gz","C:\Windows\Fonts\BRLNSDB.TTF","Berlin Sans FB Demi Bold","Berlin Sans FB Demi","BerlinSansFBDemi-Bold",TRUE,FALSE,FALSE,NA
+NA,"BERNHC.afm.gz","C:\Windows\Fonts\BERNHC.TTF","Bernard MT Condensed","Bernard MT Condensed","BernardMT-Condensed",FALSE,FALSE,FALSE,NA
+NA,"ITCBLKAD.afm.gz","C:\Windows\Fonts\ITCBLKAD.TTF","Blackadder ITC","Blackadder ITC","BlackadderITC-Regular",FALSE,FALSE,FALSE,NA
+NA,"BOD_R.afm.gz","C:\Windows\Fonts\BOD_R.TTF","Bodoni MT","Bodoni MT","BodoniMT",FALSE,FALSE,FALSE,NA
+NA,"BOD_B.afm.gz","C:\Windows\Fonts\BOD_B.TTF","Bodoni MT Bold","Bodoni MT","BodoniMT-Bold",TRUE,FALSE,FALSE,NA
+NA,"BOD_BI.afm.gz","C:\Windows\Fonts\BOD_BI.TTF","Bodoni MT Bold Italic","Bodoni MT","BodoniMT-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"BOD_I.afm.gz","C:\Windows\Fonts\BOD_I.TTF","Bodoni MT Italic","Bodoni MT","BodoniMT-Italic",FALSE,TRUE,FALSE,NA
+NA,"BOD_BLAR.afm.gz","C:\Windows\Fonts\BOD_BLAR.TTF","Bodoni MT Black","Bodoni MT Black","BodoniMTBlack",FALSE,FALSE,FALSE,NA
+NA,"BOD_BLAI.afm.gz","C:\Windows\Fonts\BOD_BLAI.TTF","Bodoni MT Black Italic","Bodoni MT Black","BodoniMTBlack-Italic",FALSE,TRUE,FALSE,NA
+NA,"BOD_CR.afm.gz","C:\Windows\Fonts\BOD_CR.TTF","Bodoni MT Condensed","Bodoni MT Condensed","BodoniMTCondensed",FALSE,FALSE,FALSE,NA
+NA,"BOD_CB.afm.gz","C:\Windows\Fonts\BOD_CB.TTF","Bodoni MT Condensed Bold","Bodoni MT Condensed","BodoniMTCondensed-Bold",TRUE,FALSE,FALSE,NA
+NA,"BOD_CBI.afm.gz","C:\Windows\Fonts\BOD_CBI.TTF","Bodoni MT Condensed Bold Italic","Bodoni MT Condensed","BodoniMTCondensed-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"BOD_CI.afm.gz","C:\Windows\Fonts\BOD_CI.TTF","Bodoni MT Condensed Italic","Bodoni MT Condensed","BodoniMTCondensed-Italic",FALSE,TRUE,FALSE,NA
+NA,"BOD_PSTC.afm.gz","C:\Windows\Fonts\BOD_PSTC.TTF","Bodoni MT Poster Compressed","Bodoni MT Poster Compressed","BodoniMTPosterCompressed",FALSE,FALSE,FALSE,NA
+NA,"BKANT.afm.gz","C:\Windows\Fonts\BKANT.TTF","Book Antiqua","Book Antiqua","BookAntiqua",FALSE,FALSE,FALSE,NA
+NA,"ANTQUAB.afm.gz","C:\Windows\Fonts\ANTQUAB.TTF","Book Antiqua Bold","Book Antiqua","BookAntiqua-Bold",TRUE,FALSE,FALSE,NA
+NA,"ANTQUABI.afm.gz","C:\Windows\Fonts\ANTQUABI.TTF","Book Antiqua Bold Italic","Book Antiqua","BookAntiqua-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"ANTQUAI.afm.gz","C:\Windows\Fonts\ANTQUAI.TTF","Book Antiqua Italic","Book Antiqua","BookAntiqua-Italic",FALSE,TRUE,FALSE,NA
+NA,"BOOKOS.afm.gz","C:\Windows\Fonts\BOOKOS.TTF","Bookman Old Style","Bookman Old Style","BookmanOldStyle",FALSE,FALSE,FALSE,NA
+NA,"BOOKOSB.afm.gz","C:\Windows\Fonts\BOOKOSB.TTF","Bookman Old Style Bold","Bookman Old Style","BookmanOldStyle-Bold",TRUE,FALSE,FALSE,NA
+NA,"BOOKOSBI.afm.gz","C:\Windows\Fonts\BOOKOSBI.TTF","Bookman Old Style Bold Italic","Bookman Old Style","BookmanOldStyle-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"BOOKOSI.afm.gz","C:\Windows\Fonts\BOOKOSI.TTF","Bookman Old Style Italic","Bookman Old Style","BookmanOldStyle-Italic",FALSE,TRUE,FALSE,NA
+NA,"BSSYM7.afm.gz","C:\Windows\Fonts\BSSYM7.TTF","Bookshelf Symbol 7","Bookshelf Symbol 7","BookshelfSymbolSeven",FALSE,FALSE,TRUE,NA
+NA,"BRADHITC.afm.gz","C:\Windows\Fonts\BRADHITC.TTF","Bradley Hand ITC","Bradley Hand ITC","BradleyHandITC",FALSE,FALSE,FALSE,NA
+NA,"BRITANIC.afm.gz","C:\Windows\Fonts\BRITANIC.TTF","Britannic Bold","Britannic Bold","BritannicBold",FALSE,FALSE,FALSE,NA
+NA,"BROADW.afm.gz","C:\Windows\Fonts\BROADW.TTF","Broadway","Broadway","Broadway",FALSE,FALSE,FALSE,NA
+NA,"BRUSHSCI.afm.gz","C:\Windows\Fonts\BRUSHSCI.TTF","Brush Script MT Italic","Brush Script MT","BrushScriptMT",FALSE,TRUE,FALSE,NA
+NA,"calibri.afm.gz","C:\Windows\Fonts\calibri.ttf","Calibri","Calibri","Calibri",FALSE,FALSE,FALSE,NA
+NA,"calibrib.afm.gz","C:\Windows\Fonts\calibrib.ttf","Calibri Bold","Calibri","Calibri-Bold",TRUE,FALSE,FALSE,NA
+NA,"calibriz.afm.gz","C:\Windows\Fonts\calibriz.ttf","Calibri Bold Italic","Calibri","Calibri-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"calibrii.afm.gz","C:\Windows\Fonts\calibrii.ttf","Calibri Italic","Calibri","Calibri-Italic",FALSE,TRUE,FALSE,NA
+NA,"calibril.afm.gz","C:\Windows\Fonts\calibril.ttf","Calibri Light","Calibri Light","Calibri-Light",FALSE,FALSE,FALSE,NA
+NA,"calibrili.afm.gz","C:\Windows\Fonts\calibrili.ttf","Calibri Light Italic","Calibri Light","Calibri-LightItalic",FALSE,TRUE,FALSE,NA
+NA,"CALIFB.afm.gz","C:\Windows\Fonts\CALIFB.TTF","Californian FB Bold","Californian FB","CalifornianFB-Bold",TRUE,FALSE,FALSE,NA
+NA,"CALIFI.afm.gz","C:\Windows\Fonts\CALIFI.TTF","Californian FB Italic","Californian FB","CalifornianFB-Italic",FALSE,TRUE,FALSE,NA
+NA,"CALIFR.afm.gz","C:\Windows\Fonts\CALIFR.TTF","Californian FB","Californian FB","CalifornianFB-Reg",FALSE,FALSE,FALSE,NA
+NA,"CALISTB.afm.gz","C:\Windows\Fonts\CALISTB.TTF","Calisto MT Bold","Calisto MT","CalisMTBol",TRUE,FALSE,FALSE,NA
+NA,"CALIST.afm.gz","C:\Windows\Fonts\CALIST.TTF","Calisto MT","Calisto MT","CalistoMT",FALSE,FALSE,FALSE,NA
+NA,"CALISTBI.afm.gz","C:\Windows\Fonts\CALISTBI.TTF","Calisto MT Bold Italic","Calisto MT","CalistoMT-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"CALISTI.afm.gz","C:\Windows\Fonts\CALISTI.TTF","Calisto MT Italic","Calisto MT","CalistoMT-Italic",FALSE,TRUE,FALSE,NA
+NA,"cambriab.afm.gz","C:\Windows\Fonts\cambriab.ttf","Cambria Bold","Cambria","Cambria-Bold",TRUE,FALSE,FALSE,NA
+NA,"cambriaz.afm.gz","C:\Windows\Fonts\cambriaz.ttf","Cambria Bold Italic","Cambria","Cambria-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"cambriai.afm.gz","C:\Windows\Fonts\cambriai.ttf","Cambria Italic","Cambria","Cambria-Italic",FALSE,TRUE,FALSE,NA
+NA,"Candara.afm.gz","C:\Windows\Fonts\Candara.ttf","Candara","Candara","Candara",FALSE,FALSE,FALSE,NA
+NA,"Candarab.afm.gz","C:\Windows\Fonts\Candarab.ttf","Candara Bold","Candara","Candara-Bold",TRUE,FALSE,FALSE,NA
+NA,"Candaraz.afm.gz","C:\Windows\Fonts\Candaraz.ttf","Candara Bold Italic","Candara","Candara-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"Candarai.afm.gz","C:\Windows\Fonts\Candarai.ttf","Candara Italic","Candara","Candara-Italic",FALSE,TRUE,FALSE,NA
+NA,"CASTELAR.afm.gz","C:\Windows\Fonts\CASTELAR.TTF","Castellar","Castellar","Castellar",FALSE,FALSE,FALSE,NA
+NA,"CENTAUR.afm.gz","C:\Windows\Fonts\CENTAUR.TTF","Centaur","Centaur","Centaur",FALSE,FALSE,FALSE,NA
+NA,"CENTURY.afm.gz","C:\Windows\Fonts\CENTURY.TTF","Century","Century","Century",FALSE,FALSE,FALSE,NA
+NA,"GOTHIC.afm.gz","C:\Windows\Fonts\GOTHIC.TTF","Century Gothic","Century Gothic","CenturyGothic",FALSE,FALSE,FALSE,NA
+NA,"GOTHICB.afm.gz","C:\Windows\Fonts\GOTHICB.TTF","Century Gothic Bold","Century Gothic","CenturyGothic-Bold",TRUE,FALSE,FALSE,NA
+NA,"GOTHICBI.afm.gz","C:\Windows\Fonts\GOTHICBI.TTF","Century Gothic Bold Italic","Century Gothic","CenturyGothic-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"GOTHICI.afm.gz","C:\Windows\Fonts\GOTHICI.TTF","Century Gothic Italic","Century Gothic","CenturyGothic-Italic",FALSE,TRUE,FALSE,NA
+NA,"CENSCBK.afm.gz","C:\Windows\Fonts\CENSCBK.TTF","Century Schoolbook","Century Schoolbook","CenturySchoolbook",FALSE,FALSE,FALSE,NA
+NA,"SCHLBKB.afm.gz","C:\Windows\Fonts\SCHLBKB.TTF","Century Schoolbook Bold","Century Schoolbook","CenturySchoolbook-Bold",TRUE,FALSE,FALSE,NA
+NA,"SCHLBKBI.afm.gz","C:\Windows\Fonts\SCHLBKBI.TTF","Century Schoolbook Bold Italic","Century Schoolbook","CenturySchoolbook-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"SCHLBKI.afm.gz","C:\Windows\Fonts\SCHLBKI.TTF","Century Schoolbook Italic","Century Schoolbook","CenturySchoolbook-Italic",FALSE,TRUE,FALSE,NA
+NA,"CHILLER.afm.gz","C:\Windows\Fonts\CHILLER.TTF","Chiller","Chiller","Chiller-Regular",FALSE,FALSE,FALSE,NA
+NA,"COLONNA.afm.gz","C:\Windows\Fonts\COLONNA.TTF","Colonna MT","Colonna MT","ColonnaMT",FALSE,FALSE,FALSE,NA
+NA,"comic.afm.gz","C:\Windows\Fonts\comic.ttf","Comic Sans MS","Comic Sans MS","ComicSansMS",FALSE,FALSE,FALSE,NA
+NA,"comicbd.afm.gz","C:\Windows\Fonts\comicbd.ttf","Comic Sans MS Bold","Comic Sans MS","ComicSansMS-Bold",TRUE,FALSE,FALSE,NA
+NA,"comicz.afm.gz","C:\Windows\Fonts\comicz.ttf","Comic Sans MS Bold Italic","Comic Sans MS","ComicSansMS-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"comici.afm.gz","C:\Windows\Fonts\comici.ttf","Comic Sans MS Italic","Comic Sans MS","ComicSansMS-Italic",FALSE,TRUE,FALSE,NA
+NA,"consola.afm.gz","C:\Windows\Fonts\consola.ttf","Consolas","Consolas","Consolas",FALSE,FALSE,FALSE,NA
+NA,"consolab.afm.gz","C:\Windows\Fonts\consolab.ttf","Consolas Bold","Consolas","Consolas-Bold",TRUE,FALSE,FALSE,NA
+NA,"consolaz.afm.gz","C:\Windows\Fonts\consolaz.ttf","Consolas Bold Italic","Consolas","Consolas-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"consolai.afm.gz","C:\Windows\Fonts\consolai.ttf","Consolas Italic","Consolas","Consolas-Italic",FALSE,TRUE,FALSE,NA
+NA,"constan.afm.gz","C:\Windows\Fonts\constan.ttf","Constantia","Constantia","Constantia",FALSE,FALSE,FALSE,NA
+NA,"constanb.afm.gz","C:\Windows\Fonts\constanb.ttf","Constantia Bold","Constantia","Constantia-Bold",TRUE,FALSE,FALSE,NA
+NA,"constanz.afm.gz","C:\Windows\Fonts\constanz.ttf","Constantia Bold Italic","Constantia","Constantia-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"constani.afm.gz","C:\Windows\Fonts\constani.ttf","Constantia Italic","Constantia","Constantia-Italic",FALSE,TRUE,FALSE,NA
+NA,"COOPBL.afm.gz","C:\Windows\Fonts\COOPBL.TTF","Cooper Black","Cooper Black","CooperBlack",FALSE,FALSE,FALSE,NA
+NA,"COPRGTB.afm.gz","C:\Windows\Fonts\COPRGTB.TTF","Copperplate Gothic Bold","Copperplate Gothic Bold","CopperplateGothic-Bold",FALSE,FALSE,FALSE,NA
+NA,"COPRGTL.afm.gz","C:\Windows\Fonts\COPRGTL.TTF","Copperplate Gothic Light","Copperplate Gothic Light","CopperplateGothic-Light",FALSE,FALSE,FALSE,NA
+NA,"corbel.afm.gz","C:\Windows\Fonts\corbel.ttf","Corbel","Corbel","Corbel",FALSE,FALSE,FALSE,NA
+NA,"corbelb.afm.gz","C:\Windows\Fonts\corbelb.ttf","Corbel Bold","Corbel","Corbel-Bold",TRUE,FALSE,FALSE,NA
+NA,"corbelz.afm.gz","C:\Windows\Fonts\corbelz.ttf","Corbel Bold Italic","Corbel","Corbel-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"corbeli.afm.gz","C:\Windows\Fonts\corbeli.ttf","Corbel Italic","Corbel","Corbel-Italic",FALSE,TRUE,FALSE,NA
+NA,"courbi.afm.gz","C:\Windows\Fonts\courbi.ttf","Courier New Bold Italic","Courier New","CourierNewPS-BoldItalicMT",TRUE,TRUE,FALSE,NA
+NA,"courbd.afm.gz","C:\Windows\Fonts\courbd.ttf","Courier New Bold","Courier New","CourierNewPS-BoldMT",TRUE,FALSE,FALSE,NA
+NA,"couri.afm.gz","C:\Windows\Fonts\couri.ttf","Courier New Italic","Courier New","CourierNewPS-ItalicMT",FALSE,TRUE,FALSE,NA
+NA,"cour.afm.gz","C:\Windows\Fonts\cour.ttf","Courier New","Courier New","CourierNewPSMT",FALSE,FALSE,FALSE,NA
+NA,"csongl.afm.gz","C:\Windows\Fonts\csongl.ttf","CSongGB18030C-Light","CSongGB18030C-Light","CSongGB18030C-Light",FALSE,FALSE,FALSE,NA
+NA,"csonghwl.afm.gz","C:\Windows\Fonts\csonghwl.ttf","CSongGB18030C-LightHWL","CSongGB18030C-LightHWL","CSongGB18030C-LightHWL",FALSE,FALSE,FALSE,NA
+NA,"saswcur.afm.gz","C:\Windows\Fonts\saswcur.ttf","Cumberland AMT","Cumberland AMT","CumberlandAMT",FALSE,FALSE,FALSE,NA
+NA,"saswcub.afm.gz","C:\Windows\Fonts\saswcub.ttf","Cumberland AMT Bold","Cumberland AMT","CumberlandAMT-Bold",TRUE,FALSE,FALSE,NA
+NA,"saswcubi.afm.gz","C:\Windows\Fonts\saswcubi.ttf","Cumberland AMT Bold Italic","Cumberland AMT","CumberlandAMT-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"saswcui.afm.gz","C:\Windows\Fonts\saswcui.ttf","Cumberland AMT Italic","Cumberland AMT","CumberlandAMT-Italic",FALSE,TRUE,FALSE,NA
+NA,"CURLZ___.afm.gz","C:\Windows\Fonts\CURLZ___.TTF","Curlz MT","Curlz MT","CurlzMT",FALSE,FALSE,FALSE,NA
+NA,"ebrima.afm.gz","C:\Windows\Fonts\ebrima.ttf","Ebrima","Ebrima","Ebrima",FALSE,FALSE,FALSE,NA
+NA,"ebrimabd.afm.gz","C:\Windows\Fonts\ebrimabd.ttf","Ebrima Bold","Ebrima","Ebrima-Bold",TRUE,FALSE,FALSE,NA
+NA,"ITCEDSCR.afm.gz","C:\Windows\Fonts\ITCEDSCR.TTF","Edwardian Script ITC","Edwardian Script ITC","EdwardianScriptITC",FALSE,FALSE,FALSE,NA
+NA,"ELEPHNTI.afm.gz","C:\Windows\Fonts\ELEPHNTI.TTF","Elephant Italic","Elephant","Elephant-Italic",FALSE,TRUE,FALSE,NA
+NA,"ELEPHNT.afm.gz","C:\Windows\Fonts\ELEPHNT.TTF","Elephant","Elephant","Elephant-Regular",FALSE,FALSE,FALSE,NA
+NA,"ENGR.afm.gz","C:\Windows\Fonts\ENGR.TTF","Engravers MT","Engravers MT","EngraversMT",FALSE,FALSE,FALSE,NA
+NA,"ERASBD.afm.gz","C:\Windows\Fonts\ERASBD.TTF","Eras Bold ITC","Eras Bold ITC","ErasITC-Bold",FALSE,FALSE,FALSE,NA
+NA,"ERASDEMI.afm.gz","C:\Windows\Fonts\ERASDEMI.TTF","Eras Demi ITC","Eras Demi ITC","ErasITC-Demi",FALSE,FALSE,FALSE,NA
+NA,"ERASLGHT.afm.gz","C:\Windows\Fonts\ERASLGHT.TTF","Eras Light ITC","Eras Light ITC","ErasITC-Light",FALSE,FALSE,FALSE,NA
+NA,"ERASMD.afm.gz","C:\Windows\Fonts\ERASMD.TTF","Eras Medium ITC","Eras Medium ITC","ErasITC-Medium",FALSE,FALSE,FALSE,NA
+NA,"esri_150.afm.gz","C:\Windows\Fonts\esri_150.ttf","ESRI AMFM Electric","ESRI AMFM Electric","ESRIAMFMElectric",FALSE,FALSE,FALSE,NA
+NA,"esri_151.afm.gz","C:\Windows\Fonts\esri_151.ttf","ESRI AMFM Gas","ESRI AMFM Gas","ESRIAMFMGas",FALSE,FALSE,FALSE,NA
+NA,"esri_152.afm.gz","C:\Windows\Fonts\esri_152.ttf","ESRI AMFM Sewer","ESRI AMFM Sewer","ESRIAMFMSewer",FALSE,FALSE,FALSE,NA
+NA,"esri_153.afm.gz","C:\Windows\Fonts\esri_153.ttf","ESRI AMFM Water","ESRI AMFM Water","ESRIAMFMWater",FALSE,FALSE,FALSE,NA
+NA,"esri_30s.afm.gz","C:\Windows\Fonts\esri_30s.ttf","ESRI ArcPad","ESRI ArcPad","ESRIArcPad",FALSE,FALSE,FALSE,NA
+NA,"esri_144.afm.gz","C:\Windows\Fonts\esri_144.ttf","ESRI Arrowhead","ESRI Arrowhead","ESRIArrowhead",FALSE,FALSE,FALSE,NA
+NA,"esri_34.afm.gz","C:\Windows\Fonts\esri_34.ttf","ESRI Business","ESRI Business","ESRIBusiness",FALSE,FALSE,FALSE,NA
+NA,"esri_1.afm.gz","C:\Windows\Fonts\esri_1.ttf","ESRI Cartography","ESRI Cartography","ESRICartography",FALSE,FALSE,FALSE,NA
+NA,"esri_375.afm.gz","C:\Windows\Fonts\esri_375.ttf","ESRI Caves 1","ESRI Caves 1","ESRICaves1",FALSE,FALSE,FALSE,NA
+NA,"esri_376.afm.gz","C:\Windows\Fonts\esri_376.ttf","ESRI Caves 2","ESRI Caves 2","ESRICaves2",FALSE,FALSE,FALSE,NA
+NA,"esri_377.afm.gz","C:\Windows\Fonts\esri_377.ttf","ESRI Caves 3","ESRI Caves 3","ESRICaves3",FALSE,FALSE,FALSE,NA
+NA,"esri_33.afm.gz","C:\Windows\Fonts\esri_33.ttf","ESRI Climate & Precipitation","ESRI Climate & Precipitation","ESRIClimate-Precipitation",FALSE,FALSE,FALSE,NA
+NA,"esri_406.afm.gz","C:\Windows\Fonts\esri_406.ttf","ESRI Commodities","ESRI Commodities","ESRICommodities",FALSE,FALSE,FALSE,NA
+NA,"esri_730.afm.gz","C:\Windows\Fonts\esri_730.ttf","ESRI Conservation","ESRI Conservation","ESRIConservation",FALSE,FALSE,FALSE,NA
+NA,"esri_8.afm.gz","C:\Windows\Fonts\esri_8.ttf","ESRI Crime Analysis","ESRI Crime Analysis","ESRICrimeAnalysis",FALSE,FALSE,FALSE,NA
+NA,"esri_11.afm.gz","C:\Windows\Fonts\esri_11.ttf","ESRI Default Marker","ESRI Default Marker","ESRIDefaultMarker",FALSE,FALSE,FALSE,NA
+NA,"esri_39.afm.gz","C:\Windows\Fonts\esri_39.ttf","ESRI Dimensioning","ESRI Dimensioning","ESRIDimensioning",FALSE,FALSE,FALSE,NA
+NA,"esri_405.afm.gz","C:\Windows\Fonts\esri_405.ttf","ESRI Elements","ESRI Elements","ESRIElements",FALSE,FALSE,FALSE,NA
+NA,"esri_801.afm.gz","C:\Windows\Fonts\esri_801.ttf","ESRI Enviro Hazard Analysis","ESRI Enviro Hazard Analysis","ESRIEnviroHazardAnalysis",FALSE,FALSE,FALSE,NA
+NA,"esri_800.afm.gz","C:\Windows\Fonts\esri_800.ttf","ESRI Enviro Hazard Incident","ESRI Enviro Hazard Incident","ESRIEnviroHazardIncident",FALSE,FALSE,FALSE,NA
+NA,"esri_802.afm.gz","C:\Windows\Fonts\esri_802.ttf","ESRI Enviro Hazard Sites","ESRI Enviro Hazard Sites","ESRIEnviroHazardSites",FALSE,FALSE,FALSE,NA
+NA,"esri_2.afm.gz","C:\Windows\Fonts\esri_2.ttf","ESRI Environmental & Icons","ESRI Environmental & Icons","ESRIEnvironmental-Icons",FALSE,FALSE,FALSE,NA
+NA,"esri_832.afm.gz","C:\Windows\Fonts\esri_832.ttf","ESRI ERS Infrastructures S1","ESRI ERS Infrastructures S1","ESRIERSInfrastructuresS1",FALSE,FALSE,FALSE,NA
+NA,"esri_837.afm.gz","C:\Windows\Fonts\esri_837.ttf","ESRI ERS Operations S1","ESRI ERS Operations S1","ESRIERSOperationsS1",FALSE,FALSE,FALSE,NA
+NA,"esri_804.afm.gz","C:\Windows\Fonts\esri_804.ttf","ESRI Fire Incident NFPA","ESRI Fire Incident NFPA","ESRIFireIncidentNFPA",FALSE,FALSE,FALSE,NA
+NA,"esri_7.afm.gz","C:\Windows\Fonts\esri_7.ttf","ESRI Geology","ESRI Geology","ESRIGeology",FALSE,FALSE,FALSE,NA
+NA,"esri_500.afm.gz","C:\Windows\Fonts\esri_500.ttf","ESRI Geology AGSO 1","ESRI Geology AGSO 1","ESRIGeologyAGSO1",FALSE,FALSE,FALSE,NA
+NA,"esri_400.afm.gz","C:\Windows\Fonts\esri_400.ttf","ESRI Geology USGS 95-525","ESRI Geology USGS 95-525","ESRIGeologyUSGS95-525",FALSE,FALSE,FALSE,NA
+NA,"esri_3.afm.gz","C:\Windows\Fonts\esri_3.ttf","ESRI Geometric Symbols","ESRI Geometric Symbols","ESRIGeometricSymbols",FALSE,FALSE,TRUE,NA
+NA,"esri_803.afm.gz","C:\Windows\Fonts\esri_803.ttf","ESRI Hazardous Materials","ESRI Hazardous Materials","ESRIHazardousMaterials",FALSE,FALSE,FALSE,NA
+NA,"esri_159.afm.gz","C:\Windows\Fonts\esri_159.ttf","ESRI Hydrants","ESRI Hydrants","ESRIHydrants",FALSE,FALSE,FALSE,NA
+NA,"esri_216.afm.gz","C:\Windows\Fonts\esri_216.ttf","ESRI IGL Font16","ESRI IGL Font16","ESRIIGLFont16",FALSE,FALSE,FALSE,NA
+NA,"esri_220.afm.gz","C:\Windows\Fonts\esri_220.ttf","ESRI IGL Font20","ESRI IGL Font20","ESRIIGLFont20",FALSE,FALSE,FALSE,NA
+NA,"esri_221.afm.gz","C:\Windows\Fonts\esri_221.ttf","ESRI IGL Font21","ESRI IGL Font21","ESRIIGLFont21",FALSE,FALSE,FALSE,NA
+NA,"esri_222.afm.gz","C:\Windows\Fonts\esri_222.ttf","ESRI IGL Font22","ESRI IGL Font22","ESRIIGLFont22",FALSE,FALSE,FALSE,NA
+NA,"esri_223.afm.gz","C:\Windows\Fonts\esri_223.ttf","ESRI IGL Font23","ESRI IGL Font23","ESRIIGLFont23",FALSE,FALSE,FALSE,NA
+NA,"esri_224.afm.gz","C:\Windows\Fonts\esri_224.ttf","ESRI IGL Font24","ESRI IGL Font24","ESRIIGLFont24",FALSE,FALSE,FALSE,NA
+NA,"esri_225.afm.gz","C:\Windows\Fonts\esri_225.ttf","ESRI IGL Font25","ESRI IGL Font25","ESRIIGLFont25",FALSE,FALSE,FALSE,NA
+NA,"esri_105.afm.gz","C:\Windows\Fonts\esri_105.ttf","ESRI Meteorological 01","ESRI Meteorological 01","ESRIMeteorological01",FALSE,FALSE,FALSE,NA
+NA,"esri_27Mcr_2.afm.gz","C:\Windows\Fonts\esri_27Mcr_2.ttf","ESRI Mil2525C Modifiers","ESRI Mil2525C Modifiers","ESRIMil2525CModifiers",FALSE,FALSE,FALSE,NA
+NA,"esri_26.afm.gz","C:\Windows\Fonts\esri_26.ttf","ESRI MilMod 01","ESRI MilMod 01","ESRIMilMod01",FALSE,FALSE,FALSE,NA
+NA,"esri_19.afm.gz","C:\Windows\Fonts\esri_19.ttf","ESRI MilMod 02","ESRI MilMod 02","ESRIMilMod02",FALSE,FALSE,FALSE,NA
+NA,"esri_20.afm.gz","C:\Windows\Fonts\esri_20.ttf","ESRI MilRed 01","ESRI MilRed 01","ESRIMilRed01",FALSE,FALSE,FALSE,NA
+NA,"esri_21.afm.gz","C:\Windows\Fonts\esri_21.ttf","ESRI MilSym 01","ESRI MilSym 01","ESRIMilSym01",FALSE,FALSE,FALSE,NA
+NA,"esri_22.afm.gz","C:\Windows\Fonts\esri_22.ttf","ESRI MilSym 02","ESRI MilSym 02","ESRIMilSym02",FALSE,FALSE,FALSE,NA
+NA,"esri_23.afm.gz","C:\Windows\Fonts\esri_23.ttf","ESRI MilSym 03","ESRI MilSym 03","ESRIMilSym03",FALSE,FALSE,FALSE,NA
+NA,"esri_24.afm.gz","C:\Windows\Fonts\esri_24.ttf","ESRI MilSym 04","ESRI MilSym 04","ESRIMilSym04",FALSE,FALSE,FALSE,NA
+NA,"esri_25.afm.gz","C:\Windows\Fonts\esri_25.ttf","ESRI MilSym 05","ESRI MilSym 05","ESRIMilSym05",FALSE,FALSE,FALSE,NA
+NA,"esri_17.afm.gz","C:\Windows\Fonts\esri_17.ttf","ESRI NIMA City Graphic LN","ESRI NIMA City Graphic LN","ESRINIMACityGraphicLN",FALSE,FALSE,FALSE,NA
+NA,"esri_16.afm.gz","C:\Windows\Fonts\esri_16.ttf","ESRI NIMA City Graphic PT","ESRI NIMA City Graphic PT","ESRINIMACityGraphicPT",FALSE,FALSE,FALSE,NA
+NA,"esri_13.afm.gz","C:\Windows\Fonts\esri_13.ttf","ESRI NIMA DNC LN","ESRI NIMA DNC LN","ESRINIMADNCLN",FALSE,FALSE,FALSE,NA
+NA,"esri_12.afm.gz","C:\Windows\Fonts\esri_12.ttf","ESRI NIMA DNC PT","ESRI NIMA DNC PT","ESRINIMADNCPT",FALSE,FALSE,FALSE,NA
+NA,"esri_15.afm.gz","C:\Windows\Fonts\esri_15.ttf","ESRI NIMA VMAP1&2 LN","ESRI NIMA VMAP1&2 LN","ESRINIMAVMAP1-2LN",FALSE,FALSE,FALSE,NA
+NA,"esri_14.afm.gz","C:\Windows\Fonts\esri_14.ttf","ESRI NIMA VMAP1&2 PT","ESRI NIMA VMAP1&2 PT","ESRINIMAVMAP1-2PT",FALSE,FALSE,FALSE,NA
+NA,"esri_40.afm.gz","C:\Windows\Fonts\esri_40.ttf","ESRI North","ESRI North","ESRINorth",FALSE,FALSE,FALSE,NA
+NA,"esri_4.afm.gz","C:\Windows\Fonts\esri_4.ttf","ESRI Oil, Gas, & Water","ESRI Oil, Gas, & Water","ESRIOilGasWater",FALSE,FALSE,FALSE,NA
+NA,"esri_121.afm.gz","C:\Windows\Fonts\esri_121.ttf","ESRI Ordnance Survey","ESRI Ordnance Survey","ESRIOrdnanceSurvey",FALSE,FALSE,FALSE,NA
+NA,"esri_161.afm.gz","C:\Windows\Fonts\esri_161.ttf","ESRI Pipeline US 1","ESRI Pipeline US 1","ESRIPipelineUS1",FALSE,FALSE,FALSE,NA
+NA,"esri_29.afm.gz","C:\Windows\Fonts\esri_29.ttf","ESRI Public1","ESRI Public1","ESRIPublic1",FALSE,FALSE,FALSE,NA
+NA,"esri_130.afm.gz","C:\Windows\Fonts\esri_130.ttf","ESRI SDS 1.95 1","ESRI SDS 1.95 1","ESRISDS1-951",FALSE,FALSE,FALSE,NA
+NA,"esri_131.afm.gz","C:\Windows\Fonts\esri_131.ttf","ESRI SDS 1.95 2","ESRI SDS 1.95 2","ESRISDS1-952",FALSE,FALSE,FALSE,NA
+NA,"esri_132.afm.gz","C:\Windows\Fonts\esri_132.ttf","ESRI SDS 2.00 1","ESRI SDS 2.00 1","ESRISDS2-001",FALSE,FALSE,FALSE,NA
+NA,"esri_133.afm.gz","C:\Windows\Fonts\esri_133.ttf","ESRI SDS 2.00 2","ESRI SDS 2.00 2","ESRISDS2-002",FALSE,FALSE,FALSE,NA
+NA,"esri_44.afm.gz","C:\Windows\Fonts\esri_44.ttf","ESRI Shields","ESRI Shields","ESRIShields",FALSE,FALSE,FALSE,NA
+NA,"esri_149.afm.gz","C:\Windows\Fonts\esri_149.ttf","ESRI Surveyor","ESRI Surveyor","ESRISurveyor",FALSE,FALSE,FALSE,NA
+NA,"esri_160.afm.gz","C:\Windows\Fonts\esri_160.ttf","ESRI Telecom","ESRI Telecom","ESRITelecom",FALSE,FALSE,FALSE,NA
+NA,"esri_9.afm.gz","C:\Windows\Fonts\esri_9.ttf","ESRI Transportation & Civic","ESRI Transportation & Civic","ESRITransportationCivic",FALSE,FALSE,FALSE,NA
+NA,"esri_651.afm.gz","C:\Windows\Fonts\esri_651.ttf","ESRI US Forestry 1","ESRI US Forestry 1","ESRIUSForestry1",FALSE,FALSE,FALSE,NA
+NA,"esri_47.afm.gz","C:\Windows\Fonts\esri_47.ttf","ESRI US MUTCD 1","ESRI US MUTCD 1","ESRIUSMUTCD1",FALSE,FALSE,FALSE,NA
+NA,"esri_48.afm.gz","C:\Windows\Fonts\esri_48.ttf","ESRI US MUTCD 2","ESRI US MUTCD 2","ESRIUSMUTCD2",FALSE,FALSE,FALSE,NA
+NA,"esri_49.afm.gz","C:\Windows\Fonts\esri_49.ttf","ESRI US MUTCD 3","ESRI US MUTCD 3","ESRIUSMUTCD3",FALSE,FALSE,FALSE,NA
+NA,"esri_5.afm.gz","C:\Windows\Fonts\esri_5.ttf","ESRI Weather","ESRI Weather","ESRIWeather",FALSE,FALSE,FALSE,NA
+NA,"FELIXTI.afm.gz","C:\Windows\Fonts\FELIXTI.TTF","Felix Titling","Felix Titling","FelixTitlingMT",FALSE,FALSE,FALSE,NA
+NA,"FTLTLT.afm.gz","C:\Windows\Fonts\FTLTLT.TTF","Footlight MT Light","Footlight MT Light","FootlightMTLight",FALSE,FALSE,FALSE,NA
+NA,"FORTE.afm.gz","C:\Windows\Fonts\FORTE.TTF","Forte","Forte","ForteMT",FALSE,FALSE,FALSE,NA
+NA,"FRABK.afm.gz","C:\Windows\Fonts\FRABK.TTF","Franklin Gothic Book","Franklin Gothic Book","FranklinGothic-Book",FALSE,FALSE,FALSE,NA
+NA,"FRABKIT.afm.gz","C:\Windows\Fonts\FRABKIT.TTF","Franklin Gothic Book Italic","Franklin Gothic Book","FranklinGothic-BookItalic",FALSE,TRUE,FALSE,NA
+NA,"FRADM.afm.gz","C:\Windows\Fonts\FRADM.TTF","Franklin Gothic Demi","Franklin Gothic Demi","FranklinGothic-Demi",FALSE,FALSE,FALSE,NA
+NA,"FRADMCN.afm.gz","C:\Windows\Fonts\FRADMCN.TTF","Franklin Gothic Demi Cond","Franklin Gothic Demi Cond","FranklinGothic-DemiCond",FALSE,FALSE,FALSE,NA
+NA,"FRADMIT.afm.gz","C:\Windows\Fonts\FRADMIT.TTF","Franklin Gothic Demi Italic","Franklin Gothic Demi","FranklinGothic-DemiItalic",FALSE,TRUE,FALSE,NA
+NA,"FRAHV.afm.gz","C:\Windows\Fonts\FRAHV.TTF","Franklin Gothic Heavy","Franklin Gothic Heavy","FranklinGothic-Heavy",FALSE,FALSE,FALSE,NA
+NA,"FRAHVIT.afm.gz","C:\Windows\Fonts\FRAHVIT.TTF","Franklin Gothic Heavy Italic","Franklin Gothic Heavy","FranklinGothic-HeavyItalic",FALSE,TRUE,FALSE,NA
+NA,"framd.afm.gz","C:\Windows\Fonts\framd.ttf","Franklin Gothic Medium","Franklin Gothic Medium","FranklinGothic-Medium",FALSE,FALSE,FALSE,NA
+NA,"FRAMDCN.afm.gz","C:\Windows\Fonts\FRAMDCN.TTF","Franklin Gothic Medium Cond","Franklin Gothic Medium Cond","FranklinGothic-MediumCond",FALSE,FALSE,FALSE,NA
+NA,"framdit.afm.gz","C:\Windows\Fonts\framdit.ttf","Franklin Gothic Medium Italic","Franklin Gothic Medium","FranklinGothic-MediumItalic",FALSE,TRUE,FALSE,NA
+NA,"FREESCPT.afm.gz","C:\Windows\Fonts\FREESCPT.TTF","Freestyle Script","Freestyle Script","FreestyleScript-Regular",FALSE,FALSE,FALSE,NA
+NA,"FRSCRIPT.afm.gz","C:\Windows\Fonts\FRSCRIPT.TTF","French Script MT","French Script MT","FrenchScriptMT",FALSE,FALSE,FALSE,NA
+NA,"Gabriola.afm.gz","C:\Windows\Fonts\Gabriola.ttf","Gabriola","Gabriola","Gabriola",FALSE,FALSE,FALSE,NA
+NA,"gadugi.afm.gz","C:\Windows\Fonts\gadugi.ttf","Gadugi","Gadugi","Gadugi",FALSE,FALSE,FALSE,NA
+NA,"gadugib.afm.gz","C:\Windows\Fonts\gadugib.ttf","Gadugi Bold","Gadugi","Gadugi-Bold",TRUE,FALSE,FALSE,NA
+NA,"GARA.afm.gz","C:\Windows\Fonts\GARA.TTF","Garamond","Garamond","Garamond",FALSE,FALSE,FALSE,NA
+NA,"GARABD.afm.gz","C:\Windows\Fonts\GARABD.TTF","Garamond Bold","Garamond","Garamond-Bold",TRUE,FALSE,FALSE,NA
+NA,"GARAIT.afm.gz","C:\Windows\Fonts\GARAIT.TTF","Garamond Italic","Garamond","Garamond-Italic",FALSE,TRUE,FALSE,NA
+NA,"georgia.afm.gz","C:\Windows\Fonts\georgia.ttf","Georgia","Georgia","Georgia",FALSE,FALSE,FALSE,NA
+NA,"georgiab.afm.gz","C:\Windows\Fonts\georgiab.ttf","Georgia Bold","Georgia","Georgia-Bold",TRUE,FALSE,FALSE,NA
+NA,"georgiaz.afm.gz","C:\Windows\Fonts\georgiaz.ttf","Georgia Bold Italic","Georgia","Georgia-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"georgiai.afm.gz","C:\Windows\Fonts\georgiai.ttf","Georgia Italic","Georgia","Georgia-Italic",FALSE,TRUE,FALSE,NA
+NA,"GIGI.afm.gz","C:\Windows\Fonts\GIGI.TTF","Gigi","Gigi","Gigi-Regular",FALSE,FALSE,FALSE,NA
+NA,"GILSANUB.afm.gz","C:\Windows\Fonts\GILSANUB.TTF","Gill Sans Ultra Bold","Gill Sans Ultra Bold","GillSans-UltraBold",FALSE,FALSE,FALSE,NA
+NA,"GILLUBCD.afm.gz","C:\Windows\Fonts\GILLUBCD.TTF","Gill Sans Ultra Bold Condensed","Gill Sans Ultra Bold Condensed","GillSans-UltraBoldCondensed",FALSE,FALSE,FALSE,NA
+NA,"GIL_____.afm.gz","C:\Windows\Fonts\GIL_____.TTF","Gill Sans MT","Gill Sans MT","GillSansMT",FALSE,FALSE,FALSE,NA
+NA,"GILB____.afm.gz","C:\Windows\Fonts\GILB____.TTF","Gill Sans MT Bold","Gill Sans MT","GillSansMT-Bold",TRUE,FALSE,FALSE,NA
+NA,"GILBI___.afm.gz","C:\Windows\Fonts\GILBI___.TTF","Gill Sans MT Bold Italic","Gill Sans MT","GillSansMT-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"GILC____.afm.gz","C:\Windows\Fonts\GILC____.TTF","Gill Sans MT Condensed","Gill Sans MT Condensed","GillSansMT-Condensed",FALSE,FALSE,FALSE,NA
+NA,"GLSNECB.afm.gz","C:\Windows\Fonts\GLSNECB.TTF","Gill Sans MT Ext Condensed Bold","Gill Sans MT Ext Condensed Bold","GillSansMT-ExtraCondensedBold",FALSE,FALSE,FALSE,NA
+NA,"GILI____.afm.gz","C:\Windows\Fonts\GILI____.TTF","Gill Sans MT Italic","Gill Sans MT","GillSansMT-Italic",FALSE,TRUE,FALSE,NA
+NA,"GLECB.afm.gz","C:\Windows\Fonts\GLECB.TTF","Gloucester MT Extra Condensed","Gloucester MT Extra Condensed","GloucesterMT-ExtraCondensed",FALSE,FALSE,FALSE,NA
+NA,"GOUDOSB.afm.gz","C:\Windows\Fonts\GOUDOSB.TTF","Goudy Old Style Bold","Goudy Old Style","GoudyOldStyleT-Bold",TRUE,FALSE,FALSE,NA
+NA,"GOUDOSI.afm.gz","C:\Windows\Fonts\GOUDOSI.TTF","Goudy Old Style Italic","Goudy Old Style","GoudyOldStyleT-Italic",FALSE,TRUE,FALSE,NA
+NA,"GOUDOS.afm.gz","C:\Windows\Fonts\GOUDOS.TTF","Goudy Old Style","Goudy Old Style","GoudyOldStyleT-Regular",FALSE,FALSE,FALSE,NA
+NA,"GOUDYSTO.afm.gz","C:\Windows\Fonts\GOUDYSTO.TTF","Goudy Stout","Goudy Stout","GoudyStout",FALSE,FALSE,FALSE,NA
+NA,"HATTEN.afm.gz","C:\Windows\Fonts\HATTEN.TTF","Haettenschweiler","Haettenschweiler","Haettenschweiler",FALSE,FALSE,FALSE,NA
+NA,"HARLOWSI.afm.gz","C:\Windows\Fonts\HARLOWSI.TTF","Harlow Solid Italic","Harlow Solid Italic","HarlowSolid",FALSE,TRUE,FALSE,NA
+NA,"HARNGTON.afm.gz","C:\Windows\Fonts\HARNGTON.TTF","Harrington","Harrington","Harrington",FALSE,FALSE,FALSE,NA
+NA,"heit.afm.gz","C:\Windows\Fonts\heit.ttf","HeiT","HeiT","HeiT",FALSE,FALSE,FALSE,NA
+NA,"HTOWERTI.afm.gz","C:\Windows\Fonts\HTOWERTI.TTF","High Tower Text Italic","High Tower Text","HighTowerText-Italic",FALSE,TRUE,FALSE,NA
+NA,"HTOWERT.afm.gz","C:\Windows\Fonts\HTOWERT.TTF","High Tower Text","High Tower Text","HighTowerText-Reg",FALSE,FALSE,FALSE,NA
+NA,"impact.afm.gz","C:\Windows\Fonts\impact.ttf","Impact","Impact","Impact",FALSE,FALSE,FALSE,NA
+NA,"IMPRISHA.afm.gz","C:\Windows\Fonts\IMPRISHA.TTF","Imprint MT Shadow","Imprint MT Shadow","ImprintMT-Shadow",FALSE,FALSE,FALSE,NA
+NA,"INFROMAN.afm.gz","C:\Windows\Fonts\INFROMAN.TTF","Informal Roman","Informal Roman","InformalRoman-Regular",FALSE,FALSE,FALSE,NA
+NA,"javatext.afm.gz","C:\Windows\Fonts\javatext.ttf","Javanese Text","Javanese Text","JavaneseText",FALSE,FALSE,FALSE,NA
+NA,"JOKERMAN.afm.gz","C:\Windows\Fonts\JOKERMAN.TTF","Jokerman","Jokerman","Jokerman-Regular",FALSE,FALSE,FALSE,NA
+NA,"JUICE___.afm.gz","C:\Windows\Fonts\JUICE___.TTF","Juice ITC","Juice ITC","JuiceITC-Regular",FALSE,FALSE,FALSE,NA
+NA,"ITCKRIST.afm.gz","C:\Windows\Fonts\ITCKRIST.TTF","Kristen ITC","Kristen ITC","KristenITC-Regular",FALSE,FALSE,FALSE,NA
+NA,"KUNSTLER.afm.gz","C:\Windows\Fonts\KUNSTLER.TTF","Kunstler Script","Kunstler Script","KunstlerScript",FALSE,FALSE,FALSE,NA
+NA,"LATINWD.afm.gz","C:\Windows\Fonts\LATINWD.TTF","Wide Latin","Wide Latin","LatinWide",FALSE,FALSE,FALSE,NA
+NA,"LEELAWAD.afm.gz","C:\Windows\Fonts\LEELAWAD.TTF","Leelawadee","Leelawadee","Leelawadee",FALSE,FALSE,FALSE,NA
+NA,"LEELAWDB.afm.gz","C:\Windows\Fonts\LEELAWDB.TTF","Leelawadee Bold","Leelawadee","Leelawadee-Bold",TRUE,FALSE,FALSE,NA
+NA,"LeelawUI.afm.gz","C:\Windows\Fonts\LeelawUI.ttf","Leelawadee UI","Leelawadee UI","LeelawadeeUI",FALSE,FALSE,FALSE,NA
+NA,"LeelaUIb.afm.gz","C:\Windows\Fonts\LeelaUIb.ttf","Leelawadee UI Bold","Leelawadee UI","LeelawadeeUI-Bold",TRUE,FALSE,FALSE,NA
+NA,"LeelUIsl.afm.gz","C:\Windows\Fonts\LeelUIsl.ttf","Leelawadee UI Semilight","Leelawadee UI Semilight","LeelawadeeUI-Semilight",FALSE,FALSE,FALSE,NA
+NA,"LBRITE.afm.gz","C:\Windows\Fonts\LBRITE.TTF","Lucida Bright","Lucida Bright","LucidaBright",FALSE,FALSE,FALSE,NA
+NA,"LBRITED.afm.gz","C:\Windows\Fonts\LBRITED.TTF","Lucida Bright Demibold","Lucida Bright","LucidaBright-Demi",FALSE,FALSE,FALSE,NA
+NA,"LBRITEDI.afm.gz","C:\Windows\Fonts\LBRITEDI.TTF","Lucida Bright Demibold Italic","Lucida Bright","LucidaBright-DemiItalic",FALSE,TRUE,FALSE,NA
+NA,"LBRITEI.afm.gz","C:\Windows\Fonts\LBRITEI.TTF","Lucida Bright Italic","Lucida Bright","LucidaBright-Italic",FALSE,TRUE,FALSE,NA
+NA,"LCALLIG.afm.gz","C:\Windows\Fonts\LCALLIG.TTF","Lucida Calligraphy Italic","Lucida Calligraphy","LucidaCalligraphy-Italic",FALSE,TRUE,FALSE,NA
+NA,"lucon.afm.gz","C:\Windows\Fonts\lucon.ttf","Lucida Console","Lucida Console","LucidaConsole",FALSE,FALSE,FALSE,NA
+NA,"LFAX.afm.gz","C:\Windows\Fonts\LFAX.TTF","Lucida Fax Regular","Lucida Fax","LucidaFax",FALSE,FALSE,FALSE,NA
+NA,"LFAXD.afm.gz","C:\Windows\Fonts\LFAXD.TTF","Lucida Fax Demibold","Lucida Fax","LucidaFax-Demi",FALSE,FALSE,FALSE,NA
+NA,"LFAXDI.afm.gz","C:\Windows\Fonts\LFAXDI.TTF","Lucida Fax Demibold Italic","Lucida Fax","LucidaFax-DemiItalic",FALSE,TRUE,FALSE,NA
+NA,"LFAXI.afm.gz","C:\Windows\Fonts\LFAXI.TTF","Lucida Fax Italic","Lucida Fax","LucidaFax-Italic",FALSE,TRUE,FALSE,NA
+NA,"LHANDW.afm.gz","C:\Windows\Fonts\LHANDW.TTF","Lucida Handwriting Italic","Lucida Handwriting","LucidaHandwriting-Italic",FALSE,TRUE,FALSE,NA
+NA,"LSANS.afm.gz","C:\Windows\Fonts\LSANS.TTF","Lucida Sans Regular","Lucida Sans","LucidaSans",FALSE,FALSE,FALSE,NA
+NA,"LSANSD.afm.gz","C:\Windows\Fonts\LSANSD.TTF","Lucida Sans Demibold Roman","Lucida Sans","LucidaSans-Demi",FALSE,FALSE,FALSE,NA
+NA,"LSANSDI.afm.gz","C:\Windows\Fonts\LSANSDI.TTF","Lucida Sans Demibold Italic","Lucida Sans","LucidaSans-DemiItalic",FALSE,TRUE,FALSE,NA
+NA,"LSANSI.afm.gz","C:\Windows\Fonts\LSANSI.TTF","Lucida Sans Italic","Lucida Sans","LucidaSans-Italic",FALSE,TRUE,FALSE,NA
+NA,"LTYPE.afm.gz","C:\Windows\Fonts\LTYPE.TTF","Lucida Sans Typewriter Regular","Lucida Sans Typewriter","LucidaSans-Typewriter",FALSE,FALSE,FALSE,NA
+NA,"LTYPEB.afm.gz","C:\Windows\Fonts\LTYPEB.TTF","Lucida Sans Typewriter Bold","Lucida Sans Typewriter","LucidaSans-TypewriterBold",TRUE,FALSE,FALSE,NA
+NA,"LTYPEBO.afm.gz","C:\Windows\Fonts\LTYPEBO.TTF","Lucida Sans Typewriter Bold Oblique","Lucida Sans Typewriter","LucidaSans-TypewriterBoldOblique",TRUE,TRUE,FALSE,NA
+NA,"LTYPEO.afm.gz","C:\Windows\Fonts\LTYPEO.TTF","Lucida Sans Typewriter Oblique","Lucida Sans Typewriter","LucidaSans-TypewriterOblique",FALSE,TRUE,FALSE,NA
+NA,"l_10646.afm.gz","C:\Windows\Fonts\l_10646.ttf","Lucida Sans Unicode","Lucida Sans Unicode","LucidaSansUnicode",FALSE,FALSE,FALSE,NA
+NA,"MAGNETOB.afm.gz","C:\Windows\Fonts\MAGNETOB.TTF","Magneto Bold","Magneto","Magneto-Bold",TRUE,FALSE,FALSE,NA
+NA,"MAIAN.afm.gz","C:\Windows\Fonts\MAIAN.TTF","Maiandra GD","Maiandra GD","MaiandraGD-Regular",FALSE,FALSE,FALSE,NA
+NA,"malgun.afm.gz","C:\Windows\Fonts\malgun.ttf","Malgun Gothic","Malgun Gothic","MalgunGothic",FALSE,FALSE,FALSE,NA
+NA,"malgunsl.afm.gz","C:\Windows\Fonts\malgunsl.ttf","Malgun Gothic Semilight","Malgun Gothic Semilight","MalgunGothic-Semilight",FALSE,FALSE,FALSE,NA
+NA,"malgunbd.afm.gz","C:\Windows\Fonts\malgunbd.ttf","Malgun Gothic Bold","Malgun Gothic","MalgunGothicBold",TRUE,FALSE,FALSE,NA
+NA,"marlett.afm.gz","C:\Windows\Fonts\marlett.ttf","Marlett","Marlett","Marlett",FALSE,FALSE,FALSE,NA
+NA,"MATURASC.afm.gz","C:\Windows\Fonts\MATURASC.TTF","Matura MT Script Capitals","Matura MT Script Capitals","MaturaMTScriptCapitals",FALSE,FALSE,FALSE,NA
+NA,"himalaya.afm.gz","C:\Windows\Fonts\himalaya.ttf","Microsoft Himalaya","Microsoft Himalaya","Microsoft-Himalaya",FALSE,FALSE,FALSE,NA
+NA,"msyi.afm.gz","C:\Windows\Fonts\msyi.ttf","Microsoft Yi Baiti","Microsoft Yi Baiti","Microsoft-Yi-Baiti",FALSE,FALSE,FALSE,NA
+NA,"ntailu.afm.gz","C:\Windows\Fonts\ntailu.ttf","Microsoft New Tai Lue","Microsoft New Tai Lue","MicrosoftNewTaiLue",FALSE,FALSE,FALSE,NA
+NA,"ntailub.afm.gz","C:\Windows\Fonts\ntailub.ttf","Microsoft New Tai Lue Bold","Microsoft New Tai Lue","MicrosoftNewTaiLue-Bold",TRUE,FALSE,FALSE,NA
+NA,"phagspa.afm.gz","C:\Windows\Fonts\phagspa.ttf","Microsoft PhagsPa","Microsoft PhagsPa","MicrosoftPhagsPa",FALSE,FALSE,FALSE,NA
+NA,"phagspab.afm.gz","C:\Windows\Fonts\phagspab.ttf","Microsoft PhagsPa Bold","Microsoft PhagsPa","MicrosoftPhagsPa-Bold",TRUE,FALSE,FALSE,NA
+NA,"micross.afm.gz","C:\Windows\Fonts\micross.ttf","Microsoft Sans Serif","Microsoft Sans Serif","MicrosoftSansSerif",FALSE,FALSE,FALSE,NA
+NA,"taile.afm.gz","C:\Windows\Fonts\taile.ttf","Microsoft Tai Le","Microsoft Tai Le","MicrosoftTaiLe",FALSE,FALSE,FALSE,NA
+NA,"taileb.afm.gz","C:\Windows\Fonts\taileb.ttf","Microsoft Tai Le Bold","Microsoft Tai Le","MicrosoftTaiLe-Bold",TRUE,FALSE,FALSE,NA
+NA,"MSUIGHUR.afm.gz","C:\Windows\Fonts\MSUIGHUR.TTF","Microsoft Uighur","Microsoft Uighur","MicrosoftUighur",FALSE,FALSE,FALSE,NA
+NA,"MSUIGHUB.afm.gz","C:\Windows\Fonts\MSUIGHUB.TTF","Microsoft Uighur Bold","Microsoft Uighur","MicrosoftUighur-Bold",TRUE,FALSE,FALSE,NA
+NA,"MISTRAL.afm.gz","C:\Windows\Fonts\MISTRAL.TTF","Mistral","Mistral","Mistral",FALSE,FALSE,FALSE,NA
+NA,"MOD20.afm.gz","C:\Windows\Fonts\MOD20.TTF","Modern No. 20","Modern No. 20","Modern-Regular",FALSE,FALSE,FALSE,NA
+NA,"monbaiti.afm.gz","C:\Windows\Fonts\monbaiti.ttf","Mongolian Baiti","Mongolian Baiti","MongolianBaiti",FALSE,FALSE,FALSE,NA
+NA,"MTCORSVA.afm.gz","C:\Windows\Fonts\MTCORSVA.TTF","Monotype Corsiva","Monotype Corsiva","MonotypeCorsiva",FALSE,FALSE,FALSE,NA
+NA,"sasgsort.afm.gz","C:\Windows\Fonts\sasgsort.ttf","Monotype Sorts","Monotype Sorts","MonotypeSorts",FALSE,FALSE,FALSE,NA
+NA,"OUTLOOK.afm.gz","C:\Windows\Fonts\OUTLOOK.TTF","MS Outlook","MS Outlook","MSOutlook",FALSE,FALSE,FALSE,NA
+NA,"REFSAN.afm.gz","C:\Windows\Fonts\REFSAN.TTF","MS Reference Sans Serif","MS Reference Sans Serif","MSReferenceSansSerif",FALSE,FALSE,FALSE,NA
+NA,"REFSPCL.afm.gz","C:\Windows\Fonts\REFSPCL.TTF","MS Reference Specialty","MS Reference Specialty","MSReferenceSpecialty",FALSE,FALSE,FALSE,NA
+NA,"mvboli.afm.gz","C:\Windows\Fonts\mvboli.ttf","MV Boli","MV Boli","MVBoli",FALSE,FALSE,FALSE,NA
+NA,"mmrtext.afm.gz","C:\Windows\Fonts\mmrtext.ttf","Myanmar Text","Myanmar Text","MyanmarText",FALSE,FALSE,FALSE,NA
+NA,"mmrtextb.afm.gz","C:\Windows\Fonts\mmrtextb.ttf","Myanmar Text Bold","Myanmar Text","MyanmarText-Bold",TRUE,FALSE,FALSE,NA
+NA,"myinghei.afm.gz","C:\Windows\Fonts\myinghei.ttf","MYingHei_18030_C-Medium","MYingHei_18030_C-Medium","MYingHei-18030-C-Medium",FALSE,FALSE,FALSE,NA
+NA,"myinghwl.afm.gz","C:\Windows\Fonts\myinghwl.ttf","MYingHei_18030_C-MediumHWL","MYingHei_18030_C-MediumHWL","MYingHei-18030-C-MediumHWL",FALSE,FALSE,FALSE,NA
+NA,"NIAGENG.afm.gz","C:\Windows\Fonts\NIAGENG.TTF","Niagara Engraved","Niagara Engraved","NiagaraEngraved-Reg",FALSE,FALSE,FALSE,NA
+NA,"NIAGSOL.afm.gz","C:\Windows\Fonts\NIAGSOL.TTF","Niagara Solid","Niagara Solid","NiagaraSolid-Reg",FALSE,FALSE,FALSE,NA
+NA,"Nirmala.afm.gz","C:\Windows\Fonts\Nirmala.ttf","Nirmala UI","Nirmala UI","NirmalaUI",FALSE,FALSE,FALSE,NA
+NA,"NirmalaB.afm.gz","C:\Windows\Fonts\NirmalaB.ttf","Nirmala UI Bold","Nirmala UI","NirmalaUI-Bold",TRUE,FALSE,FALSE,NA
+NA,"NirmalaS.afm.gz","C:\Windows\Fonts\NirmalaS.ttf","Nirmala UI Semilight","Nirmala UI Semilight","NirmalaUI-Semilight",FALSE,FALSE,FALSE,NA
+NA,"OCRAEXT.afm.gz","C:\Windows\Fonts\OCRAEXT.TTF","OCR A Extended","OCR A Extended","OCRAExtended",FALSE,FALSE,FALSE,NA
+NA,"OLDENGL.afm.gz","C:\Windows\Fonts\OLDENGL.TTF","Old English Text MT","Old English Text MT","OldEnglishTextMT",FALSE,FALSE,FALSE,NA
+NA,"ONYX.afm.gz","C:\Windows\Fonts\ONYX.TTF","Onyx","Onyx","Onyx",FALSE,FALSE,FALSE,NA
+NA,"PALSCRI.afm.gz","C:\Windows\Fonts\PALSCRI.TTF","Palace Script MT","Palace Script MT","PalaceScriptMT",FALSE,FALSE,FALSE,NA
+NA,"palab.afm.gz","C:\Windows\Fonts\palab.ttf","Palatino Linotype Bold","Palatino Linotype","PalatinoLinotype-Bold",TRUE,FALSE,FALSE,NA
+NA,"palabi.afm.gz","C:\Windows\Fonts\palabi.ttf","Palatino Linotype Bold Italic","Palatino Linotype","PalatinoLinotype-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"palai.afm.gz","C:\Windows\Fonts\palai.ttf","Palatino Linotype Italic","Palatino Linotype","PalatinoLinotype-Italic",FALSE,TRUE,FALSE,NA
+NA,"pala.afm.gz","C:\Windows\Fonts\pala.ttf","Palatino Linotype","Palatino Linotype","PalatinoLinotype-Roman",FALSE,FALSE,FALSE,NA
+NA,"PAPYRUS.afm.gz","C:\Windows\Fonts\PAPYRUS.TTF","Papyrus","Papyrus","Papyrus-Regular",FALSE,FALSE,FALSE,NA
+NA,"PARCHM.afm.gz","C:\Windows\Fonts\PARCHM.TTF","Parchment","Parchment","Parchment-Regular",FALSE,FALSE,FALSE,NA
+NA,"PER_____.afm.gz","C:\Windows\Fonts\PER_____.TTF","Perpetua","Perpetua","Perpetua",FALSE,FALSE,FALSE,NA
+NA,"PERB____.afm.gz","C:\Windows\Fonts\PERB____.TTF","Perpetua Bold","Perpetua","Perpetua-Bold",TRUE,FALSE,FALSE,NA
+NA,"PERBI___.afm.gz","C:\Windows\Fonts\PERBI___.TTF","Perpetua Bold Italic","Perpetua","Perpetua-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"PERI____.afm.gz","C:\Windows\Fonts\PERI____.TTF","Perpetua Italic","Perpetua","Perpetua-Italic",FALSE,TRUE,FALSE,NA
+NA,"PERTIBD.afm.gz","C:\Windows\Fonts\PERTIBD.TTF","Perpetua Titling MT Bold","Perpetua Titling MT","PerpetuaTitlingMT-Bold",TRUE,FALSE,FALSE,NA
+NA,"PERTILI.afm.gz","C:\Windows\Fonts\PERTILI.TTF","Perpetua Titling MT Light","Perpetua Titling MT","PerpetuaTitlingMT-Light",FALSE,FALSE,FALSE,NA
+NA,"PLAYBILL.afm.gz","C:\Windows\Fonts\PLAYBILL.TTF","Playbill","Playbill","Playbill",FALSE,FALSE,FALSE,NA
+NA,"POORICH.afm.gz","C:\Windows\Fonts\POORICH.TTF","Poor Richard","Poor Richard","PoorRichard-Regular",FALSE,FALSE,FALSE,NA
+NA,"PRISTINA.afm.gz","C:\Windows\Fonts\PRISTINA.TTF","Pristina","Pristina","Pristina-Regular",FALSE,FALSE,FALSE,NA
+NA,"RAGE.afm.gz","C:\Windows\Fonts\RAGE.TTF","Rage Italic","Rage Italic","RageItalic",FALSE,TRUE,FALSE,NA
+NA,"RAVIE.afm.gz","C:\Windows\Fonts\RAVIE.TTF","Ravie","Ravie","Ravie",FALSE,FALSE,FALSE,NA
+NA,"ROCK.afm.gz","C:\Windows\Fonts\ROCK.TTF","Rockwell","Rockwell","Rockwell",FALSE,FALSE,FALSE,NA
+NA,"ROCKB.afm.gz","C:\Windows\Fonts\ROCKB.TTF","Rockwell Bold","Rockwell","Rockwell-Bold",TRUE,FALSE,FALSE,NA
+NA,"ROCKBI.afm.gz","C:\Windows\Fonts\ROCKBI.TTF","Rockwell Bold Italic","Rockwell","Rockwell-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"ROCC____.afm.gz","C:\Windows\Fonts\ROCC____.TTF","Rockwell Condensed","Rockwell Condensed","Rockwell-Condensed",FALSE,FALSE,FALSE,NA
+NA,"ROCCB___.afm.gz","C:\Windows\Fonts\ROCCB___.TTF","Rockwell Condensed Bold","Rockwell Condensed","Rockwell-CondensedBold",TRUE,FALSE,FALSE,NA
+NA,"ROCKEB.afm.gz","C:\Windows\Fonts\ROCKEB.TTF","Rockwell Extra Bold","Rockwell Extra Bold","Rockwell-ExtraBold",FALSE,FALSE,FALSE,NA
+NA,"ROCKI.afm.gz","C:\Windows\Fonts\ROCKI.TTF","Rockwell Italic","Rockwell","Rockwell-Italic",FALSE,TRUE,FALSE,NA
+NA,"sasmonob.afm.gz","C:\Windows\Fonts\sasmonob.ttf","SAS Monospace Bold","SAS Monospace Bold","SASMonospaceBT-Bold",FALSE,FALSE,FALSE,NA
+NA,"sasmono.afm.gz","C:\Windows\Fonts\sasmono.ttf","SAS Monospace","SAS Monospace","SASMonospaceBT-Roman",FALSE,FALSE,FALSE,NA
+NA,"SCRIPTBL.afm.gz","C:\Windows\Fonts\SCRIPTBL.TTF","Script MT Bold","Script MT Bold","ScriptMTBold",FALSE,FALSE,FALSE,NA
+NA,"segmdl2.afm.gz","C:\Windows\Fonts\segmdl2.ttf","Segoe MDL2 Assets","Segoe MDL2 Assets","SegoeMDL2Assets",FALSE,FALSE,FALSE,NA
+NA,"segoepr.afm.gz","C:\Windows\Fonts\segoepr.ttf","Segoe Print","Segoe Print","SegoePrint",FALSE,FALSE,FALSE,NA
+NA,"segoeprb.afm.gz","C:\Windows\Fonts\segoeprb.ttf","Segoe Print Bold","Segoe Print","SegoePrint-Bold",TRUE,FALSE,FALSE,NA
+NA,"segoesc.afm.gz","C:\Windows\Fonts\segoesc.ttf","Segoe Script","Segoe Script","SegoeScript",FALSE,FALSE,FALSE,NA
+NA,"segoescb.afm.gz","C:\Windows\Fonts\segoescb.ttf","Segoe Script Bold","Segoe Script","SegoeScript-Bold",TRUE,FALSE,FALSE,NA
+NA,"segoeui.afm.gz","C:\Windows\Fonts\segoeui.ttf","Segoe UI","Segoe UI","SegoeUI",FALSE,FALSE,FALSE,NA
+NA,"segoeuib.afm.gz","C:\Windows\Fonts\segoeuib.ttf","Segoe UI Bold","Segoe UI","SegoeUI-Bold",TRUE,FALSE,FALSE,NA
+NA,"segoeuiz.afm.gz","C:\Windows\Fonts\segoeuiz.ttf","Segoe UI Bold Italic","Segoe UI","SegoeUI-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"segoeuii.afm.gz","C:\Windows\Fonts\segoeuii.ttf","Segoe UI Italic","Segoe UI","SegoeUI-Italic",FALSE,TRUE,FALSE,NA
+NA,"segoeuil.afm.gz","C:\Windows\Fonts\segoeuil.ttf","Segoe UI Light","Segoe UI Light","SegoeUI-Light",FALSE,FALSE,FALSE,NA
+NA,"seguili.afm.gz","C:\Windows\Fonts\seguili.ttf","Segoe UI Light Italic","Segoe UI Light","SegoeUI-LightItalic",FALSE,TRUE,FALSE,NA
+NA,"seguisb.afm.gz","C:\Windows\Fonts\seguisb.ttf","Segoe UI Semibold","Segoe UI Semibold","SegoeUI-Semibold",FALSE,FALSE,FALSE,NA
+NA,"seguisbi.afm.gz","C:\Windows\Fonts\seguisbi.ttf","Segoe UI Semibold Italic","Segoe UI Semibold","SegoeUI-SemiboldItalic",FALSE,TRUE,FALSE,NA
+NA,"segoeuisl.afm.gz","C:\Windows\Fonts\segoeuisl.ttf","Segoe UI Semilight","Segoe UI Semilight","SegoeUI-Semilight",FALSE,FALSE,FALSE,NA
+NA,"seguisli.afm.gz","C:\Windows\Fonts\seguisli.ttf","Segoe UI Semilight Italic","Segoe UI Semilight","SegoeUI-SemilightItalic",FALSE,TRUE,FALSE,NA
+NA,"seguibl.afm.gz","C:\Windows\Fonts\seguibl.ttf","Segoe UI Black","Segoe UI Black","SegoeUIBlack",FALSE,FALSE,FALSE,NA
+NA,"seguibli.afm.gz","C:\Windows\Fonts\seguibli.ttf","Segoe UI Black Italic","Segoe UI Black","SegoeUIBlack-Italic",FALSE,TRUE,FALSE,NA
+NA,"seguihis.afm.gz","C:\Windows\Fonts\seguihis.ttf","Segoe UI Historic","Segoe UI Historic","SegoeUIHistoric",FALSE,FALSE,FALSE,NA
+NA,"seguisym.afm.gz","C:\Windows\Fonts\seguisym.ttf","Segoe UI Symbol","Segoe UI Symbol","SegoeUISymbol",FALSE,FALSE,TRUE,NA
+NA,"SHOWG.afm.gz","C:\Windows\Fonts\SHOWG.TTF","Showcard Gothic","Showcard Gothic","ShowcardGothic-Reg",FALSE,FALSE,FALSE,NA
+NA,"simsunb.afm.gz","C:\Windows\Fonts\simsunb.ttf","SimSun-ExtB","SimSun-ExtB","SimSun-ExtB",FALSE,FALSE,FALSE,NA
+NA,"SNAP____.afm.gz","C:\Windows\Fonts\SNAP____.TTF","Snap ITC","Snap ITC","SnapITC-Regular",FALSE,FALSE,FALSE,NA
+NA,"STENCIL.afm.gz","C:\Windows\Fonts\STENCIL.TTF","Stencil","Stencil","Stencil",FALSE,FALSE,FALSE,NA
+NA,"sylfaen.afm.gz","C:\Windows\Fonts\sylfaen.ttf","Sylfaen","Sylfaen","Sylfaen",FALSE,FALSE,FALSE,NA
+NA,"sasgsymb.afm.gz","C:\Windows\Fonts\sasgsymb.ttf","Symbol MT","Symbol MT","SymbolMT",FALSE,FALSE,TRUE,NA
+NA,"symbol.afm.gz","C:\Windows\Fonts\sasgsymb.ttf","Symbol","Symbol","SymbolMT",FALSE,FALSE,TRUE,NA
+NA,"sasgsymb.afm.gz","C:\Windows\Fonts\symbol.ttf","Symbol MT","Symbol MT","SymbolMT",FALSE,FALSE,TRUE,NA
+NA,"symbol.afm.gz","C:\Windows\Fonts\symbol.ttf","Symbol","Symbol","SymbolMT",FALSE,FALSE,TRUE,NA
+NA,"tahoma.afm.gz","C:\Windows\Fonts\tahoma.ttf","Tahoma","Tahoma","Tahoma",FALSE,FALSE,FALSE,NA
+NA,"tahomabd.afm.gz","C:\Windows\Fonts\tahomabd.ttf","Tahoma Bold","Tahoma","Tahoma-Bold",TRUE,FALSE,FALSE,NA
+NA,"TEMPSITC.afm.gz","C:\Windows\Fonts\TEMPSITC.TTF","Tempus Sans ITC","Tempus Sans ITC","TempusSansITC",FALSE,FALSE,FALSE,NA
+NA,"saswthr.afm.gz","C:\Windows\Fonts\saswthr.ttf","Thorndale AMT","Thorndale AMT","ThorndaleAMT",FALSE,FALSE,FALSE,NA
+NA,"saswthb.afm.gz","C:\Windows\Fonts\saswthb.ttf","Thorndale AMT Bold","Thorndale AMT","ThorndaleAMT-Bold",TRUE,FALSE,FALSE,NA
+NA,"saswthbi.afm.gz","C:\Windows\Fonts\saswthbi.ttf","Thorndale AMT Bold Italic","Thorndale AMT","ThorndaleAMT-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"saswthi.afm.gz","C:\Windows\Fonts\saswthi.ttf","Thorndale AMT Italic","Thorndale AMT","ThorndaleAMT-Italic",FALSE,TRUE,FALSE,NA
+NA,"timesbi.afm.gz","C:\Windows\Fonts\timesbi.ttf","Times New Roman Bold Italic","Times New Roman","TimesNewRomanPS-BoldItalicMT",TRUE,TRUE,FALSE,NA
+NA,"timesbd.afm.gz","C:\Windows\Fonts\timesbd.ttf","Times New Roman Bold","Times New Roman","TimesNewRomanPS-BoldMT",TRUE,FALSE,FALSE,NA
+NA,"timesi.afm.gz","C:\Windows\Fonts\timesi.ttf","Times New Roman Italic","Times New Roman","TimesNewRomanPS-ItalicMT",FALSE,TRUE,FALSE,NA
+NA,"times.afm.gz","C:\Windows\Fonts\times.ttf","Times New Roman","Times New Roman","TimesNewRomanPSMT",FALSE,FALSE,FALSE,NA
+NA,"sasgtsr.afm.gz","C:\Windows\Fonts\sasgtsr.ttf","Times New Roman Symbol","Times New Roman Symbol","TimesNewRomanSymbol",FALSE,FALSE,TRUE,NA
+NA,"sasgtsb.afm.gz","C:\Windows\Fonts\sasgtsb.ttf","Times New Roman Symbol Bold","Times New Roman Symbol","TimesNewRomanSymbol-Bold",TRUE,FALSE,TRUE,NA
+NA,"sasgtsbi.afm.gz","C:\Windows\Fonts\sasgtsbi.ttf","Times New Roman Symbol Bold Italic","Times New Roman Symbol","TimesNewRomanSymbol-BoldItalic",TRUE,TRUE,TRUE,NA
+NA,"sasgtsi.afm.gz","C:\Windows\Fonts\sasgtsi.ttf","Times New Roman Symbol Italic","Times New Roman Symbol","TimesNewRomanSymbol-Italic",FALSE,TRUE,TRUE,NA
+NA,"tnruni.afm.gz","C:\Windows\Fonts\tnruni.ttf","Times New Roman Uni","Times New Roman Uni","TimesNewRomanUni",FALSE,FALSE,FALSE,NA
+NA,"trebucbi.afm.gz","C:\Windows\Fonts\trebucbi.ttf","Trebuchet MS Bold Italic","Trebuchet MS","Trebuchet-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"trebuc.afm.gz","C:\Windows\Fonts\trebuc.ttf","Trebuchet MS","Trebuchet MS","TrebuchetMS",FALSE,FALSE,FALSE,NA
+NA,"trebucbd.afm.gz","C:\Windows\Fonts\trebucbd.ttf","Trebuchet MS Bold","Trebuchet MS","TrebuchetMS-Bold",TRUE,FALSE,FALSE,NA
+NA,"trebucit.afm.gz","C:\Windows\Fonts\trebucit.ttf","Trebuchet MS Italic","Trebuchet MS","TrebuchetMS-Italic",FALSE,TRUE,FALSE,NA
+NA,"TCB_____.afm.gz","C:\Windows\Fonts\TCB_____.TTF","Tw Cen MT Bold","Tw Cen MT","TwCenMT-Bold",TRUE,FALSE,FALSE,NA
+NA,"TCBI____.afm.gz","C:\Windows\Fonts\TCBI____.TTF","Tw Cen MT Bold Italic","Tw Cen MT","TwCenMT-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"TCCM____.afm.gz","C:\Windows\Fonts\TCCM____.TTF","Tw Cen MT Condensed","Tw Cen MT Condensed","TwCenMT-Condensed",FALSE,FALSE,FALSE,NA
+NA,"TCCB____.afm.gz","C:\Windows\Fonts\TCCB____.TTF","Tw Cen MT Condensed Bold","Tw Cen MT Condensed","TwCenMT-CondensedBold",TRUE,FALSE,FALSE,NA
+NA,"TCCEB.afm.gz","C:\Windows\Fonts\TCCEB.TTF","Tw Cen MT Condensed Extra Bold","Tw Cen MT Condensed Extra Bold","TwCenMT-CondensedExtraBold",FALSE,FALSE,FALSE,NA
+NA,"TCMI____.afm.gz","C:\Windows\Fonts\TCMI____.TTF","Tw Cen MT Italic","Tw Cen MT","TwCenMT-Italic",FALSE,TRUE,FALSE,NA
+NA,"TCM_____.afm.gz","C:\Windows\Fonts\TCM_____.TTF","Tw Cen MT","Tw Cen MT","TwCenMT-Regular",FALSE,FALSE,FALSE,NA
+NA,"verdana.afm.gz","C:\Windows\Fonts\verdana.ttf","Verdana","Verdana","Verdana",FALSE,FALSE,FALSE,NA
+NA,"verdanab.afm.gz","C:\Windows\Fonts\verdanab.ttf","Verdana Bold","Verdana","Verdana-Bold",TRUE,FALSE,FALSE,NA
+NA,"verdanaz.afm.gz","C:\Windows\Fonts\verdanaz.ttf","Verdana Bold Italic","Verdana","Verdana-BoldItalic",TRUE,TRUE,FALSE,NA
+NA,"verdanai.afm.gz","C:\Windows\Fonts\verdanai.ttf","Verdana Italic","Verdana","Verdana-Italic",FALSE,TRUE,FALSE,NA
+NA,"VINERITC.afm.gz","C:\Windows\Fonts\VINERITC.TTF","Viner Hand ITC","Viner Hand ITC","VinerHandITC",FALSE,FALSE,FALSE,NA
+NA,"VIVALDII.afm.gz","C:\Windows\Fonts\VIVALDII.TTF","Vivaldi Italic","Vivaldi","Vivaldii",FALSE,TRUE,FALSE,NA
+NA,"VLADIMIR.afm.gz","C:\Windows\Fonts\VLADIMIR.TTF","Vladimir Script","Vladimir Script","VladimirScript",FALSE,FALSE,FALSE,NA
+NA,"webdings.afm.gz","C:\Windows\Fonts\webdings.ttf","Webdings","Webdings","Webdings",FALSE,FALSE,FALSE,NA
+NA,"wingding.afm.gz","C:\Windows\Fonts\wingding.ttf","Wingdings","Wingdings","Wingdings-Regular",FALSE,FALSE,FALSE,NA
+NA,"WINGDNG2.afm.gz","C:\Windows\Fonts\WINGDNG2.TTF","Wingdings 2","Wingdings 2","Wingdings2",FALSE,FALSE,FALSE,NA
+NA,"WINGDNG3.afm.gz","C:\Windows\Fonts\WINGDNG3.TTF","Wingdings 3","Wingdings 3","Wingdings3",FALSE,FALSE,FALSE,NA

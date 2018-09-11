@@ -25,5 +25,5 @@ RoxygenNote: 6.0.1.9000
 Packaged: 2017-05-31 14:03:43 UTC; jeroen
 Repository: CRAN
 Date/Publication: 2017-06-01 12:03:37 UTC
-Built: R 3.3.3; x86_64-w64-mingw32; 2017-08-08 00:14:23 UTC; windows
+Built: R 3.5.0; x86_64-w64-mingw32; 2018-05-29 16:30:16 UTC; windows
 Archs: i386, x64

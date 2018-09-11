@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: tw_tab</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for tw_tab {socviz}"><tr><td>tw_tab {socviz}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>tw_tab</h2>
+
+<h3>Description</h3>
+
+<p>Quickly make a two-way table of proportions (percentages)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+tw_tab(x, y, margin = NULL, digs = 1, dnn = NULL, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>Row variable</p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>Column variable</p>
+</td></tr>
+<tr valign="top"><td><code>margin</code></td>
+<td>
+<p>See 'prop.table'. Default is joint distribution (all
+cells sum to 100), 1 for row margins (rows sum to 1), 2 for
+column margins (columns sum to 1)</p>
+</td></tr>
+<tr valign="top"><td><code>digs</code></td>
+<td>
+<p>Number of rigits to round percentages to. Defaults to 1.</p>
+</td></tr>
+<tr valign="top"><td><code>dnn</code></td>
+<td>
+<p>See 'table'. the names to be given to the dimensions in
+the result (the dimnames names). Defaults to NULL for none.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>Other arguments to be passed to 'table'.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>A wrapper for 'table' and 'prop.table' with the margin labels set
+by default to NULL and the cells rounded to percents at 1
+decimal place.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A contingency table of percentage values.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Kieran Healy
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>socviz</em> version 0.5.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

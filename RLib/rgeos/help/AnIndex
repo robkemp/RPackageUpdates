@@ -6,6 +6,7 @@ area.poly,gpc.poly-method	class-gpc.poly
 area.poly-methods	gpc-new-generics
 bbox,Ring-method	class-Ring
 bbox,SpatialRingsDataFrame-method	class-SpatialRingsDataFrame
+bbox2SP	bbox2SP
 checkP4S	utility-functions
 coerce,data.frame,gpc.poly-method	class-gpc.poly
 coerce,gpc.poly,matrix-method	class-gpc.poly
@@ -134,6 +135,7 @@ RGEOSRelate	pred-binary-gRelate
 RGEOSTouches	pred-binary-gTouches
 RGEOSUnionCascaded	topo-bin-gUnion
 RGEOSWithin	pred-binary-gContains
+rgeos_extSoftVersion	utility-functions
 Ring	constructor-SpatialRings
 Ring-class	class-Ring
 row.names,SpatialCollections-method	class-SpatialCollections

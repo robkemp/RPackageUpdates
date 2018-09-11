@@ -1,6 +1,7 @@
 add_summary             Add Summary Statistics onto a ggplot.
 annotate_figure         Annotate Arranged Figure
 as_ggplot               Storing grid.arrange() arrangeGrob() and plots
+axis_scale              Change Axis Scale: log2, log10 and more
 background_image        Add Background Image to ggplot2
 bgcolor                 Change ggplot Panel Background Color
 border                  Set ggplot Panel Border Line
@@ -15,9 +16,11 @@ get_legend              Extract Legends from a ggplot object
 get_palette             Generate Color Palettes
 ggadd                   Add Summary Statistics or a Geom onto a ggplot
 ggarrange               Arrange Multiple ggplots
+ggballoonplot           Ballon plot
 ggbarplot               Bar plot
 ggboxplot               Box plot
 ggdensity               Density plot
+ggdonutchart            Donut chart
 ggdotchart              Cleveland's Dot Plots
 ggdotplot               Dot plot
 ggecdf                  Empirical cumulative density function
@@ -33,6 +36,7 @@ ggpie                   Pie chart
 ggpubr_args             ggpubr General Arguments Description
 ggqqplot                QQ Plots
 ggscatter               Scatter plot
+ggscatterhist           Scatter Plot with Marginal Histograms
 ggstripchart            Stripcharts
 ggtext                  Text
 ggtexttable             Draw a Textual Table
@@ -55,4 +59,3 @@ stat_stars              Add Stars to a Scatter Plot
 text_grob               Create a Text Graphical object
 theme_pubr              Publication ready theme
 theme_transparent       Create a ggplot with Transparent Background
-xscale                  Change Axis Scale: log2, log10 and more

@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Boolean operators and functions for class bit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for LogicBit {bit}"><tr><td>LogicBit {bit}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2> Boolean operators and functions for class bit </h2>
+
+<h3>Description</h3>
+
+<p>Boolean 'negation', 'and', 'or' and 'exclusive or'.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'bit'
+!x
+## S3 method for class 'bitwhich'
+!x
+## S3 method for class 'bit'
+e1 &amp; e2
+## S3 method for class 'bitwhich'
+e1 &amp; e2
+## S3 method for class 'bit'
+e1 | e2
+## S3 method for class 'bitwhich'
+e1 | e2
+## S3 method for class 'bit'
+e1 == e2
+## S3 method for class 'bitwhich'
+e1 == e2
+## S3 method for class 'bit'
+e1 != e2
+## S3 method for class 'bitwhich'
+e1 != e2
+xor(x, y)
+## Default S3 method:
+xor(x, y)
+## S3 method for class 'bit'
+xor(x, y)
+## S3 method for class 'bitwhich'
+xor(x, y)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p> a bit vector (or one logical vector in binary operators) </p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p> a bit vector or an logical vector </p>
+</td></tr>
+<tr valign="top"><td><code>e1</code></td>
+<td>
+<p> a bit vector or an logical vector </p>
+</td></tr>
+<tr valign="top"><td><code>e2</code></td>
+<td>
+<p> a bit vector or an logical vector </p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Binary operators and function <code>xor</code> can combine 'bit' objects and 'logical' vectors.
+They do not recycle, thus the lengths of objects must match. Boolean operations on bit vectors are extremely fast
+because they are implemented using C's bitwise operators. If one argument is 'logical' it is converted to 'bit'. <br />
+</p>
+<p>Binary operators and function <code>xor</code> can combine 'bitwhich' objects and other vectors.
+They do not recycle, thus the lengths of objects must match. Boolean operations on bitwhich vectors are fast
+if the distribution of TRUE and FALSE is very asymetric. If one argument is not 'bitwhich' it is converted to 'bitwhich'. <br />
+</p>
+<p>The <code>xor</code> function has been made generic and <code>xor.default</code> has been implemented much faster than R's standard <code><a href="../../base/html/xor.html">xor</a></code>.
+This was possible because actually boolean function <code>xor</code> and comparison operator <code>!=</code> do the same (even with NAs), and <code>!=</code> is much faster than the multiple calls in <code>(x | y) &amp; !(x &amp; y)</code>
+</p>
+
+
+<h3>Value</h3>
+
+<p>An object of class 'bit' (or 'bitwhich')
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p> Jens Oehlschlägel </p>
+
+
+<h3>See Also</h3>
+
+ <p><code><a href="bit-package.html">bit</a></code>, <code><a href="../../methods/html/S4groupGeneric.html">Logic</a></code> </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  x &lt;- as.bit(c(FALSE, FALSE, FALSE, NA, NA, NA, TRUE, TRUE, TRUE))
+  yl &lt;- c(FALSE, NA, TRUE, FALSE, NA, TRUE, FALSE, NA, TRUE)
+  y &lt;- as.bit(yl)
+  !x
+  x &amp; y
+  x | y
+  xor(x, y)
+  x != y
+  x == y
+  x &amp; yl
+  x | yl
+  xor(x, yl)
+  x != yl
+  x == yl
+
+  x &lt;- as.bitwhich(c(FALSE, FALSE, FALSE, NA, NA, NA, TRUE, TRUE, TRUE))
+  yl &lt;- c(FALSE, NA, TRUE, FALSE, NA, TRUE, FALSE, NA, TRUE)
+  y &lt;- as.bitwhich(yl)
+  !x
+  x &amp; y
+  x | y
+  xor(x, y)
+  x != y
+  x == y
+  x &amp; yl
+  x | yl
+  xor(x, yl)
+  x != yl
+  x == yl
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>bit</em> version 1.1-14 <a href="00Index.html">Index</a>]</div>
+</body></html>

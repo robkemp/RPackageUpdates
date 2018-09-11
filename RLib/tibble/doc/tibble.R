@@ -51,3 +51,14 @@ df$a
 df2 <- tibble(abc = 1)
 df2$a
 
+## ------------------------------------------------------------------------
+data.frame(a = 1:3)[, "a", drop = TRUE]
+tibble(a = 1:3)[, "a", drop = TRUE]
+
+## ---- error = TRUE-------------------------------------------------------
+tibble(a = 1, b = 1:3)
+tibble(a = 1:3, b = 1)
+tibble(a = 1:3, c = 1:2)
+tibble(a = 1, b = integer())
+tibble(a = integer(), b = 1)
+

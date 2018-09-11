@@ -1,19 +1,18 @@
+AUC                     Decision Theory measures of specificity,
+                        sensitivity, and d prime
 Bechtoldt               Seven data sets showing a bifactor solution.
 Dwyer                   8 cognitive variables used by Dwyer for an
                         example.
+Garcia                  Data from the sexism (protest) study of Garcia,
+                        Schmitt, Branscome, and Ellemers (2010)
 Gleser                  Example data from Gleser, Cronbach and
                         Rajaratnam (1965) to show basic principles of
                         generalizability theory.
 Gorsuch                 Example data set from Gorsuch (1997) for an
                         example factor extension.
-Harman                  Two data sets from Harman (1967). 9 cognitive
+Harman                  Five data sets from Harman (1967). 9 cognitive
                         variables from Holzinger and 8 emotional
                         variables from Burt
-Harman.5                5 socio-economic variables from Harman (1967)
-Harman.8                Correlations of eight physical variables (from
-                        Harman, 1966)
-Harman.political        Eight political variables used by Harman (1967)
-                        as example 8.17
 ICC                     Intraclass Correlations (ICC1, ICC2, ICC3 from
                         Shrout and Fleiss)
 ICLUST.cluster          Function to form hierarchical cluster analysis
@@ -33,8 +32,12 @@ Schmid                  12 variables created by Schmid and Leiman to
                         show the Schmid-Leiman Transformation
 Schutz                  The Schutz correlation matrix example from
                         Shapiro and ten Berge
+Tal_Or                  Data set testing causal direction in presumed
+                        media influence
 Tucker                  9 Cognitive variables discussed by Tucker and
                         Lewis (1973)
+Utility                 Useful utility functions for file/directory
+                        exploration and manipulation.
 VSS                     Apply the Very Simple Structure, MAP, and other
                         criteria to determine the appropriate number of
                         factors.
@@ -52,12 +55,14 @@ affect                  Two data sets of affect and arousal scores as a
                         function of personality and movie conditions
 alpha                   Find two estimates of reliability: Cronbach's
                         alpha and Guttman's Lambda 6.
-bestScales              A set of functions for factorial and empirical
-                        scale construction
+bestScales              A bootstrap aggregation (bagging) function for
+                        choosing most predictive items
 bfi                     25 Personality items representing 5 factors
 bi.bars                 Draw pairs of bargraphs based on two groups
 biplot.psych            Draw biplots of factor or component scores by
                         factor or component loadings
+blant                   A 29 x 29 matrix that produces weird factor
+                        analytic results
 block.random            Create a block randomized structure for n
                         independent variables
 blot                    Bond's Logical Operations Test - BLOT
@@ -77,6 +82,7 @@ cluster.plot            Plot factor/cluster loadings and assign items
 cluster2keys            Convert a cluster vector (from e.g., kmeans) to
                         a keys matrix suitable for scoring item
                         clusters.
+cohen.d                 Find Cohen d and confidence intervals
 cohen.kappa             Find Cohen's kappa and weighted kappa
                         coefficients for correlation of two raters
 comorbidity             Convert base rates of two diagnoses and their
@@ -157,11 +163,15 @@ fa                      Exploratory Factor analysis using MinRes
 fa.diagram              Graph factor loading matrices
 fa.extension            Apply Dwyer's factor extension to find factor
                         loadings for extended variables
+fa.lookup               A set of functions for factorial and empirical
+                        scale construction
 fa.multi                Multi level (hierarchical) factor analysis
 fa.parallel             Scree plots of data or correlation matrix
                         compared to random "parallel" matrices
 fa.poly                 Deprecated Exploratory Factor analysis
                         functions.  Please use fa
+fa.random               A first approximation to Random Effects
+                        Exploratory Factor Analysis
 fa.sort                 Sort factor analysis or principal components
                         analysis loadings
 factor.congruence       Coefficient of factor congruence
@@ -176,8 +186,8 @@ factor.stats            Find various goodness of fit statistics for
                         factor analysis and principal components
 factor2cluster          Extract cluster definitions from factor
                         loadings
-fisherz                 Transformations of r including Fisher r to z
-                        and z to r and confidence intervals
+fisherz                 Transformations of r, d, and t including Fisher
+                        r to z and z to r and confidence intervals
 galton                  Galton's Mid parent child height data
 geometric.mean          Find the geometric mean of a vector or columns
                         of a data.frame.
@@ -226,6 +236,8 @@ mixedCor                Find correlations for mixtures of continuous,
                         polytomous, and dichotomous variables
 msq                     75 mood items from the Motivational State
                         Questionnaire for 3896 participants
+msqR                    75 mood items from the Motivational State
+                        Questionnaire for 3032 unique participants
 mssd                    Find von Neuman's Mean Square of Successive
                         Differences
 multi.hist              Multiple histograms with density and normal
@@ -281,6 +293,8 @@ rescale                 Function to convert scores to "conventional "
 residuals.psych         Extract residuals from various psych objects
 reverse.code            Reverse the coding of selected items prior to
                         scale analysis
+sai                     State Anxiety data from the PMC lab over
+                        multiple occasions.
 sat.act                 3 Measures of ability: SATV, SATQ, ACT
 scaling.fits            Test the adequacy of simple choice, logistic,
                         or Thurstonian scaling.
@@ -323,6 +337,8 @@ simulation.circ         Simulations of circumplex and simple structure
 smc                     Find the Squared Multiple Correlation (SMC) of
                         each variable with the remaining variables in a
                         matrix
+spi                     A sample from the SAPA Personality Inventory
+                        including an item dictionary and scoring keys.
 spider                  Make "radar" or "spider" plots.
 splitHalf               Alternative estimates of test reliabiity
 statsBy                 Find statistics (including correlations) within
@@ -337,6 +353,8 @@ table2matrix            Convert a table with counts to a matrix or
 test.irt                A simple demonstration (and test) of various
                         IRT scoring algorthims.
 test.psych              Testing of functions in the psych package
+testRetest              Find various test-retest statistics, including
+                        test, person and item reliability
 tetrachoric             Tetrachoric, polychoric, biserial and
                         polyserial correlations from various types of
                         input

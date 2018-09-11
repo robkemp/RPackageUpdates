@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Coercing to bitwhich</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for as.bitwhich {bit}"><tr><td>as.bitwhich {bit}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2> Coercing to bitwhich </h2>
+
+<h3>Description</h3>
+
+<p>Functions to coerce to bitwhich
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+as.bitwhich(x, ...)
+## S3 method for class 'bitwhich'
+as.bitwhich(x, ...)
+## S3 method for class 'ri'
+as.bitwhich(x, ...)
+## S3 method for class 'bit'
+as.bitwhich(x, range=NULL, ...)
+## S3 method for class 'which'
+as.bitwhich(x, maxindex, ...)
+## S3 method for class 'integer'
+as.bitwhich(x, ...)
+## S3 method for class 'double'
+as.bitwhich(x, ...)
+## S3 method for class 'logical'
+as.bitwhich(x, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p> An object of class 'bitwhich', 'integer', 'logical' or 'bit' or an integer vector as resulting from 'which' </p>
+</td></tr>
+<tr valign="top"><td><code>maxindex</code></td>
+<td>
+<p> the length of the new bitwhich vector </p>
+</td></tr>
+<tr valign="top"><td><code>range</code></td>
+<td>
+<p> a <code><a href="ri.html">ri</a></code> or an integer vector of length==2 giving a range restriction for chunked processing </p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p> further arguments </p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>a value of class <code><a href="bitwhich.html">bitwhich</a></code>
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p> Jens Oehlschlägel </p>
+
+
+<h3>See Also</h3>
+
+ <p><code><a href="bitwhich.html">bitwhich</a></code>, <code><a href="as.bit.html">as.bit</a></code> </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+ as.bitwhich(c(FALSE, FALSE, FALSE))
+ as.bitwhich(c(FALSE, FALSE, TRUE))
+ as.bitwhich(c(FALSE, TRUE, TRUE))
+ as.bitwhich(c(TRUE, TRUE, TRUE))
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>bit</em> version 1.1-14 <a href="00Index.html">Index</a>]</div>
+</body></html>

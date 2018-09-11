@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Coercion to (positive) integer positions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for as.which {bit}"><tr><td>as.which {bit}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2> Coercion to (positive) integer positions </h2>
+
+<h3>Description</h3>
+
+<p>Coercing to something like the result of which <code><a href="../../base/html/which.html">which</a></code>
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+as.which(x, ...)
+## Default S3 method:
+as.which(x, ...)
+## S3 method for class 'ri'
+as.which(x, ...)
+## S3 method for class 'bit'
+as.which(x, range = NULL, ...)
+## S3 method for class 'bitwhich'
+as.which(x, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p> an object of classes <code><a href="bit-package.html">bit</a></code>, <code><a href="bitwhich.html">bitwhich</a></code>, <code><a href="ri.html">ri</a></code> or something on which <code><a href="../../base/html/which.html">which</a></code> works </p>
+</td></tr>
+<tr valign="top"><td><code>range</code></td>
+<td>
+<p> a <code><a href="ri.html">ri</a></code> or an integer vector of length==2 giving a range restriction for chunked processing </p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p> further arguments (passed to <code><a href="../../base/html/which.html">which</a></code> for the default method, ignored otherwise) </p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p><code>as.which.bit</code> returns a vector of subscripts with class 'which'
+</p>
+
+
+<h3>Value</h3>
+
+<p>a vector of class 'logical' or 'integer'
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p> Jens Oehlschlägel </p>
+
+
+<h3>See Also</h3>
+
+ <p><code><a href="as.bit.html">as.bit</a></code>, <code><a href="../../base/html/logical.html">as.logical</a></code>, <code><a href="../../base/html/integer.html">as.integer</a></code>, <code><a href="as.which.html">as.which</a></code>, <code><a href="as.bitwhich.html">as.bitwhich</a></code>, <code><a href="../../ff/html/as.ff.html">as.ff</a></code>, <code><a href="../../ff/html/as.hi.html">as.hi</a></code> </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  r &lt;- ri(5, 20, 100)
+  x &lt;- as.which(r)
+  x
+
+  stopifnot(identical(x, as.which(as.logical(r))))
+  stopifnot(identical(x, as.which(as.bitwhich(r))))
+  stopifnot(identical(x, as.which(as.bit(r))))
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>bit</em> version 1.1-14 <a href="00Index.html">Index</a>]</div>
+</body></html>

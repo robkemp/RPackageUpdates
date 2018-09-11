@@ -1,0 +1,12 @@
+age.cat                 Categorize a continuous age variable into
+                        common categories.
+ann.gr                  Calculates annualized growth rates.
+ed.cat                  Categorize a continuous education variable into
+                        common categories.
+modelmig                Estimate Model Migration Schedules using
+                        Non-linear Least Squares
+relsize                 Calculates relative width and height for
+                        comparison from data.
+robR-package            What the package does (short line) ~~ package
+                        title ~~
+save.xlsx               Exports R objects to a .xlsx file.

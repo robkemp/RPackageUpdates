@@ -7,7 +7,7 @@ importFrom(stats, optim)
 importFrom(graphics, par, lines, strwidth, strheight, text)
 
 export(createPolygonsComment, createSPComment, set_do_poly_check, get_do_poly_check)
-
+export(rgeos_extSoftVersion)
 #export(checkPolygonsGEOS)
 #export(checkHolesGPC)
 export(poly_findInBoxGEOS, gUnarySTRtreeQuery, gBinarySTRtreeQuery)
@@ -48,7 +48,7 @@ export( gRelate, gDisjoint, gTouches, gIntersects, gCrosses,
 export( RGEOSArea, RGEOSLength, RGEOSDistance, RGEOSisWithinDistance, 
 		RGEOSHausdorffDistance)
 export( gArea, gLength, gDistance, gWithinDistance, gNearestPoints)
-
+export( bbox2SP )
 
 # GEOS topology functions
 export( RGEOSEnvelope, RGEOSConvexHull, RGEOSBoundary, RGEOSGetCentroid, 

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Hybrid Index, C-coded utilities</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for intrle {bit}"><tr><td>intrle {bit}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2> Hybrid Index, C-coded utilities </h2>
+
+<h3>Description</h3>
+
+<p>These C-coded utilitites speed up index preprocessing considerably
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+intrle(x)
+intisasc(x)
+intisdesc(x)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p> an integer vector </p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p><code>intrle</code> is by factor 50 faster and needs less RAM (2x its input vector) compared to <code><a href="../../base/html/rle.html">rle</a></code> which needs 9x the RAM of its input vector.
+This is achieved because we allow the C-code of <code>intrle</code> to break when it turns out, that rle-packing will not achieve a
+compression factor of 3 or better.
+<br />
+<code>intisasc</code> is a faster version of <code><a href="../../base/html/is.unsorted.html">is.unsorted</a></code>: it checks whether <code>x</code> is sorted and returns NA <code>x</code> contains NAs.
+<br />
+<code>intisdesc</code> checks for being sorted descending and assumes that the input <code>x</code> contains no NAs (is used after <code>intisasc</code> and does not check for NAs).
+</p>
+
+
+<h3>Value</h3>
+
+<p><code>intrle</code> returns an object of class <code><a href="../../base/html/rle.html">rle</a></code> or NULL, if rle-compression is not efficient (compression factor &lt;3 or length(x)&lt;3).
+<br />
+<code>intisasc</code> returns one of <code>FALSE, NA, TRUE</code>
+<br />
+<code>intisdesc</code> returns one of <code>FALSE, TRUE</code> (if the input contains NAs, the output is undefined)
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p> Jens Oehlschlägel </p>
+
+
+<h3>See Also</h3>
+
+ <p><code><a href="../../ff/html/hi.html">hi</a></code>, <code><a href="../../base/html/rle.html">rle</a></code>, <code><a href="../../base/html/is.unsorted.html">is.unsorted</a></code>, <code><a href="../../ff/html/is.sorted.html">is.sorted</a></code> </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  intrle(sample(1:100))
+  intrle(diff(1:100))
+  intisasc(1:100)
+  intisasc(100:1)
+  intisasc(c(NA, 1:100))
+  intisdesc(1:100)
+  intisdesc(100:1)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>bit</em> version 1.1-14 <a href="00Index.html">Index</a>]</div>
+</body></html>

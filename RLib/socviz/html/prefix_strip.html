@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: prefix_strip</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for prefix_strip {socviz}"><tr><td>prefix_strip {socviz}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>prefix_strip</h2>
+
+<h3>Description</h3>
+
+<p>Strip a series of characters from the beginning of a character vector.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+prefix_strip(var_string, prefixes, toTitle = TRUE, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>var_string</code></td>
+<td>
+<p>A character vector, usually variable names</p>
+</td></tr>
+<tr valign="top"><td><code>prefixes</code></td>
+<td>
+<p>A character vector, usually variable prefixes</p>
+</td></tr>
+<tr valign="top"><td><code>toTitle</code></td>
+<td>
+<p>Convert results to Title Case? Defaults to TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>Other arguments to 'gsub'</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Takes a character vector (usually vector of variable names from a
+summarized or tidied model object), along with a vector of
+character terms (usually the prefix of a dummy or categorical
+variable added by R when creating model terms) and strips the
+latter away from the former. Useful for quickly cleaning
+variable names for a plot.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A character vector with 'prefixes' terms stripped from the
+beginning of 'var_name' terms.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Kieran Healy
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>socviz</em> version 0.5.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

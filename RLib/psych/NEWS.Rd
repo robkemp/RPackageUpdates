@@ -1,13 +1,15 @@
 \name{NEWS}
 \title{News for Package 'psych'}
-\section{Changes in psych version 1.7.5 (2017-04-15}{
+\section{Changes in psych version 1.8.5 (2018-05-15)}{
   \subsection{Introduction}{
     \itemize{
-      \item Version 1.7.5 is the development release of the psych package. It is available at the repository at \url{http://personality-project.org/r}. The released version is 1.7.4.  The second digit reflects the year (i.e., 2016), the third set the month (i.e., 1.6.12 was released in December of 2016, the last two digits of development versions reflect the day of any modifications). 1.7.3 was  released in March, 2017,
+      \item Version 1.8.5 is the development release of the psych package. It is available as a source file for Macs or PCs in the repository at \url{http://personality-project.org/r}. The released version on CRAN is 1.8.4.  The second digit reflects the year (i.e., 2018), the third set the month (i.e., 1.8.3 was released in March of 2018, the last two digits of development versions reflect  either an minor change or the day of any modifications, e.g. 1.8.3.3 was the third attempt to get 1.8.3 released.  1.7.8 was  released in August, 2017.
+    \item To install this development version, use the command: install.packages("psych", repos="http://personality-project.org/r", type="source"). Remember to restart R and library(psych) to make the new version active.
        
       \item The psych package includes functions and data sets to do classic and modern psychometrics and to analyze personality  and experimental psychological data sets. The psych package has been developed as a supplement to courses in research methods in psychology, personality research, and graduate level psychometric theory. The functions are a supplement to the text (in progress): An introduction to psychometric theory with applications in R. 
       \item Additional functions are added sporadically.
       \item This news file reports changes that have been made as the package has been developed.
+      \item To report bugs, send email to \url{mailto:revelle@northwestern.edu} using bug.report.
     }
   }
   \subsection{To do}{
@@ -15,12 +17,11 @@
       \item Suggestions are welcome, but the current list includes the following(and has included for a long time, so lets be patient):
       \item Add confirmatory clustering to ICLUST
       \item Get cluster scores in ICLUST -- analogous to factor scores (requested by Ben Shalet)
-      \item Add signal detetection function as an option for dichotmous data. (in progress)
+     
       \item Add the ability to create multiple groups in sim.irt functions
       \item Find canonical loadings in set.cor     
       \item Add omega factor extension figure option (requested by Sylia Wilson)     
      \item Add option to do subject density and item density plot to IRT plot.
-    \item note that the df in setCor should reflect the number of cases actually used   
       \item add the ability to scale radar plots of raw data from min to max, and add a scale to radar and spider plots (e.g. circular histograms)
       \item add the ability to add labels to lavaan.diagram  
       \item clean up lavaan diagram so that the output is more readable    
@@ -28,17 +29,16 @@
      \item To help those who want to simulate a bifactor model, make it explicit  
      
      \item Check the bias in bootstrap resampling using cor.ci  
-     \item Consider using the log option in pnorm 
+     
      \item Start to use the drop=FALSE when doing subsetting (doing this more and more)
    
      \item add symmetric=TRUE to eigen calls, think about only.values=TRUE for some cases 
      \item Add an analysis if DIF to the irt functions  (requested by David Condon)
      \item Add some power functions
-     \item Fix the help menu for describeBy to explain vectors are ok
+     
      \item Add CIs for means and skews as an option (for describe as well as describeBy)  Requested by Aaron Wichman
      \item Fix statsBy to handle the case of NULL groups.  (particularly for the cors=TRUE option).
      \item Add a function for the Meng, Rosenthal, Rubin tests for multiple comparisons of correlations.
-    
      \item Clean up the various sim functions so that they are better documented
      \item Clean up documentation of score.irt etc.  (partly done)
      \item Add complexity  to omega solution
@@ -51,26 +51,189 @@
      \item Allow for different rotation options in X and Y sets in esem, allow omega style hierarchical structure for x (and y)
      \item Fix bug in esem.diagram for ability- bifactor 3,3 simple=FALSE,cut=.2
      \item Improve documentation for esem
-      \item parallelize iterations when bootstrapping fa   
-      \item fix alpha so that it can just select a small subset of items to score  
-      \item Add in cross validation as an option to best.scales/bestItems.     
+
       \item Add interbattery diagram to the structure.    
       \item fix bug in lavaan.diagram for lr=FALSE   
-      \item Add option to omegaSem to generate code for lavaan for a  hierarchical model
-     \item Add the df in mediate
      \item Make sure that output is "tidy" 
-     \item add Meng's test of correlations
-     \item Fix scoreIRT.2pl so that it does not choke on 1 items scales
-     \item Add an additional object to corr.test and corr.p to give p adjusted cis (requested by Lorien Elleman)
       \item Add Krippendorf's alpha?
+      \item Add Neil's Waller bifactor solution (see Psychometrika 2017)
+      \item Add the ability to weight factor residuals to allow WLMS
+      \item Add the ability to get factor scores for higher order factors (requested by Brandon Vaughn)
+      \item Create a reliabilities  function to combine omega and alpha and splitHalf
+       \item Added a few more descriptives to alpha (min.r and max r)
       
-     
-      
+    
+    
   }
   } 
   }
   
-    \section{Changes in psych version 1.7.4 (2017-04-25)}{
+    \section{Changes in psych version 1.8.4 (2018-04-30)}{
+    \subsection{Additions}{
+          \itemize{ 
+    \item When using multiple raters in cohen.kappa, report the average (Light's kappa) as well as the individual pairwise kappas.
+    \item Added fromTo  to allow choosing variable sequences by names of first and last
+    \item Added cs (taken from Hmisc:::CS function) to convert non-quoted strings into quoted vectors.
+    \item added acs to convert input into quoted strings.  
+    \item Added median r to alpha, scoreItems, scoreOverlap, splitHalf (this serves as a signal for poor scales if the median.r differs very much from the av.r)
+    \item Improved bestScales to allow easier bagging of results.
+    \item Improved the documentation of bestScales to emphasize the bagging nature of the function.  Separated the documentation from fa.lookup and lookup.
+        
+         }
+          }
+       \subsection{Bugs Fixed}{
+          \itemize{
+          \item Fixed a problem with describe when describing a single column data frame.  Reported by Vilmantas Gėgžna.  The problem is with the way sd handles data.frames.
+         \item Fixed mediate so it will do regressions without mediation ala setCor.
+         \item Fixed a bug in corr.test for the case of single x or y variables (reported by Alex Weiss)
+         \item Fixed a bug in alpha where it was not working from a correlation matrix with n.obs specified. (Reported by Nicholas Stefaniak).
+         \item Fixed some problems in bestScales reported by Elizabeth Knowlton.
+          }
+           }
+    
+     }
+     
+    \section{Changes in psych version 1.8.3 (2018-03-21)}{
+    \subsection{Additions}{
+          \itemize{ 
+          \item Minor changes in documentation (e.g. in alpha, violinBy, corr.test, ...)
+          \item digits option to print(x, all=TRUE) in print.psych
+          \item Modified violinBy to treat character variables as numeric  (with notification) and to adjust the minimum and maximum in the case of groups. (Following some suggestions by Christie Nothelfer.)
+          \item Added  the omit option to describe to just describe numeric data (another suggestion by  Christie Nothelfe)
+          \item Modified p values in corr.test to allow for very small p by using the log.p option (suggested by Nicholas Clark)
+          \item Modified read.file and write.file (etc) to allow file= as well as f=.  This is to make it more obviously compatible with save.file().
+          \item Dropped all sex > 2 values in spi.
+          \item Improved the dictionary for spi to include the demographic codes.
+          \item Added the density option to error.bars  (suggested by Anne Zola).
+          \item Added the na.rm=TRUE option to dummy.code  (suggested by Elizabeth Knowlton)
+          \item Added the ability to have criteria as a separate object in bestScales
+          \item Added formula option to setCor
+          \item Improved the input to setCor and mediate to allow for formula input.  Also allowed interaction terms in setCor for parallelism with mediate. 
+           \item Improved bestScales so that it summarizes the results of iterations. Fixed a problem with the overlap option so that it correctly chooses the number of items.
+           \item Improved dfOrder so that it sorts dataframes more readily.
+           \item Greatly improved setCor and mediate to allow for multiple interaction terms  and to include higher level interactions.  Both functions now return the transformed data when doing interaction terms.  Improved  the print.psych function for setCor.
+           \item Added a HowTo for mediation and moderation, cleaned up the other HowTos to allow them to cross reference each other.
+           \item Added the Garcia and Tal_Or data sets for demonstrations of moderation and mediation. 
+           \item Added the ability to partial out variables in mediate.  
+           \item Switched to using the log option in pnorm  for probabilities in pt and pf
+             \item parallelize iterations when bootstrapping fa   (did this some time earlier, but had not taken if off the to do list)
+        \item Added alpha option to corPlot (to allow semi-transparent plots)
+        \item Dropped the density =50 option and changed to alpha=1 in violinBy.  This leads to much faster plotting.
+        \item Added the densityBy function to draw multiple histogram/density plots to show the overlap between two or more distributions. Can also just draw the density for one distribution.
+        \item Modified the call for bi.bars to be consistent with densityBy and violinby calls. 
+        \item Minor improvement in vignette documentation 
+        \item Added the AUC (area under the Curve) function. This basically adds signal detetection capability as an option for dichotmous data (and reports such measures as sensitivity and specificity as well as d'). 
+        \item Added alpha.ci to calculate confidence intervals for alpha based upon Feldt (1987)
+        \item Added confidence intervals to splitHalf function. 
+         \item Added the df in mediate 
+         \item Modified the call sequence to matReg to make it more transparent in mediatethe individual ab paths in the mediate function (requested by Heather Urry)
+          \item Added the describeFast function for quick counts of large data sets.
+        \item Added the filesList function to display all the files in a directory (using file.choose to find the directory).
+        \item Added the fileCreate function to do what file.choose() should do for RStudio
+         \item Added the filetype option to read.file and the ability to write without a suffix to write.file
+         \item Added filesInfo for information about the files in a directory
+         \item Completely rewrote the dfOrder function after finally understanding the help menu for order.
+         \item Added testRetest to do test-retest reliability and a number of related statistics.
+         \item Added checks for non-numeric data and data with no variances to mixedCor.
+         \item Added a check in mlr so that it will only find within subject alpha if n.times > 2  (This was throwing a warning if using mlr to check testRetest results.)
+         \item Serious rewriting of mixedCor with the hope of making it faster (and more robust to cases where we have unequal number of categories in polytomous data). Perhaps solved the problem of poly.di blowing up if the polytomous have a different number of categories.
+           \item Fixed the degrees of freedom in setCor and mediate to reflect the actual numbers of subjects in the correlations, not the number of cases in the file.
+           \item Modified ICC to use lmer from lme4 to handle missing data and to report variance components.  Set the default to use lmer.  This is particularly useful if doing large files.
+           \item Added the theta parameter to the sim.irt family of functions to allow for specification of the theta across simulations.  (Requested by Yuming Liu.)
+        \item Added DAT as a possible data file type to read.file.
+        \item Cleaned up the diagram.Rd file demonstrations to look nicer.
+        \item Added a min.length parameter to corPlot to allow for abbreviations of row and column names.
+        \item Added the sai and tai data sets (state anxiety and trait anxiety measures from the PMC lab) for demonstrations of test-retest reliability, validity, etc. 
+        \item Changed all the http:// references to https:// to get around problems with failure to read http:// files.
+        
+        
+         }
+          }
+       \subsection{Bugs Fixed}{
+          \itemize{
+          \item  Added  ci <-  sef <- ci.adj <- NULL in corr.test to fix problem reported by  Nicholas Clark  9/13/17
+          \item Fixed an inconsistency in mssd between the single vector case and the matrix/data.frame case.  Was dividing by n-lag -1 instead of n- lag.
+          \item Clarified documentation for mssd (problem raised by Dennis Mongin)
+          \item Discovered that write.file(new=TRUE)  works only in R.app and not in RStudio.  This seems to be because core-R ignores the new=TRUE option.  
+          \item Correct was not being passed correctly in fa for doing polychoric or tetrachoric correlations  (detected by Jason French, 10/10/17)
+          \item Fixed improper error message bug in cohen.kappa reported by Johannes Bracher 
+          \item Fixed spi.dictionary so that it labels variables correctly.
+   		  \item Fixed a print error in mediate for the a path (probabilities were displaying incorrectly.)
+          \item Made the digits option actually work in pairs.panels (reported by Federico Filipponi)
+		  \item Fixed a bug in fa for some problems (e.g. fa(bfi[1:5], covar=TRUE) 
+		   \item Fixed a problem with diagram.curve and another in diagram.curved.arrow
+		\item Fixed a problem with plot.fa.parallel for the case of plotting just one line. (reported by Daniel Morillo).
+        \item Fixed the lavaan and sem models for omegaSem to handle reversed items properly (this involves gsub for - signs in names).
+        \item Fixed the ab boot values in mediate when we partial out variables (reported by Dan Molden)
+        \item Corrected the BDI scores in the affect data set.  They had been incorrectly the EA1 scores. 
+        \item Modified the help file for read.file to explain more clearly how to read .rda files. 
+        \item Modified polychoric so that when it tests for number of categories, it is not limited by 1-5 or so, and can handle 0,20,40,80, 100  if these are few enough categories. 
+        \item Changed the (1-alpha) "\% confidence" to (1-alpha)*100 "\% confidence " in error.bars.by (requested by Victor González Fernández)
+         \item Fixed the residuals reported in fa.extend (not giving correct values for uncorrelated factors --reported by Deon DuBruin) (and modified the print statement
+        \item Changed the degrees of freedom in paired.r to be n-3 to match r.test (and Steiger 1980)
+        \item Fixed setCor so that the ruw values are correct in the case of negative correlations. (reported by David Condon).  
+    \item Added left and right brackets to variable names in df2latex to allow stars to print correctly in LaTex
+    \item Corrected the definition of the objective function in principal (error pointed out by Andre Beauducei) 
+    \item Fixed cor2latex (and df2latex) so that large negative correlations can be bold faced as well as large positive correlations (pointed out by Anne Zola).
+    \item Fixed the label option in error.dots so that it actually works.
+          }
+           }
+    
+     }
+        
+     
+    \section{Changes in psych version 1.7.8 (2017-08-31)}{
+    \subsection{Additions}{
+          \itemize{ 
+          \item Completely rewrote partial.r for readability and also to add the ability  to find the anti-image (that is to say, to partial all the variables from each other in correlation matrix.) 
+          \item Added some options to autoR. 
+          \item Added the gr option (for color gradients) to corPlot following a suggestion from Anne Zola and Lorien Elleman
+          \item Added fa.random to start doing random effects factor analysis. 
+          \item Added cohen.d  to find cohen.d statistic for two groups on a number of variables. Also reports the Mahalanobis distance.
+          \item Added Mahalanobis distance for groups (see del Giudice, MBR, 2017) 
+          \item Added d.ci (cohen.d.ci) to find confidence intervals for effect sizes.
+          \item Added d2t, t2d to do basic conversions of effect size.
+          \item Rewrote bestItems and bestScales to allow raw data or correlation matrix input and to be much faster. 
+          \item Added the pc option to fa.diagram to allow the arrows to come from the observed variables if the data are a principal components solution. (suggested by Michael Wood).
+          \item Added selectFromKeys to allow selecting items based upon a keys.list
+          \item Added fa.sapa to allow iterated  factor solutions across random subsets of subjects.  Basically just a tool to examine the stability of sapa based solutions. 
+          \item Completely rewrote pairs.panels to a) add confidence regions for regressions and for loess fits. Changed the smooth function to be loess rather than lowess. Adjusted the histograms so that values line up with the labels.  Changes suggested by Julian Martin.  
+            \item Added alpha factor analysis as an option to the fa function.
+          \item Converted package to be byte-compiled.  This seems to result in a 7 - 10 \% improvement for e.g., factoring a 1000 x 100 categorical data matrix (mean of 61 elapsed vs. 65 secs).
+          \item added sem.diagram and sem.graph which call structure.diagram and structure graph with sem output.  Still having problems sporadically with RGraphviz.
+          \item Added in cross validation as an option to best.scales/bestItems.  
+        \item Modified alpha so that it can just select a small subset of items to score   
+          \item Added a comment to the r.test function about precision of p values (suggested by Julia Rohrer).
+          \item Add an additional object to corr.test and corr.p to give Bonferonni and Holm (default) adjusted cis (requested by Lorien Elleman)
+          \item Added the name for corPlotUpperLowerCi to be the camel case equivalent of cor.plot.UpperLowerCi
+          \item Changed the se.bars=TRUE to se.bars=FALSE in fa.parallel to make the decision rule more transparent
+         \item Modified fa so that it will not die if nfactors = nvar 
+         \item Changed messages to warnings in polychoric.  This allows fa.parallel to run in parallel (and therefore much faster) without crashing. (Based upon a problem reported by Guido Biele). 
+         \item Added the diag option to residuals and resid.
+         \item Added the blant data set to show factor analytic problems.
+         
+                  }
+          }
+       \subsection{Bugs Fixed}{
+          \itemize{ 
+           \item Fixed problem in cohen.kappa to correctly find the variances of weighted kappa (reported by Lisa Avery).
+          \item Fixed mssd to correctly divide by number of cases-lag instead of n.obs - l - lag  (reported by Charlotte Vrijen)
+          \item Fixed problem with alpha for two item scales (I was not correctly reporting the alpha if one item was dropped.)  Reported by Daniel Zingaro.
+          \item Patched cohen.kappa so that it warns instead of breaking if given identical ratings for everyone (reported by Caroline Wehner).
+          \item Added the factor names for old.min(res) solutions.  
+          \item Fixed (finally?) a bug in mixedCor (coming from polydi) that was incorrectly reporting half of the correlations as 1.0.  This was causing improper solutions in any data set that had more than 1 dichotomous variable and more than 1 polytomous variable.
+          \item Fixed scoreIRT.2pl so that it does not choke on 1 items scales
+           \item Modified fa so that it will report the factor score correlations for the chosen scoring method as well as the regression based scores.  Although factor.scores was reporting the correct R2 values, fa was always reporting the regression based R2 values. Also deprecated the oblique.score option.   (Based upon trying to answer a question from Jeannette Samuelsen.)
+       
+ 
+       
+        
+           }
+          }
+    }  
+  
+  
+    \section{Changes in psych version 1.7.5 (2017-05-01)}{
     \subsection{Additions}{
           \itemize{ 
         \item Added read.xport to the read.file so we can read SAS export files. Also added the widths parameter so that read.file can read a fixed width file.  
@@ -86,7 +249,18 @@
         \item Added quickView to complement headTail and topBottom.  Added from and to parameters to all three functions.
         \item Added top=4 and bottom=4 to replace hlength and tlength in headTail and topBottom. Makes more obvious code.
         \item Added Vaccounted for fa and pca (as requested by various stackoverflow users).
-        \item Dropped the message about matrices not being square in cortest.  (Just an irritant when doing R CMD check and testing the intro.rnw file)
+        \item Dropped the message about matrices not being square in cortest.  (Just an irritant when doing R CMD check and testing the intro.rnw file)#Adapted from the help for pairs
+#modified December 15, 2011 to add the rug option
+#further modified March 30, 2012 to add the method of correlation option (suggested by Carsten Dormann).
+#Fixed a bug in show.points on  March 18, 2017  (reported by Matthew Labrum)
+#by moving all the little functions to be outside the main function, this allows method and rug to be passed to these lower order functions.
+#this should allow for somewhat cleaner code for the other functions
+#modified March 15, 2015 to add the ability to control the size of the correlation separately from the cex variable in the points
+#also added the ability to set the number of breaks in the histograms
+#Also completely reorganized the main function to be much cleaner
+#would like to add the smoothScatter function as an option
+
+
         \item Modified plot.parallel to go from ymin rather than 0.  Suggested by Hao Wu.
         \item Added confidence intervals for the ICC1 and ICC2 to the output for statsBy (requested by Lorien Elleman)
         \item Added mixedCor as an improvement to mixed.cor.  Somewhat cleaner interface.
@@ -661,6 +835,7 @@
        \item Perhaps finally fixed pairs.panels so it will not change options for graphics window. 
        \item Fixed polychoric so that it will not blow up if the number of response alternatives are not equal.  (Reported by Jeanette Lim )
        \item Fixed fa.poly so that the scores are calculated based upon the polychoric correlations rather than the Pearson correlations (based partly on trying to solve another problem reported by Jeanette Lim)
+    \item Fixed scoreItems for the case of an unnamed keys vector  (reported by Sara Weston)
       }
    } 
   }

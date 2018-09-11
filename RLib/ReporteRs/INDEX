@@ -1,0 +1,90 @@
++.pot                   pot concatenation
+CodeBlock               Code Block Object
+FlexCell                Cell object for FlexTable
+FlexRow                 Row object for FlexTable
+FlexTable               FlexTable creation
+Footnote                Create a Footnote
+RScript                 RScript object
+ReporteRs-package       ReporteRs: a package to create document from R
+[<-.FlexRow             modify FlexRow content
+[<-.FlexTable           alter FlexTable content and format
+add.pot                 add a paraggraph to an existing set of
+                        paragraphs of text
+addCodeBlock            Add code block into a document object
+addColumnBreak          Add a column break into a section
+addDate                 Insert a date
+addDocument             Add an external document into a document object
+addFlexTable            Insert a FlexTable into a document object
+addFooter               Insert a footer into a document object
+addFooter.pptx          Insert a footer shape into a document pptx
+                        object
+addFooterRow            add footer in a FlexTable
+addHeaderRow            add header in a FlexTable
+addImage                Add an external image into a document object
+addPageBreak            Add a page break into a document object
+addPageNumber           Insert a page number into a document object
+addPageNumber.pptx      Insert a page number shape into a document pptx
+                        object
+addParagraph            Add a paragraph into a document object
+addParagraph.Footnote   Insert a paragraph into a Footnote object
+addPlot                 Add a plot into a document object
+addRScript              Add R script into a document object
+addSection              Add a section into a document object
+addSlide                Add a slide into a document object
+addSubtitle             Add a subtitle shape into a document object
+addTOC                  Add a table of contents into a document object
+addTitle                Add a title
+as.FlexTable            R tables as FlexTables
+as.FlexTable.sessionInfo
+                        get FlexTable from a sessionInfo object
+as.html                 get HTML code
+as.html.FlexTable       get HTML code from a FlexTable
+as.html.pot             get HTML code from a pot
+borderProperties        border properties object
+cellProperties          Cell formatting properties
+chprop                  Change a formatting properties object
+chprop.FlexTable        format FlexTable
+colorProperties         color properties object
+deleteBookmark          delete a bookmark into a docx object
+deleteBookmarkNextContent
+                        delete first content after a bookmark into a
+                        docx object
+docx                    Create Microsoft Word document object
+                        representation
+is.color                color checking
+knit_print.FlexTable    FlexTable custom printing function for knitr
+light.table             light FlexTable shortcut
+list.settings           format ordered and unordered lists
+list_bookmarks          List Bookmarks from a Word Document
+map_title               map titles styles
+office_web_viewer       Office Web Viewer
+parProperties           Paragraph formatting properties
+pot                     Piece of Text (formated text)
+pot_img                 Image to be concatenate with pot object
+pptx                    Create Microsoft PowerPoint document object
+                        representation
+print.FlexTable         Print FlexTables
+print.Footnote          print a Footnote
+renderFlexTable         FlexTable output for shiny
+setColumnsColors        applies background colors to columns of a
+                        FlexTable
+setFlexTableBackgroundColors
+                        applies background colors to cells of a
+                        FlexTable
+setFlexTableBorders     change grid lines of a FlexTable
+setFlexTableWidths      set columns widths of a FlexTable
+setRowsColors           applies background colors to rows of a
+                        FlexTable
+setZebraStyle           FlexTable rows zebra striping
+set_of_paragraphs       Set of paragraphs of text
+slide.layouts           Get layout names of a document object
+slide.layouts.pptx      Get layout names of a pptx document
+spanFlexTableColumns    Span columns within rows
+spanFlexTableRows       Span rows within columns
+styles                  Get styles names of a document object
+textNormal              shortcuts for formatting properties
+textProperties          Text formatting properties
+text_extract            Simple Text Extraction From a Word Document
+toc.options             Set TOC options
+vanilla.table           vanilla FlexTable shortcut
+writeDoc                Write a document object

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Selected GeoJSON Specification Sections</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{GeoJSON Specification}
+%\VignetteEncoding{UTF-8}
+-->
+
+<h1>Selected GeoJSON Specification Sections</h1>
+
+<p>In <code>geojsonio</code> we follow the below guidelines (RFC7946) for GeoJSON, and try
+to preserve CRS information, and bbox information when converting formats.</p>
+
+<p>The following are the guidelines for CRS and bounding boxes for geojson,
+annotated as needed, get complete guidelines at <a href="https://tools.ietf.org/html/rfc7946">https://tools.ietf.org/html/rfc7946</a></p>
+
+<h2>The Structure of GeoJSON</h2>
+
+<p>See <a href="https://tools.ietf.org/html/rfc7946#section-3">https://tools.ietf.org/html/rfc7946#section-3</a> for further information.</p>
+
+<p><strong>GeoJSON text</strong>: a JSON text and consists of a single GeoJSON object.</p>
+
+<p><strong>GeoJSON object</strong>: represents a Geometry, Feature, or collection of Features
+(i.e., FeatureCollection).</p>
+
+<ul>
+<li>has a member with the name &ldquo;type&rdquo;.  The value of the member
+MUST be one of the GeoJSON types.</li>
+<li>MAY have a &ldquo;bbox&rdquo; member, the value of which MUST be a bounding
+box array (see Section 5).</li>
+<li>MAY have other members (see Section 6).</li>
+</ul>
+
+<p><strong>Geometry object</strong>: represents points, curves, and surfaces in coordinate
+space. Every Geometry object is a GeoJSON object no matter where it occurs
+in a GeoJSON text.</p>
+
+<ul>
+<li>The value of a Geometry object&#39;s &ldquo;type&rdquo; member MUST be one of the
+seven geometry types.</li>
+<li>A GeoJSON Geometry object of any type other than
+&ldquo;GeometryCollection&rdquo; has a member with the name &ldquo;coordinates&rdquo;.
+The value of the &ldquo;coordinates&rdquo; member is an array.  The structure
+of the elements in this array is determined by the type of
+geometry.</li>
+</ul>
+
+<p><strong>Position</strong>: the fundamental geometry construct.  The &ldquo;coordinates&rdquo; member of
+a Geometry object is composed of either:</p>
+
+<ul>
+<li>one position in the case of a Point geometry,</li>
+<li>an array of positions in the case of a LineString or MultiPoint geometry,</li>
+<li>an array of LineString or linear ring coordinates in the case of a
+Polygon or MultiLineString geometry, or</li>
+<li>an array of Polygon coordinates in the case of a MultiPolygon geometry</li>
+</ul>
+
+<p><strong>Type of Geometries</strong>:</p>
+
+<ul>
+<li>Point</li>
+<li>MultiPoint</li>
+<li>LineString</li>
+<li>MultiLineString</li>
+<li>Polygon</li>
+<li>MultiPolygon</li>
+<li>GeometryCollection</li>
+</ul>
+
+<p><strong>Feature Object</strong>: A Feature object represents a spatially bounded thing.  Every
+Feature object is a GeoJSON object no matter where it occurs in a GeoJSON text. A
+Feature object has a &ldquo;type&rdquo; member with the value &ldquo;Feature&rdquo;; has a member with the
+name &ldquo;geometry&rdquo;, the value of which geometry member as defined above or a JSON
+null value. A Feature object has a member with the name &ldquo;properties&rdquo;; the value
+of the properties member is an object (any JSON object or a JSON null value).</p>
+
+<p><strong>FeatureCollection Object</strong>: A GeoJSON object with the type &ldquo;FeatureCollection&rdquo; is a
+FeatureCollection object.  A FeatureCollection object has a member with the name
+&ldquo;features&rdquo;.  The value of &ldquo;features&rdquo; is a JSON array. Each element of the array
+is a Feature object as defined above.  It is possible for this array to be empty.</p>
+
+<h2>CRS (Coordinate Reference System)</h2>
+
+<p>See <a href="https://tools.ietf.org/html/rfc7946#page-12">https://tools.ietf.org/html/rfc7946#page-12</a> for further information.</p>
+
+<ul>
+<li>The coordinate reference system for all GeoJSON coordinates is a geographic
+coordinate reference system, using the World Geodetic System 1984 (WGS84)
+datum, with longitude and latitude units of decimal degrees.  This is equivalent
+to the coordinate reference system identified by the Open Geospatial Consortium (OGC)
+URN <code>urn:ogc:def:crs:OGC::CRS84</code>. An OPTIONAL third-position element SHALL
+be the height in meters above or below the WGS 84 reference ellipsoid.  In the
+absence of elevation values, applications sensitive to height or depth SHOULD
+interpret positions as being at local ground or sea level.</li>
+<li>The crs member has been removed.</li>
+<li>RFC7946 does not that &ldquo;where all involved parties have a prior arrangement,
+alternative coordinate reference systems can be used without risk of data being
+misinterpreted.&rdquo;</li>
+</ul>
+
+<h2>Bounding Boxes</h2>
+
+<p>See <a href="https://tools.ietf.org/html/rfc7946#page-12">https://tools.ietf.org/html/rfc7946#page-12</a> for further information.</p>
+
+<p>To include information on the coordinate range for Geometries, Features, or
+FeatureCollections, a GeoJSON object may have a member named <code>bbox</code>. The value of the bbox
+member must be a 2*n array where n is the number of dimensions represented in the
+contained geometries, with the lowest values for all axes followed by the highest
+values. The axes order of a bbox follows the axes order of geometries.</p>
+
+<p>Example of a 2D bbox member on a Feature:</p>
+
+<pre><code>{
+  &quot;type&quot;: &quot;Feature&quot;,
+  &quot;bbox&quot;: [-10.0, -10.0, 10.0, 10.0],
+  &quot;geometry&quot;: {
+    &quot;type&quot;: &quot;Polygon&quot;,
+    &quot;coordinates&quot;: [[
+      [-10.0, -10.0], [10.0, -10.0], [10.0, 10.0], [-10.0, -10.0]
+    ]]
+  }
+  ...
+}
+</code></pre>
+
+<p>Example of a 2D bbox member on a FeatureCollection:</p>
+
+<pre><code>{
+  &quot;type&quot;: &quot;FeatureCollection&quot;,
+  &quot;bbox&quot;: [100.0, 0.0, 105.0, 1.0],
+  &quot;features&quot;: [
+    ...
+  ]
+}
+</code></pre>
+
+<p>Example of a 3D bbox member with a depth of 100 meters on a FeatureCollection:</p>
+
+<pre><code>{
+  &quot;type&quot;: &quot;FeatureCollection&quot;,
+  &quot;bbox&quot;: [100.0, 0.0, -100.0, 105.0, 1.0, 0.0],
+  &quot;features&quot;: [
+    ...
+  ]
+}
+</code></pre>
+
+<h2>Coordinate Precision</h2>
+
+<p>See <a href="https://tools.ietf.org/html/rfc7946#page-18">https://tools.ietf.org/html/rfc7946#page-18</a> for further information.</p>
+
+<p>The size of a GeoJSON text in bytes is a major interoperability
+consideration, and precision of coordinate values has a large impact
+on the size of texts.  A GeoJSON text containing many detailed
+Polygons can be inflated almost by a factor of two by increasing
+coordinate precision from 6 to 15 decimal places.  For geographic
+coordinates with units of degrees, 6 decimal places (a default common
+in, e.g., sprintf) amounts to about 10 centimeters, a precision well
+within that of current GPS systems.  Implementations should consider
+the cost of using a greater precision than necessary.</p>
+
+</body>
+
+</html>

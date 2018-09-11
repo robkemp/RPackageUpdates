@@ -1,0 +1,16 @@
+flatten                 Convert multidimensional array of counts per
+                        state into table form. Each row in the table
+                        corresponds to one individual
+humanleague             humanleague
+ipf                     Multidimensional IPF
+prob2IntFreq            Generate integer frequencies from discrete
+                        probabilities and an overall population.
+qis                     Multidimensional QIS
+qisi                    QIS-IPF
+sobolSequence           Generate Sobol' quasirandom sequence
+synthPop                [Legacy] Generate a population in n dimensions
+                        given n 1-d marginals.
+synthPopG               [Legacy] Generate a population in 2 dimensions
+                        given 2 1-d marginals and a further constraint.
+unitTest                Entry point to enable running unit tests within
+                        R (e.g. in testthat)

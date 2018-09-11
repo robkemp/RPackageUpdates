@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Opiate-Related Deaths in the United States, 1999-2014</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for opiates {socviz}"><tr><td>opiates {socviz}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Opiate-Related Deaths in the United States, 1999-2014</h2>
+
+<h3>Description</h3>
+
+<p>State-level data on optiate related deaths in the US, from the CDC
+Wonder database. Query details: Dataset is Multiple causes of
+death, 1999-2014; 2006 Urbanization; Autopsy, Gender, Place of
+Death, States, 10-year age groups, and Hisipanic Origin, Weekday,
+Year/Month set to ALL. Standard Population 2000 US Std Population.
+Default intercensal populations for years 2001-2009 except Infant
+age groups. Rates per 100,000 population.
+MCD ICD-10 Codes selected: T40.0 (Opium), T40.1 (Heroin), T40.2
+(Other opioids), T40.3 (Methadone), T40.4 (Other synthetic
+narcotics), T40.6 (Other and unspecified narcotics). UCD - ICD-10
+Codes selected: X40-X44, X60-X64, X85, Y10-Y14.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+opiates
+</pre>
+
+
+<h3>Format</h3>
+
+<p>&quot;A tibble with 800 rows and 10 columns.&quot;</p>
+
+
+<h3>Details</h3>
+
+<p>The variables are as follows:
+</p>
+
+<ul>
+<li><p> year. Year
+</p>
+</li>
+<li><p> state. State name.
+</p>
+</li>
+<li><p> fips. State FIPS code.
+</p>
+</li>
+<li><p> deaths. Number of opiate-related deaths.
+</p>
+</li>
+<li><p> population. Population.
+</p>
+</li>
+<li><p> crude. Crude death rate.
+</p>
+</li>
+<li><p> adjusted. Adjusted death rate.
+</p>
+</li>
+<li><p> adjusted.se. Standard error of Adjusted death rate.
+</p>
+</li>
+<li><p> region. Census region. (Stored as an ordered factor.)
+</p>
+</li>
+<li><p> abbr. Abbreviated state name.
+</p>
+</li>
+<li><p> division_name. Census Division. (Character.)
+</p>
+</li></ul>
+
+
+
+<h3>Source</h3>
+
+<p>Centers for Disease Control CDC WONDER data
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>socviz</em> version 0.5.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

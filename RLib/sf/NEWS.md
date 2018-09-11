@@ -1,3 +1,185 @@
+# version 0.6-3
+
+* move dependency `RPostgreSQL` back to Suggests:, from Imports:
+
+* `st_centroid.sf` and `st_point_on_surface.sf` now also warn if attributes are not constant over geometries.
+
+* `summarise` now allows the user to define geometries for summaries; #714, by Kirill Mueller
+
+* `plot.sf` now emits a warning if `col` does not have length 1 or `nrow(x)`, and requires `pal` (rather than `col`) to set a palette for factors.
+
+* `plot.sf` provides control over legend keys using `key.length` and `key.width`, decrease default key length; #731
+
+* `sgbp` objects receive an `as.data.frame` method; #715
+
+# version 0.6-2
+
+* GDAL read/write now supports logical variables; #722
+
+* add `st_crop` to simplify cropping objects with a rectangular area; #720
+
+* fix bug in `[<-` when columns are added to an `sf` object; #718
+
+* use dynamic registration of S3 methods, similar to how hms does this; #710 by Kirill Mueller
+
+* (partially) address writing GPKG to network drive, writing to temp file first; #628
+
+* add Kirill Mueller as contributor
+
+* `st_make_grid` is now faster; #708, by Dan Baston
+
+* `st_read` and `st_write` are now generic, with methods for directly reading from and writing to database connections; `st_read_db` and `st_write_db` are now deprecated; #558, thanks to Etienne Racine @etiennebr
+
+* Package `RPostgreSQL` moved from Suggests to Imports
+
+* restore compatibility with GDAL 2.0.x versions (which won't have `gdal_utils`); #686
+
+* `read_sf` can now also read tables without geometry; #684, by Andy Teucher
+
+# version 0.6-1
+
+* method `distinct` now works; #669, #672
+
+* `+`, `-`, `*` and `/` for pairs of geometries (`sfg`, `sfc`) now return geometric union, difference, intersection and symmetric difference, respectively.
+
+* `st_cast` from `MULTIPOLYGON` to `MULTILINESTRING` should now work properly; #660
+
+* all Rcpp interfaces needed by package `stars` have now been moved into `sf`; pkg `stars` is now R-only, and only `sf` needs linking to GDAL.
+
+* `gdal_utils()` now interfaces the 9 gdal utils using the C++ API
+
+* improve resetting (base) plots; add `reset = FALSE` in a call to `plot` to enable adding to plots that have a legend
+
+* `st_read` now returns a `data.frame` when a table contains no geometries, rather than giving an error; it does emit a warning in this case. See https://stat.ethz.ch/pipermail/r-sig-geo/2018-February/026344.html
+
+* move `pillar` from `Imports:` to `Suggests:`
+
+* update to the new rwinlib distribution of gdal (adds JPG2000); #639
+
+* speed up computation of centroids for largest polygon; #623
+
+* add `st_as_sfc.raw` method
+
+* Bugfix: binary operations (`st_intersection`, `st_difference`, etc) no longer fail when operating on data frames of class `"tbl_df"` with common column names; #644
+
+# version 0.6-0
+
+* add `pillar` to Imports: to provide method for printing WKT geometries in tibbles
+
+* `st_as_text`, and subsequently `format` and `print`, now use argument `digits` (or `options(digits = n)`) to control the number of digits used for printing coordinates; default is now `options("digits")`, which is typically 7.
+
+* `st_is_within_distance` now works with geographic coordinates
+
+* `st_cast` from `MULTIPOLYGON` to `MULTILINESTRING` no longer changes the number of features/feature geometries, but conversion from `MULTIPOLYGON` to `LINESTRING` now (typically) does; #596
+
+* `st_distance` for long/lat geographic coordinates now uses `lwgeom`, accepting all geometry types; argument `dist_fun` is deprecated as a consequence, and distance calculations are different from those in sf versions 0.5-5 or earlier; #593
+
+* add package `lwgeom` to Suggests; `st_area`, `st_length`, `st_distance`, `st_segmentize` for long/lat CRS now use package `lwgeom` instead of `geosphere`; #593
+
+* `st_length` now returns zero for polygon-type geometries; #593
+
+* if present, add units of attribute to default plot title; #591
+
+* add `unnest` method, which depends on `tidyr` > 0.7-2; #570 PR by @karldw
+
+* add `largest` option to `st_join` to get largest intersection match only; #547, by @tiernanmartin
+
+* change default maximum number of feature to print to 10, controllable by `options(sf_max_print)`; #556
+
+* add `Hausdorff` (and `Frechet` for those with GEOS 3.7.0) as options to `st_distance`; add `par` for densified versions
+
+* add `st_snap`, for snapping geometries to other geometries, within a tolerance
+
+* make `st_wrap_dateline` a generic, with methods for `sf`, `sfc` and `sfg`; #541
+
+* `plot.sf` and `st_as_grob` (used by ggplot2) are now robust against misspecified ring directions (holes that have the same direction as the exterior rings), by using `rule = "evenodd"`; #540
+
+* functions depending on `liblwgeom` (`st_make_valid`, `st_geohash`, `st_plit`) have been moved to their own package, https://github.com/r-spatial/lwgeom; argument `use_gdal` of `st_transform` has been deprecated, instead one can now use `lwgeom::st_transform_proj`; sf now no longer tries to link to liblwgeom; #509, #537, #487
+
+* `st_read`, `st_sf` and `st_sfc` gain a parameter `check_ring_dir` (default: `FALSE`) that checks ring directions and corrects to: exterior counter clockwise, holes clockwise, when seen from above.
+
+* get rid of `classInt::classIntervals` warning if number of unique values is smaller than the number of breaks asked for
+
+# version 0.5-5
+
+* have `classInt` in Imports:, to not break other package checks
+
+* add vignettes 5: plotting sf objects and 6: miscellaneous; #324
+
+* add (default) color key to `plot.sf` if single map is plotted, contributed by @hughjonesd; #528 
+
+* `st_as_sfc` can now read EWKT; #530
+
+* argument `max.plot` takes its default from `options(sf_max.plot=n)`, if present; #516
+
+* `plot.sf` gets an arguments `pal` to specify a color palette function; #526
+
+* `plot.sf` gets arguments `breaks` and `nbreaks`; add support for `classInt::classIntervals` styles for finding class intervals (using `breaks`)
+
+* add `st_as_sf` methods for `ppp`, `lpp` and `psp` objects from spatstat.
+
+* allow for direct route to proj.4 ignoring GDAL (requiring liblwgeom); #509, #511
+
+* add `print` method for `crs` objects; #517
+
+* `sf_extSoftVersion` now reveals whether GDAL was linked to GEOS; #510
+
+* better check input of `st_polygon`; #514
+
+* add `st_node`, similar to `rgeos::gNode`
+
+* support for reading `OFTInteger64List` fields; #508
+
+* sparse geometric binary predicate lists now have a class, `sgbp`, and attributes `region.id` and `predicate`; #234, #524
+
+* prevent `st_split` from stopping the R session; #492
+
+* `st_intersection`, `st_union` and so on now also print a message when used directly on long/lat coordinates; #496
+
+* add `rep` method for `sfc` objects
+
+* comparing two `crs` objects now uses the GDAL function `IsSame`; #180
+
+* add `st_collection_extract`, which, given an object with geometries of type `GEOMETRY` or `GEOMETRYCOLLECTION`, returns an object consisting only of elements of the specified type; by Andy Teucher, #482
+
+* `st_write` exports GeoJSON with UTF-8 encoding on Windows; #444
+
+* move package methods from Imports: to Depends: ; #478
+
+* deal better with precision setting and propagation; #476
+
+* fix bug in `st_layers` in case layers have no geometry; #334
+
+* clarify argument `envelope` in `st_voronoi`; #474
+
+* change aggregate to make it return the same geometry as 'by', padding attributes with NA where needed; #453 
+
+# version 0.5-4
+
+* fix compatibility problems introduced by `tidyr` 0.7-0 using rlang magic
+
+* convert path names to UTF-8 in `st_read`, `st_write` and `st_layers`; #471
+
+* `st_sfc` converts `NULL` values into empty geometries, and correctly identifies empty `POINT`s; #466, #463
+
+* `st_write` abbreviates column names if driver is `ESRI Shapefile`; #464
+
+* add `of_largest_polygon` argument to `st_centroid`, to get the centroid of the largest polygon; #450
+
+* fix use of `st_relate` as join predicate for `st_join`; #454
+
+* fix bug where `st_intersects` with empty second argument would crash; #458
+
+* produce better WKT; #463
+
+* fix bug in `st_cast.sf`; #461, #462
+
+* change `st_read` SRS assignment logic; corrects reading projected geojson with gdal 2.2.0; #449
+
+* `st_intersection` etc. on `tbl` now also return `tbl`; #448
+
+* `[.sf` preserves class, e.g. of `tbl`; #448
+
 # version 0.5-3
 
 * support and propagate all Proj.4 +units=xx length units; #446
@@ -44,7 +226,7 @@
 
 * add a `[<-` method for `sfc` objects; automatically replaces `NULL` with an empty geometry; #411
 
-* add `st_point_on_surface` function to return a point that is guaranteed to be on the surface (standard compliance)
+* add `st_point_on_surface()` to return a point that is guaranteed to be on the surface (standard compliance)
 
 * `read_sf` now returns an sf-tibble, an object of class `c("sf", "tbl_df", "tbl", "data.frame")`
 
@@ -140,7 +322,7 @@
 
 * build proper support for `cbind` and `rbind` methods for `sf`, which work (as documented) when _all_ arguments are of class `sf`; `dplyr::bind_cols` or `st_sf(data.frame(sf, df))` work for binding `data.frame`s to an `sf` object.
 
-* units support for function arguments of `st_segmentize` and `st_line_sample`
+* `st_segmentize()` and `st_line_sample()` now accept units arguments
 
 * document problem reading shapefiles from USB drives on OSX; #252
 

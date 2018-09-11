@@ -1,7 +1,7 @@
 Encoding: UTF-8
 Package: covr
 Title: Test Coverage for Packages
-Version: 3.0.0
+Version: 3.1.0
 Authors@R: c(
     person("Jim", "Hester", email = "james.f.hester@gmail.com", role = c("aut", "cre")),
     person("Willem", "Ligtenberg", role = "ctb"),
@@ -32,19 +32,20 @@ Description: Track and report code coverage for your package and (optionally)
     quality and completeness. This package is compatible with any testing
     methodology or framework and tracks coverage of both R code and compiled
     C/C++/FORTRAN code.
-URL: https://github.com/jimhester/covr
-BugReports: https://github.com/jimhester/covr/issues
+URL: https://github.com/r-lib/covr
+BugReports: https://github.com/r-lib/covr/issues
 Depends: R (>= 3.1.0), methods
-Imports: stats, utils, jsonlite, rex, httr, crayon, withr (>= 1.0.2)
+Imports: digest, stats, utils, jsonlite, rex, httr, crayon, withr (>=
+        1.0.2)
 Suggests: R6, knitr, rmarkdown, shiny (>= 0.11.1), htmltools,
         htmlwidgets (>= 0.7), DT (>= 0.2), testthat, rstudioapi (>=
-        0.2), devtools, xml2 (>= 1.0.0), parallel, memoise
+        0.2), xml2 (>= 1.0.0), parallel, memoise, mockery
 License: GPL-3
 LazyData: true
 VignetteBuilder: knitr
-RoxygenNote: 6.0.1
+RoxygenNote: 6.0.1.9000
 NeedsCompilation: yes
-Packaged: 2017-06-26 17:42:39 UTC; jhester
+Packaged: 2018-05-18 20:07:04 UTC; jhester
 Author: Jim Hester [aut, cre],
   Willem Ligtenberg [ctb],
   Kirill Müller [ctb],
@@ -69,6 +70,6 @@ Author: Jim Hester [aut, cre],
   Qin Wang [ctb]
 Maintainer: Jim Hester <james.f.hester@gmail.com>
 Repository: CRAN
-Date/Publication: 2017-06-26 17:52:33 UTC
-Built: R 3.4.1; x86_64-w64-mingw32; 2017-08-23 22:33:48 UTC; windows
+Date/Publication: 2018-05-18 21:47:54 UTC
+Built: R 3.5.0; x86_64-w64-mingw32; 2018-05-29 17:47:24 UTC; windows
 Archs: i386, x64
