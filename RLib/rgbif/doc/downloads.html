@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>GBIF Downloads</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: #990073
+   }
+
+   pre .number {
+     color: #099;
+   }
+
+   pre .comment {
+     color: #998;
+     font-style: italic
+   }
+
+   pre .keyword {
+     color: #900;
+     font-weight: bold
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: #d14;
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{Downloads}
+%\VignetteEncoding{UTF-8}
+-->
+
+<h1>GBIF Downloads</h1>
+
+<p>GBIF provides two ways to get occurrence data: through the
+<code>/occurrence/search</code> route (see <code>occ_search()</code> and <code>occ_data()</code>),
+or via the <code>/occurrence/download</code> route (many functions, see below).
+<code>occ_search()</code>/<code>occ_data()</code> are more appropriate for smaller data, while
+<code>occ_download*()</code> functions are more appropriate for larger data requests.
+Note that the download service is equivalent to downloading a dataset
+from the GBIF website - but doing it here makes it reproducible
+(and easier once you learn the ropes)!</p>
+
+<p>The download functions are:</p>
+
+<ul>
+<li><code>occ_download()</code> - Start a download</li>
+<li><code>occ_download_prep()</code> - Prepare a download request</li>
+<li><code>occ_download_queue()</code> - Start many downloads in a queue</li>
+<li><code>occ_download_meta()</code> - Get metadata progress on a single download</li>
+<li><code>occ_download_list()</code> - List your downloads</li>
+<li><code>occ_download_cancel()</code> - Cancel a download</li>
+<li><code>occ_download_cancel_staged()</code> - Cancels any jobs with status <code>RUNNING</code>
+or <code>PREPARING</code></li>
+<li><code>occ_download_get()</code> - Retrieve a download</li>
+<li><code>occ_download_import()</code> - Import a download from local file system</li>
+<li><code>occ_download_datasets()</code> - List datasets for a download</li>
+<li><code>occ_download_dataset_activity()</code> - Lists the downloads activity of a dataset</li>
+</ul>
+
+<p><code>occ_download()</code> is the function to start off with when using the GBIF download
+service. With it you can specify what query you want. Unfortunately, the interfaces
+to the search vs. download services are different, so we couldn&#39;t make the <code>rgbif</code>
+interface to <code>occ_search</code>/<code>occ_data</code> the same as <code>occ_download</code>.</p>
+
+<p>Be aware that you can only perform 3 downloads simultaneously, so plan wisely.
+To help with this limitation, we are working on a queue helper, but it&#39;s not
+ready yet.</p>
+
+<p>Let&#39;s take a look at how to use the download functions:</p>
+
+<h2>Load rgbif</h2>
+
+<pre><code class="r">library(&quot;rgbif&quot;)
+</code></pre>
+
+<h2>Kick off a download</h2>
+
+<p>Instead of passing parameters like <code>taxonkey = 12345</code> in <code>occ_search</code>, for downloads
+we pass the whole thing as a character string <strong>because</strong> you can use operators
+other than <code>=</code> (equal to).</p>
+
+<pre><code class="r">(res &lt;- occ_download(&#39;taxonKey = 7264332&#39;, &#39;hasCoordinate = TRUE&#39;))
+#&gt; &lt;&lt;gbif download&gt;&gt;
+#&gt;   Username: sckott
+#&gt;   E-mail: myrmecocystus@gmail.com
+#&gt;   Download key: 0000796-171109162308116
+</code></pre>
+
+<p>What <code>occ_download</code> returns is not the data itself!  When you send the request to
+GBIF, they have to prepare it first, then when it&#39;s done you can download it.</p>
+
+<p>What <code>occ_download</code> returns is some useful metadata that tells you about the
+download, and helps us check and know when the download is done.</p>
+
+<h2>Check download status</h2>
+
+<p>After running <code>occ_download</code>, we can pass the resulting object to
+<code>occ_download_meta</code> - with primary goal of checking the download status.</p>
+
+<pre><code class="r">occ_download_meta(res)
+#&gt; &lt;&lt;gbif download metadata&gt;&gt;
+#&gt;   Status: PREPARING
+#&gt;   Format: DWCA
+#&gt;   Download key: 0000796-171109162308116
+#&gt;   Created: 2017-11-10T19:30:32.328+0000
+#&gt;   Modified: 2017-11-10T19:30:44.590+0000
+#&gt;   Download link: http://api.gbif.org/v1/occurrence/download/request/0000796-171109162308116.zip
+#&gt;   Total records: 1425
+#&gt;   Request:
+#&gt;     type:  and
+#&gt;     predicates:
+#&gt;       &gt; type: equals, key: TAXON_KEY, value: 7264332
+#&gt;       &gt; type: equals, key: HAS_COORDINATE, value: TRUE
+</code></pre>
+
+<p>Continue running <code>occ_download_meta</code> until the <code>Status</code> value is <code>SUCCEEDED</code>
+or <code>KILLED</code>. If it is <code>KILLED</code> that means something went wrong - get in touch
+with us. If <code>SUCCEEDED</code>, then you can proceed to the next step (downloading
+the data with <code>occ_download_get</code>).</p>
+
+<p>Before we go to the next step, there&#39;s another function to help you out.</p>
+
+<p>With <code>occ_download_list</code> you can get an overview of all your download
+requests, with</p>
+
+<pre><code class="r">x &lt;- occ_download_list()
+x$results &lt;- tibble::as_tibble(x$results)
+x
+#&gt; $meta
+#&gt;   offset limit endofrecords count
+#&gt; 1      0    20        FALSE   211
+#&gt;
+#&gt; $results
+#&gt; # A tibble: 20 x 18
+#&gt;                        key                    doi
+#&gt;  *                   &lt;chr&gt;                  &lt;chr&gt;
+#&gt;  1 0000796-171109162308116 doi:10.15468/dl.nv3r5p
+#&gt;  2 0000739-171109162308116 doi:10.15468/dl.jmachn
+#&gt;  3 0000198-171109162308116 doi:10.15468/dl.t5wjpe
+#&gt;  4 0000122-171020152545675 doi:10.15468/dl.yghxj7
+#&gt;  5 0000119-171020152545675 doi:10.15468/dl.qiowtc
+#&gt;  6 0000115-171020152545675 doi:10.15468/dl.tdbkzn
+#&gt;  7 0010067-170714134226665 doi:10.15468/dl.ro6qj1
+#&gt;  8 0010066-170714134226665 doi:10.15468/dl.bhekhi
+#&gt;  9 0010065-170714134226665 doi:10.15468/dl.xy4nfp
+#&gt; 10 0010064-170714134226665 doi:10.15468/dl.hsqp84
+#&gt; 11 0010062-170714134226665 doi:10.15468/dl.h2apik
+#&gt; 12 0010061-170714134226665 doi:10.15468/dl.1srstq
+#&gt; 13 0010059-170714134226665 doi:10.15468/dl.2me5hk
+#&gt; 14 0010058-170714134226665 doi:10.15468/dl.sjmxvf
+#&gt; 15 0010057-170714134226665 doi:10.15468/dl.f28182
+#&gt; 16 0010056-170714134226665 doi:10.15468/dl.4t2qim
+#&gt; 17 0010055-170714134226665 doi:10.15468/dl.lumz7s
+#&gt; 18 0010054-170714134226665 doi:10.15468/dl.wfkgqm
+#&gt; 19 0010053-170714134226665 doi:10.15468/dl.fintow
+#&gt; 20 0010050-170714134226665 doi:10.15468/dl.a2h9gu
+#&gt; # ... with 16 more variables: license &lt;chr&gt;, created &lt;chr&gt;, modified &lt;chr&gt;,
+#&gt; #   status &lt;chr&gt;, downloadLink &lt;chr&gt;, size &lt;dbl&gt;, totalRecords &lt;int&gt;,
+#&gt; #   numberDatasets &lt;int&gt;, request.creator &lt;chr&gt;, request.format &lt;chr&gt;,
+#&gt; #   request.notificationAddresses &lt;list&gt;, request.sendNotification &lt;lgl&gt;,
+#&gt; #   request.predicate.type &lt;chr&gt;, request.predicate.predicates &lt;list&gt;,
+#&gt; #   request.predicate.key &lt;chr&gt;, request.predicate.value &lt;chr&gt;
+</code></pre>
+
+<h2>Canceling downloads</h2>
+
+<p>If for some reason you need to cancel a download you can do so with
+<code>occ_download_cancel</code> or <code>occ_download_cancel_staged</code>.</p>
+
+<p><code>occ_download_cancel</code> cancels a job by download key, while <code>occ_download_cancel_staged</code>
+cancels all jobs in <code>PREPARING</code> or <code>RUNNING</code> stage.</p>
+
+<h2>Fetch data</h2>
+
+<p>After you see the <code>SUCCEEDED</code> status on calling <code>occ_download_meta</code>, you can
+then download the data using <code>occ_download_get</code>.</p>
+
+<pre><code class="r">(dat &lt;- occ_download_get(&quot;0000796-171109162308116&quot;))
+#&gt; &lt;&lt;gbif downloaded get&gt;&gt;
+#&gt;   Path: ./0000796-171109162308116.zip
+#&gt;   File size: 0.35 MB
+</code></pre>
+
+<p>This only download data to your machine - it does not read it into R.
+You can now move on to importing into R.</p>
+
+<h2>Import data into R</h2>
+
+<p>Pass the output of <code>occ_download_get</code> directly to <code>occ_download_import</code> -
+they can be piped together if you like.</p>
+
+<pre><code class="r">occ_download_get(&quot;0000796-171109162308116&quot;) %&gt;% occ_download_import()
+# OR
+dat &lt;- occ_download_get(&quot;0000796-171109162308116&quot;)
+occ_download_import(dat)
+#&gt; # A tibble: 1,425 x 235
+#&gt;        gbifID abstract accessRights accrualMethod accrualPeriodicity
+#&gt;         &lt;int&gt;    &lt;lgl&gt;        &lt;chr&gt;         &lt;lgl&gt;              &lt;lgl&gt;
+#&gt;  1 1667184715       NA                         NA                 NA
+#&gt;  2 1667182218       NA                         NA                 NA
+#&gt;  3 1667179996       NA                         NA                 NA
+#&gt;  4 1667179527       NA                         NA                 NA
+#&gt;  5 1667171607       NA                         NA                 NA
+#&gt;  6 1667165448       NA                         NA                 NA
+#&gt;  7 1667163154       NA                         NA                 NA
+#&gt;  8 1667162324       NA                         NA                 NA
+#&gt;  9 1667162162       NA                         NA                 NA
+#&gt; 10 1667161552       NA                         NA                 NA
+#&gt; # ... with 1,415 more rows, and 230 more variables: accrualPolicy &lt;lgl&gt;,
+#&gt; #   alternative &lt;lgl&gt;, audience &lt;lgl&gt;, available &lt;lgl&gt;,
+#&gt; #   bibliographicCitation &lt;lgl&gt;, conformsTo &lt;lgl&gt;, contributor &lt;lgl&gt;,
+#&gt; #   coverage &lt;lgl&gt;, created &lt;lgl&gt;, creator &lt;lgl&gt;, date &lt;lgl&gt;,
+#&gt; #   dateAccepted &lt;lgl&gt;, dateCopyrighted &lt;lgl&gt;, dateSubmitted &lt;lgl&gt;,
+#&gt; #   description &lt;lgl&gt;, educationLevel &lt;lgl&gt;, extent &lt;lgl&gt;, format &lt;lgl&gt;,
+#&gt; #   hasFormat &lt;lgl&gt;, hasPart &lt;lgl&gt;, hasVersion &lt;lgl&gt;, identifier &lt;chr&gt;,
+#&gt;
+#&gt; ... cut for brevity
+</code></pre>
+
+<h2>Citing download data</h2>
+
+<p>The nice thing about data retrieved via GBIF&#39;s download service is that they
+provide DOIs for each download, so that you can give a link that resolves to
+the download with metadata on GBIF&#39;s website. And it makes for a nice citation.</p>
+
+<p>Using the funciton <code>gbif_citaiton</code> we can get citations for our downloads,
+with the output from <code>occ_download_get</code> or <code>occ_download_meta</code>.</p>
+
+<pre><code class="r">occ_download_meta(res) %&gt;% gbif_citation()
+#&gt; $download
+#&gt; [1] &quot;GBIF Occurrence Download https://doi.org/10.15468/dl.ohjevv Accessed from R via rgbif (https://github.com/ropensci/rgbif) on 2017-11-10&quot;
+#&gt;
+#&gt; $datasets
+#&gt; NULL
+</code></pre>
+
+<p>You&#39;ll notice that the <code>datasets</code> slot is <code>NULL</code> - because when using <code>occ_download_meta</code>,
+we don&#39;t yet have any information about which datasets are in the download.</p>
+
+<p>But if you use <code>occ_download_get</code> you then have the individual datasets, and we
+can get citatations for each idividual dataset in addition to the entire download.</p>
+
+<pre><code class="r">occ_download_get(&quot;0000796-171109162308116&quot;) %&gt;% gbif_citation()
+#&gt; $download
+#&gt; [1] &quot;GBIF Occurrence Download https://doi.org/10.15468/dl.nv3r5p Accessed from R via rgbif (https://github.com/ropensci/rgbif) on 2017-11-10&quot;
+#&gt;
+#&gt; $datasets
+#&gt; $datasets[[1]]
+#&gt; &lt;&lt;rgbif citation&gt;&gt;
+#&gt;    Citation: Office of Environment &amp; Heritage (2017). OEH Atlas of NSW
+#&gt;         Wildlife. Occurrence Dataset https://doi.org/10.15468/14jd9g accessed
+#&gt;         via GBIF.org on 2017-11-10.. Accessed from R via rgbif
+#&gt;         (https://github.com/ropensci/rgbif) on 2017-11-10
+#&gt;    Rights: This work is licensed under a Creative Commons Attribution (CC-BY)
+#&gt;         4.0 License.
+#&gt;
+#&gt; $datasets[[2]]
+#&gt; &lt;&lt;rgbif citation&gt;&gt;
+#&gt;    Citation: Creuwels J (2017). Naturalis Biodiversity Center (NL) - Botany.
+#&gt;         Naturalis Biodiversity Center. Occurrence Dataset
+#&gt;         https://doi.org/10.15468/ib5ypt accessed via GBIF.org on 2017-11-10..
+#&gt;         Accessed from R via rgbif (https://github.com/ropensci/rgbif) on
+#&gt;         2017-11-10
+#&gt;    Rights: To the extent possible under law, the publisher has waived all
+#&gt;         rights to these data and has dedicated them to the Public Domain (CC0
+#&gt;         1.0). Users may copy, modify, distribute and use the work, including
+#&gt;         for commercial purposes, without restriction.
+#&gt;
+#&gt; ... cutoff for brevity
+</code></pre>
+
+<p>Here, we get the overall citation as well as citations (and data rights) for each dataset.</p>
+
+<p>Please do cite the data you use from GBIF!</p>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+bounding_wkt            Generate Bounding Boxes
+sp_convert              Convert SpatialPolygons or
+                        SpatialPolygonDataFrames into WKT objects
+validate_wkt            Validate WKT objects
+wicket                  Well-Known Text utilities
+wkt_bounding            Convert WKT Objects into Bounding Boxes
+wkt_centroid            Extract Centroid
+wkt_coords              Extract Latitude and Longitude from WKT
+                        polygons
+wkt_correct             Correct Incorrectly Oriented WKT Objects

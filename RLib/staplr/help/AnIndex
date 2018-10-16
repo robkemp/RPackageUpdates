@@ -1,0 +1,11 @@
+staplr-package	staplr
+get_fields	get_fields
+remove_pages	remove_pages
+rename_files	rename_files
+rotate_pages	rotate_pages
+rotate_pdf	rotate_pdf
+set_fields	set_fields
+split_from	split_from
+split_pdf	split_pdf
+staple_pdf	staple_pdf
+staplr	staplr

@@ -1,0 +1,14 @@
+Name: insertHeader
+Description: Inserts header at the cursor position.
+Binding: insertHeader
+Interactive: false
+
+Name: Clear Environment
+Description: Removes all objects from environment.
+Binding: clearEnvironment
+Interactive: false
+
+Name: Add Comment
+Description: Removes all objects from environment.
+Binding: insertComment
+Interactive: false

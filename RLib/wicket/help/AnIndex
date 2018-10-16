@@ -1,0 +1,9 @@
+wicket-package	wicket
+bounding_wkt	bounding_wkt
+sp_convert	sp_convert
+validate_wkt	validate_wkt
+wicket	wicket
+wkt_bounding	wkt_bounding
+wkt_centroid	wkt_centroid
+wkt_coords	wkt_coords
+wkt_correct	wkt_correct

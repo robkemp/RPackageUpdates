@@ -1,0 +1,13 @@
+get_fields              Get form fields from a pdf form
+remove_pages            Remove selected pages from a file
+rename_files            Rename multiple files
+rotate_pages            Rotate selected pages of a pdf file
+rotate_pdf              Rotate entire pdf document
+set_fields              Set fields of a pdf form
+split_from              Splits single input PDF document into parts
+                        from given points
+split_pdf               Splits single input PDF document into
+                        individual pages.
+staple_pdf              Merge multiple PDF files into one
+staplr                  staplr: A package containing a toolkit for PDF
+                        files

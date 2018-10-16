@@ -1,0 +1,3 @@
+chop                    Split polygon into many
+geoaxe-package          Split geospatial objects into pieces
+to_wkt                  To WKT
