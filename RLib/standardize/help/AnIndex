@@ -1,0 +1,12 @@
+standardize-package	standardize-package
+fac_and_contr	fac_and_contr
+is.standardized	is.standardized
+makepredictcall.scaledby	makepredictcall.scaledby
+named_contr_sum	named_contr_sum
+predict.standardized	predict.standardized
+print.standardized	print.standardized
+ptk	ptk
+scaled_contr_poly	scaled_contr_poly
+scale_by	scale_by
+standardize	standardize
+standardized-class	standardized-class

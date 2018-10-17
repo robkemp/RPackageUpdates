@@ -1,0 +1,23 @@
+fac_and_contr           Create a factor and specify contrasts.
+is.standardized         Determine if an object has class
+                        'standardized'.
+makepredictcall.scaledby
+                        S3 'makepredictcall' method for class
+                        'scaledby'.
+named_contr_sum         Create named sum contrasts for an unordered
+                        factor.
+predict.standardized    Place new data into an already existing
+                        standardized space.
+print.standardized      S3 'print' method for class 'standardized'.
+ptk                     Duration and voicing measures of voiceless
+                        plosives in Spanish
+scale_by                Center and scale a continuous variable
+                        conditioning on factors.
+scaled_contr_poly       Create scaled orthogonal polynomial contrasts
+                        for an ordered factor.
+standardize             Standardize a formula and data frame for
+                        regression.
+standardize-package     standardize: Tools for Standardizing Variables
+                        for Regression in R.
+standardized-class      Class 'standardized' containing regression
+                        variables in a standardized space.
