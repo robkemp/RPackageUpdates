@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Index. jsonvalidate 1.0.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">jsonvalidate 1.0.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <div class="row">
+  <div class="span8">
+    <h1>jsonvalidate</h1>
+
+<p><a href="https://travis-ci.org/ropenscilabs/jsonvalidate"><img src="https://travis-ci.org/ropenscilabs/jsonvalidate.svg?branch=master" alt="Build Status"/></a>
+<a href="https://ci.appveyor.com/project/richfitz/jsonvalidate/branch/master"><img src="https://ci.appveyor.com/api/projects/status/gx82a6tp9eigrl70/branch/master?svg=true" alt="Build status"/></a></p>
+
+<p>Validate JSON against a schema using <a href="https://github.com/mafintosh/is-my-json-valid"><code>is-my-json-valid</code></a>.  This packagfe is simply a thin wrapper around the node library, using the <a href="https://http://cran.r-project.org/package=V8">V8</a> package to call <code>is-my-json-valid</code> from R.</p>
+
+<h2>Installation</h2>
+
+<pre><code class="r">devtools::install_github(&quot;ropenscilabs/jsonvalidate&quot;)
+</code></pre>
+
+<h2>Usage</h2>
+
+<pre><code class="r">jsonvalidate::validate_json(json, schema)
+</code></pre>
+
+<p>or</p>
+
+<pre><code class="r">validate &lt;- jsonvalidate::validate_json(schema)
+validate(json)
+validate(json2) # etc
+</code></pre>
+
+<h2>License</h2>
+
+<p>MIT + file LICENSE © <a href="https://github.com/richfitz">Rich FitzJohn</a>.</p>
+
+<p><a href="http://ropensci.org"><img src="http://ropensci.org/public_images/github_footer.png" alt="ropensci_footer"/></a></p>
+
+
+    <h2>Help topics</h2>
+
+    <h3></h3>
+    
+    
+    <ul class="index">
+        
+      <li>
+        <code><a href="json_validate.html">json_validate</a></code><br />Validate a json file</li>
+            
+      <li>
+        <code><a href="json_validator.html">json_validator</a></code><br />Create a json validator</li>
+    
+    </ul>
+  </div>
+  
+  <div class="span3 offset1">
+    <h2>Vignettes</h2>
+    <ul>
+      <li><a href="vignettes/jsonvalidate.html">jsonvalidate</a></li>
+    </ul>
+        
+    <h2>Dependencies</h2>
+    <ul>
+      
+      <li><strong>Imports</strong>: V8</li>
+      <li><strong>Suggests</strong>: knitr, rmarkdown, testthat</li>
+      
+    </ul>
+    <h2>Authors</h2>
+    <ul>
+      <li><a href="mailto:rich.fitzjohn@gmail.com">Rich FitzJohn</a> [aut, cre]</li>
+      <li>Mathias Buus [cph]</li>
+    </ul>
+
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

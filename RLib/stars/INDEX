@@ -1,0 +1,33 @@
+Math.stars              Mathematical operations for stars objects
+Ops.stars               S3 Ops Group Generic Functions for stars
+                        objects
+as                      Coerce stars object into a Raster raster or
+                        brick
+c.stars                 combine multiple stars objects, or combine
+                        multiple attributes in a single stars object
+                        into a single array
+cut_stars               cut methods for stars objects
+dplyr                   dplyr verbs for stars objects
+plot.stars              plot stars object, with subplots for each level
+                        of first non-spatial dimension
+read_ncdf               read ncdf file into stars object
+read_stars              read raster/array dataset from file or
+                        connection
+st_apply                st_apply apply a function to one or more array
+                        dimensions
+st_as_sf                Convert stars object into an sf object
+st_as_stars             convert objects into a stars object
+st_crop                 crop a stars object
+st_dimensions           get dimensions from stars object
+st_rasterize            rasterize simple feature geometries
+st_transform            transform features, or warp/resample grids in
+                        stars objects to a new coordinate reference
+                        system
+st_warp                 Warp (resample) grids in stars objects to a new
+                        grid, possibly in an new coordinate reference
+                        system
+st_write.stars          write stars object to gdal dataset (typically:
+                        to file)
+st_xy2sfc               replace x y raster dimensions with simple
+                        feature geometry list (points, or polygons =
+                        rasterize)
