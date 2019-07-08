@@ -1,0 +1,9 @@
+Rst                     Evalute ACME Reduction Factor R*
+acme.est                Parameter Estimation for Persistence and Search
+                        Proficiency
+acme.post               Posterior Calculation of Mortality
+acme.summary            Report Summary of ACME Dataset
+acme.table              Posterior Summary of Mortality
+altamont                Placement and Searches for Carcasses at
+                        Altamont
+read.data               Construct ACME Sufficient Statistics

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Open a data.frame in 'Excel'</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for view_in_xl {viewxl}"><tr><td>view_in_xl {viewxl}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Open a data.frame in 'Excel'</h2>
+
+<h3>Description</h3>
+
+<p>Open a data.frame in 'Excel'
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+view_in_xl(df = NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>df</code></td>
+<td>
+<p>The name of a <code>data.frame</code> or a <code>data.frame</code> itself, if not provided, an addin is launched.</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+
+# Launch addin
+view_in_xl()
+
+# or pass the name of a data.frame
+view_in_xl("iris")
+
+# or directly the object
+view_in_xl(iris)
+
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>viewxl</em> version 0.1.3 <a href="00Index.html">Index</a>]</div>
+</body></html>

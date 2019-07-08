@@ -1,0 +1,14 @@
+apotheke.df             Coordinates of 100 Random Pharmacies in Berlin
+apotheke.sf             sf POINT of 100 Random Pharmacies in Berlin
+apotheke.sp             SpatialPointsDataFrame of 100 Random Pharmacies
+                        in Berlin
+com                     Communes Coordinates
+dst                     SpatialPointsDataFrame of 10 Communes in France
+osrm                    Shortest Paths and Travel Time from
+                        OpenStreetMap via an OSRM API
+osrmIsochrone           Get Polygons of Isochrones
+osrmRoute               Get the Shortest Path Between Two Points
+osrmTable               Get Travel Time Matrices Between Points
+osrmTrip                Get the Travel Geometry Between Multiple
+                        Unordered Points
+src                     SpatialPointsDataFrame of 10 Communes in France

@@ -1,0 +1,12 @@
+osrm-package	osrm
+apotheke.df	apotheke.df
+apotheke.sf	apotheke.sf
+apotheke.sp	apotheke.sp
+com	com
+dst	dst
+osrm	osrm
+osrmIsochrone	osrmIsochrone
+osrmRoute	osrmRoute
+osrmTable	osrmTable
+osrmTrip	osrmTrip
+src	src

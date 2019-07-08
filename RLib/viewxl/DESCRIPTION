@@ -1,0 +1,26 @@
+Package: viewxl
+Type: Package
+Title: View data.frames in 'Excel'
+Version: 0.1.3
+Authors@R: c(person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = c("aut")),
+  person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")))
+Description: 'RStudio' addin to open a data.frame in 'Excel'.
+License: GPL-3 | file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: writexl, rstudioapi, miniUI, shiny
+RoxygenNote: 6.1.0
+Author: Fanny Meyer [aut],
+  Victor Perrier [aut, cre]
+Maintainer: Victor Perrier <victor.perrier@dreamrs.fr>
+Built: R 3.6.0; ; 2019-07-08 15:51:17 UTC; windows
+RemoteType: github
+RemoteHost: https://api.github.com
+RemoteRepo: viewxl
+RemoteUsername: dreamRs
+RemoteRef: master
+RemoteSha: dba046affbf0b6017ea774d28b1cd17a421c1f85
+GithubRepo: viewxl
+GithubUsername: dreamRs
+GithubRef: master
+GithubSHA1: dba046affbf0b6017ea774d28b1cd17a421c1f85

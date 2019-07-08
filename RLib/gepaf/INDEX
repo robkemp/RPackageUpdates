@@ -1,0 +1,3 @@
+decodePolyline          Decode a Google Polyline to a Data Frame
+encodePolyline          Encode Coordinates to Google Polylines
+gepaf                   Google Encoded Polyline Algorithm Format
